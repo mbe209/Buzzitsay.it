@@ -418,13 +418,7 @@
       gap: 5px;
     }
 
-    .proof-item span.star {
-      color: var(--yellow-primary);
-    }
-
-    /* -----------------------------------------------------------------
-       HERO APP SLIDER: Angepasst an Screenshots mit nativer iOS-Statusbar
-       ----------------------------------------------------------------- */
+    /* App Slider */
     .hero-visual {
       flex: 0.95;
       display: flex;
@@ -446,7 +440,6 @@
       pointer-events: none;
     }
 
-    /* Slider Positionierungs-Container mit seitlichen Buttons */
     .slider-stage {
       position: relative;
       z-index: 2;
@@ -457,7 +450,6 @@
       max-width: 360px;
     }
 
-    /* Der Smartphone-Frame: Schlank, kein doppelter Rahmen */
     .phone-mockup-wrapper {
       position: relative;
       width: 100%;
@@ -507,7 +499,6 @@
       border-radius: 38px;
     }
 
-    /* Pfeil-Buttons: Jetzt seitlich vom Smartphone platziert */
     .slider-btn {
       position: absolute;
       top: 50%;
@@ -544,7 +535,6 @@
       right: -6px;
     }
 
-    /* Slider Dots unterhalb */
     .slider-dots {
       position: relative;
       z-index: 3;
@@ -1095,7 +1085,7 @@
   </header>
 
   <main>
-    <!-- SECTION 1: Hero mit fehlerfreiem App-Slider -->
+    <!-- SECTION 1: Hero -->
     <section class="section-wrap sec-hero">
       <div class="container hero-grid">
         <div class="hero-content">
@@ -1116,7 +1106,6 @@
             </a>
 
             <div class="proof-tags">
-              <div class="proof-item"><span class="star">★</span> 4.9 <span data-i18n="proof_rating">Bewertung</span></div>
               <div class="proof-item">👥 <span data-i18n="proof_players">Bis zu 10 Spieler</span></div>
               <div class="proof-item">🔒 <span data-i18n="proof_privacy">Zero Tracking</span></div>
               <div class="proof-item">👶 <span data-i18n="proof_age">Freigabe 4+</span></div>
@@ -1124,12 +1113,11 @@
           </div>
         </div>
 
-        <!-- HERO VISUAL: Perfekt abgestimmter App-Slider -->
+        <!-- HERO VISUAL: App-Slider -->
         <div class="hero-visual">
           <div class="ambient-glow"></div>
           
           <div class="slider-stage" id="heroPhoneSlider">
-            <!-- Pfeile liegen außerhalb des Bildschirms -->
             <button type="button" class="slider-btn prev" id="sliderPrev" aria-label="Vorheriges Bild">&#10094;</button>
             <button type="button" class="slider-btn next" id="sliderNext" aria-label="Nächstes Bild">&#10095;</button>
             
@@ -1162,7 +1150,7 @@
             </div>
           </div>
 
-          <!-- Slider Dots sauber unterhalb -->
+          <!-- Slider Dots -->
           <div class="slider-dots" id="sliderDots">
             <button type="button" class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
             <button type="button" class="slider-dot" data-index="1" aria-label="Slide 2"></button>
@@ -1420,7 +1408,6 @@
         hero_sub: "BiSi: Buzz it, Say it – Das Reaktions-Quiz",
         hero_desc: "BiSi bringt den ultimativen Nervenkitzel von Stadt-Land-Fluss in Echtzeit auf euer iPhone & iPad. Kein Zubehör, keine Zettel, keine Ausreden: Wer zuerst auf den Buzzer haut, hat das Wort.",
         badge_ios_sub: "Laden im",
-        proof_rating: "Bewertung",
         proof_players: "Bis zu 10 Spieler",
         proof_privacy: "Zero Tracking",
         proof_age: "Freigabe 4+",
@@ -1493,7 +1480,6 @@
         hero_sub: "BiSi: Buzz it, Say it – The Fast Reaction Quiz",
         hero_desc: "BiSi brings the classic thrill of Categories in real-time right onto your iPhone & iPad. No accessories, no paper slips, no excuses: The fastest finger gets the word.",
         badge_ios_sub: "Download on",
-        proof_rating: "Rating",
         proof_players: "Up to 10 Players",
         proof_privacy: "Zero Tracking",
         proof_age: "Rated 4+",
@@ -1566,7 +1552,6 @@
         hero_sub: "BiSi: Buzz it, Say it – El Quiz de Reacción Rápida",
         hero_desc: "BiSi reinventa 'Basta / Tutti Frutti' en tiempo real en tu iPhone y iPad. Sin papel, sin lápices, sin excusas: el dedo más rápido tiene la palabra.",
         badge_ios_sub: "Consíguelo en",
-        proof_rating: "Valoración",
         proof_players: "Hasta 10 jugadores",
         proof_privacy: "Cero Rastreo",
         proof_age: "Clasificación 4+",
@@ -1611,7 +1596,7 @@
         f4_title: "Justo y Transparente",
         f4_text: "Detección precisa de pulsaciones, retroalimentación táctil y decisiones consensuadas.",
         f5_title: "Modo Oscuro y Claro",
-        f5_text: "Cambia en cualquier momento entre el modo oscuro vibrante y un modo claro refinado.",
+        f5_text: "Cambia en cualquier momento entre el modo oscuro vibrante und ein klares Light-Design.",
         f6_title: "Privacidad y Cero Anuncios",
         f6_text: "Sin anuncios molestos, sin rastreo de datos y sin obligación de registro. Juega directo como invitado.",
         categories_label: "Las 6 categorías del juego",
@@ -1623,7 +1608,7 @@
         cat_animal: "Animal",
         cta_title: "¿Eres lo bastante rápido para el Nivel 10?",
         cta_desc: "¡Descarga BiSi exclusivamente para iOS, reúne a tus amigos y desata la euforia en tu fiesta!",
-        footer_support: "Support & Ayuda",
+        footer_support: "Soporte y Ayuda",
         footer_privacy: "Política de Privacidad",
         footer_rights: "Todos los derechos reservados.",
         footer_meta: "Exclusivo para iOS • Categoría: Trivia y Familia • Edad: 4+"
@@ -1639,7 +1624,6 @@
         hero_sub: "BiSi: Buzz it, Say it – Le Quiz de Réaction Ultime",
         hero_desc: "BiSi transpose l'intensité du Petit Bac en temps réel sur votre iPhone & iPad. Zéro papier, zéro crayon, zéro excuse : le premier sur le buzzer prend la parole.",
         badge_ios_sub: "Télécharger dans",
-        proof_rating: "Note",
         proof_players: "Jusqu'à 10 joueurs",
         proof_privacy: "Zéro Tracking",
         proof_age: "Dès 4 ans",
@@ -1753,7 +1737,7 @@
         });
       }
 
-      // Slider Navigation (0.PNG bis 6.PNG)
+      // Slider Navigation
       var currentSlide = 0;
       var totalSlides = 7;
       var track = document.getElementById('sliderTrack');
