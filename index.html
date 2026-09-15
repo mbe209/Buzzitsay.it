@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BiSi: Buzz it, Say it – Das Reaktions-Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f0322;
+      --bg-surface: #180833;
+      --yellow-primary: #ffd000;
+      --yellow-glow: #ffe156;
+      --purple-accent: #9d4edd;
+      --purple-vibrant: #7b2cbf;
+      --purple-light: #d8c7f0;
+      --text-main: #ffffff;
+      --text-muted: #baa6d8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(255, 208, 0, 0.28);
+      --glow-yellow: 0 0 25px rgba(255, 208, 0, 0.35);
+      --glow-purple: 0 0 35px rgba(157, 78, 221, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      line-height: 1.6;
+      font-size: 15px;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(15, 3, 34, 0.78);
+      z-index: 100;
+      border-bottom: 1px solid var(--border-subtle);
+      transition: background 0.3s ease;
+    }
+
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(135deg, var(--purple-vibrant), var(--bg-surface));
+      border: 1.5px solid var(--yellow-primary);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      box-shadow: 0 3px 10px rgba(255, 208, 0, 0.25);
+    }
+
+    .brand-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+
+    .brand-name span {
+      color: var(--yellow-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 26px;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--yellow-primary);
+    }
+
+    .lang-switcher {
+      display: flex;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border-subtle);
+      border-radius: 99px;
+      padding: 2px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 99px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--yellow-primary);
+      color: #120524;
+      box-shadow: 0 2px 6px rgba(255, 208, 0, 0.3);
+    }
+
+    .btn-cta-nav {
+      background: var(--yellow-primary);
+      color: #120524;
+      font-weight: 700;
+      padding: 8px 18px;
+      border-radius: 99px;
+      text-decoration: none;
+      font-size: 0.86rem;
+      box-shadow: 0 4px 14px rgba(255, 208, 0, 0.3);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-cta-nav:hover {
+      background: var(--yellow-glow);
+      transform: translateY(-1px);
+      box-shadow: var(--glow-yellow);
+    }
+
+    /* Seamless Flowing Section Transitions */
+    .section-wrap {
+      padding: 110px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-wrap::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* SECTION 1: Deep Indigo Purple to Amber Haze */
+    .sec-hero {
+      padding: 85px 0 120px;
+      background: linear-gradient(180deg, #0d021e 0%, #16062f 60%, #1c083b 100%);
+    }
+
+    .sec-hero::before {
+      background: 
+        radial-gradient(circle at 82% 28%, rgba(255, 208, 0, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 18% 18%, rgba(123, 44, 191, 0.25) 0%, transparent 50%);
+    }
+
+    /* SECTION 2: Seamless Amber Bloom (Soft Golden Atmosphere) */
+    .sec-gameplay {
+      background: linear-gradient(180deg, 
+        #1c083b 0%, 
+        #2a1240 18%, 
+        #351a44 40%, 
+        #2a103c 75%, 
+        #18062d 100%);
+    }
+
+    .sec-gameplay::before {
+      background: 
+        radial-gradient(ellipse at 50% 35%, rgba(255, 208, 0, 0.16) 0%, rgba(255, 183, 3, 0.05) 50%, transparent 75%),
+        radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.15) 0%, transparent 50%);
+    }
+
+    /* SECTION 3: Deep Royal Steal Mode */
+    .sec-steal {
+      background: linear-gradient(180deg, 
+        #18062d 0%, 
+        #1b0735 25%, 
+        #240944 55%, 
+        #190631 85%, 
+        #120424 100%);
+    }
+
+    .sec-steal::before {
+      background: 
+        radial-gradient(circle at 75% 45%, rgba(255, 0, 85, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 25% 65%, rgba(157, 78, 221, 0.18) 0%, transparent 55%);
+    }
+
+    /* SECTION 4: Radiant Level-Up Continuum */
+    .sec-levels {
+      background: linear-gradient(180deg, 
+        #120424 0%, 
+        #180731 30%, 
+        #220a45 60%, 
+        #17052e 85%, 
+        #0d021c 100%);
+    }
+
+    .sec-levels::before {
+      background: 
+        radial-gradient(circle at 50% 30%, rgba(255, 208, 0, 0.14) 0%, transparent 55%),
+        radial-gradient(circle at 50% 80%, rgba(123, 44, 191, 0.18) 0%, transparent 60%);
+    }
+
+    /* SECTION 5: Dark Glow Highlights */
+    .sec-highlights {
+      background: linear-gradient(180deg, 
+        #0d021c 0%, 
+        #120326 40%, 
+        #180633 75%, 
+        #110324 100%);
+    }
+
+    /* SECTION 6: Final iOS Download CTA */
+    .sec-final-cta {
+      background: linear-gradient(180deg, 
+        #110324 0%, 
+        #16052f 40%, 
+        #080112 100%);
+      padding: 70px 0 100px;
+    }
+
+    /* Safe Reveal on Scroll */
+    .reveal-on-scroll {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.js-hidden {
+      opacity: 0;
+      transform: translateY(28px);
+    }
+
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Hero Layout */
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 48px;
+    }
+
+    .hero-content {
+      flex: 1.15;
+    }
+
+    .hero-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255, 208, 0, 0.08);
+      border: 1px solid var(--border-accent);
+      color: var(--yellow-primary);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.1rem;
+      line-height: 1.1;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: -0.6px;
+    }
+
+    .hero-content h1 .highlight {
+      color: var(--yellow-primary);
+      text-shadow: 0 0 25px rgba(255, 208, 0, 0.35);
+    }
+
+    .hero-subtitle {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--purple-light);
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .store-badge-ios {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.03));
+      border: 1.5px solid var(--yellow-primary);
+      border-radius: 14px;
+      padding: 10px 22px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 0 15px rgba(255, 208, 0, 0.2);
+      transition: all 0.25s ease;
+      width: fit-content;
+    }
+
+    .store-badge-ios:hover {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(255, 208, 0, 0.35);
+    }
+
+    .store-badge-ios svg {
+      width: 28px;
+      height: 28px;
+      fill: #fff;
+    }
+
+    .store-text-sub {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--purple-light);
+      display: block;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .store-text-main {
+      font-size: 1rem;
+      font-weight: 700;
+      display: block;
+      line-height: 1.1;
+    }
+
+    .exclusive-badge {
+      background: var(--yellow-primary);
+      color: #100422;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      margin-left: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .proof-tags {
+      display: flex;
+      gap: 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .proof-item span.star {
+      color: var(--yellow-primary);
+    }
+
+    /* Hero Visual */
+    .hero-visual {
+      flex: 1.05;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .ambient-glow {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(255, 208, 0, 0.28) 0%, rgba(157, 78, 221, 0.18) 55%, transparent 70%);
+      filter: blur(60px);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .hero-banner-wrapper {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 28px;
+      padding: 8px;
+      background: linear-gradient(145deg, rgba(255, 208, 0, 0.35), rgba(157, 78, 221, 0.2) 40%, rgba(16, 4, 34, 0.85) 100%);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-purple);
+      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+    }
+
+    .hero-banner-wrapper:hover {
+      transform: translateY(-4px) scale(1.01);
+      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.75), var(--glow-yellow);
+    }
+
+    .hero-banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+    }
+
+    /* Section Heads */
+    .section-head {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-tag {
+      text-transform: uppercase;
+      font-size: 0.76rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--yellow-primary);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      line-height: 1.18;
+      margin-bottom: 12px;
+      letter-spacing: -0.4px;
+    }
+
+    .section-desc {
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    /* Gameplay Cards with Frosted Amber Highlights */
+    .steps-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step-box-flowing {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 208, 0, 0.2);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 20px;
+      padding: 28px 22px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step-box-flowing:hover {
+      transform: translateY(-6px);
+      border-color: var(--yellow-primary);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 208, 0, 0.2);
+    }
+
+    .step-index-flowing {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--yellow-primary), #ffb703);
+      color: #120524;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+      box-shadow: 0 4px 14px rgba(255, 208, 0, 0.35);
+    }
+
+    .step-title-flowing {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .step-text-flowing {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    /* Steal Mode Spotlight Feature */
+    .steal-feature {
+      background: linear-gradient(135deg, rgba(123, 44, 191, 0.22), rgba(20, 5, 42, 0.75));
+      border: 1.5px solid var(--border-accent);
+      border-radius: 26px;
+      padding: 44px 40px;
+      display: flex;
+      gap: 44px;
+      align-items: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), var(--glow-purple);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .steal-info {
+      flex: 1.2;
+    }
+
+    .steal-badge {
+      display: inline-block;
+      background: #ff0055;
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 99px;
+      letter-spacing: 0.8px;
+      margin-bottom: 14px;
+      box-shadow: 0 0 14px rgba(255, 0, 85, 0.4);
+    }
+
+    .steal-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.1rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .steal-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .steal-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 0.88rem;
+      color: var(--purple-light);
+    }
+
+    .steal-list li strong {
+      color: #fff;
+    }
+
+    .steal-icon {
+      color: var(--yellow-primary);
+      font-size: 1.1rem;
+      margin-top: 1px;
+    }
+
+    .steal-visual {
+      flex: 0.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+    }
+
+    .pulse-steal-btn {
+      background: linear-gradient(135deg, #ff0055, #d90429);
+      border: 2.5px solid #ffccd5;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(255, 0, 85, 0.6);
+      animation: pulse-red 1.6s infinite;
+    }
+
+    @keyframes pulse-red {
+      0% { transform: scale(1); box-shadow: 0 0 12px rgba(255, 0, 85, 0.45); }
+      50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255, 0, 85, 0.85); }
+      100% { transform: scale(1); box-shadow: 0 0 12px rgba(255, 0, 85, 0.45); }
+    }
+
+    /* Levels Continuum */
+    .levels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+
+    .level-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+      border: 1px solid var(--border-subtle);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 18px;
+      padding: 22px 16px;
+      text-align: center;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .level-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 208, 0, 0.4);
+    }
+
+    .level-card.featured {
+      background: linear-gradient(145deg, rgba(255, 208, 0, 0.16), rgba(123, 44, 191, 0.3));
+      border-color: var(--yellow-primary);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), var(--glow-yellow);
+    }
+
+    .level-num {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--purple-light);
+    }
+
+    .level-card.featured .level-num {
+      color: var(--yellow-primary);
+    }
+
+    .level-time {
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin: 6px 0;
+      color: #ffffff;
+    }
+
+    .level-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .level-card.featured .level-desc {
+      color: #fff;
+    }
+
+    /* Feature Highlights */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 26px 22px;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .feature-card:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: var(--border-accent);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-icon-badge {
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 208, 0, 0.12);
+      border: 1px solid var(--border-accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .feature-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* Category Chips Area */
+    .categories-wrap {
+      margin-top: 48px;
+      text-align: center;
+    }
+
+    .categories-label {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      color: var(--yellow-primary);
+      margin-bottom: 18px;
+    }
+
+    .cat-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    .cat-chip {
+      background: rgba(157, 78, 221, 0.14);
+      border: 1px solid rgba(157, 78, 221, 0.32);
+      padding: 10px 22px;
+      border-radius: 99px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
+      color: #ffffff;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    .cat-chip:hover {
+      background: rgba(255, 208, 0, 0.18);
+      border-color: var(--yellow-primary);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 208, 0, 0.25);
+    }
+
+    /* Final CTA */
+    .final-cta-card {
+      background: radial-gradient(circle at 50% 0%, rgba(123, 44, 191, 0.85), rgba(20, 5, 42, 0.95) 75%);
+      border: 1.5px solid var(--yellow-primary);
+      border-radius: 28px;
+      padding: 56px 32px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-yellow);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .final-cta-card h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.4px;
+    }
+
+    .final-cta-card p {
+      font-size: 1rem;
+      color: var(--purple-light);
+      max-width: 540px;
+      margin: 0 auto 28px;
+      line-height: 1.65;
+    }
+
+    .final-cta-card .store-badge-ios {
+      margin: 0 auto;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      background: #080112;
+      padding: 42px 0 32px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 26px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow-primary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-desc {
+        margin: 0 auto 26px;
+      }
+      .store-badge-ios {
+        margin: 0 auto;
+      }
+      .proof-tags {
+        justify-content: center;
+      }
+      .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .steal-feature {
+        flex-direction: column;
+        padding: 34px 24px;
+      }
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      nav ul {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-content h1 {
+        font-size: 2.1rem;
+      }
+      .steps-container {
+        grid-template-columns: 1fr;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-title {
+        font-size: 1.85rem;
+      }
+      .final-cta-card h2 {
+        font-size: 1.95rem;
+      }
+      .footer-top, .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="container nav-wrap">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">⚡</div>
+        <div class="brand-name">BiSi<span>.</span></div>
+      </a>
+
+      <nav>
+        <ul>
+          <li><a href="#gameplay" data-i18n="nav_gameplay">Spielablauf</a></li>
+          <li><a href="#steal" data-i18n="nav_steal">Klau-Modus</a></li>
+          <li><a href="#levels" data-i18n="nav_levels">Level-Up</a></li>
+          <li><a href="#features" data-i18n="nav_features">Highlights</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switcher">
+          <button type="button" class="lang-btn active" data-lang="de" onclick="setLanguage('de')">DE</button>
+          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+          <button type="button" class="lang-btn" data-lang="es" onclick="setLanguage('es')">ES</button>
+          <button type="button" class="lang-btn" data-lang="fr" onclick="setLanguage('fr')">FR</button>
+        </div>
+
+        <a href="#download" class="btn-cta-nav" data-i18n="btn_get_app">
+          <span>iOS App laden</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: Midnight Indigo Purple (Hero) -->
+    <section class="section-wrap sec-hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-pill" data-i18n="hero_pill">⚡ Das #1 Reaktions-Quiz für bis zu 10 Freunde</div>
+          <h1 data-i18n="hero_title">Buchstabe sehen.<br>Thema checken.<br><span class="highlight">Buzzern & antworten!</span></h1>
+          <div class="hero-subtitle" data-i18n="hero_sub">BiSi: Buzz it, Say it – Das Reaktions-Quiz</div>
+          <p class="hero-desc" data-i18n="hero_desc">
+            BiSi bringt den ultimativen Nervenkitzel von Stadt-Land-Fluss in Echtzeit auf euer iPhone & iPad. Kein Zubehör, keine Zettel, keine Ausreden: Wer zuerst auf den Buzzer haut, hat das Wort.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="https://github.com/mbe209/quizzzGame/issues" target="_blank" class="store-badge-ios">
+              <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.67 1.38-.58.67-1.09 1.74-.96 2.78 1.04.08 2.08-.54 2.71-1.29z"/></svg>
+              <div>
+                <span class="store-text-sub" data-i18n="badge_ios_sub">Laden im</span>
+                <span class="store-text-main">App Store <span class="exclusive-badge">Exklusiv</span></span>
+              </div>
+            </a>
+
+            <div class="proof-tags">
+              <div class="proof-item"><span class="star">★</span> 4.9 <span data-i18n="proof_rating">Bewertung</span></div>
+              <div class="proof-item">👥 <span data-i18n="proof_players">Bis zu 10 Spieler</span></div>
+              <div class="proof-item">🔒 <span data-i18n="proof_privacy">Zero Tracking</span></div>
+              <div class="proof-item">👶 <span data-i18n="proof_age">Freigabe 4+</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="ambient-glow"></div>
+          <div class="hero-banner-wrapper">
+            <img src="Gemini_Generated_Image_k15fvek15fvek15f.jpg" alt="BiSi Buzzer Hero Banner" class="hero-banner-img" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Seamless Amber Atmosphere (Gameplay) -->
+    <section id="gameplay" class="section-wrap sec-gameplay reveal-on-scroll">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag" data-i18n="tag_how_it_works">Gameplay</div>
+          <h2 class="section-title" data-i18n="title_how_it_works">So einfach funktioniert's</h2>
+          <p class="section-desc" data-i18n="desc_how_it_works">Keine Regelbücher, kein Einrichten – in 30 Sekunden ist deine Runde startklar.</p>
+        </div>
+
+        <div class="steps-container">
+          <div class="step-box-flowing">
+            <div class="step-index-flowing">1</div>
+            <h3 class="step-title-flowing" data-i18n="step1_title">Synchroner Countdown</h3>
+            <p class="step-text-flowing" data-i18n="step1_text">3, 2, 1 … Bei Null erscheinen Buchstabe und Thema gleichzeitig auf allen iPhones der Gruppe.</p>
+          </div>
+
+          <div class="step-box-flowing">
+            <div class="step-index-flowing">2</div>
+            <h3 class="step-title-flowing" data-i18n="step2_title">Schnellster Finger</h3>
+            <p class="step-text-flowing" data-i18n="step2_text">Triff den Buzzer dank ultraschneller Echtzeit-Erkennung und haptischem Taptic-Feedback vor deinen Mitspielern.</p>
+          </div>
+
+          <div class="step-box-flowing">
+            <div class="step-index-flowing">3</div>
+            <h3 class="step-title-flowing" data-i18n="step3_title">Buzz it, Say it!</h3>
+            <p class="step-text-flowing" data-i18n="step3_text">Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen!</p>
+          </div>
+
+          <div class="step-box-flowing">
+            <div class="step-index-flowing">4</div>
+            <h3 class="step-title-flowing" data-i18n="step4_title">Live-Voting</h3>
+            <p class="step-text-flowing" data-i18n="step4_text">Alle Mitspieler stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: Deep Royal Steal Mode -->
+    <section id="steal" class="section-wrap sec-steal reveal-on-scroll">
+      <div class="container">
+        <div class="steal-feature">
+          <div class="steal-info">
+            <div class="steal-badge" data-i18n="steal_badge">Spannung pur ab 3 Spielern</div>
+            <h2 class="steal-title" data-i18n="steal_title">Spielmodus „Klau die Antwort“</h2>
+            <p style="color: var(--text-muted); font-size: 0.94rem;" data-i18n="steal_subtitle">
+              Zu früh gebuzzert und plötzlich ein Blackout? Im Steal-Modus bleibt jede Runde bis zur letzten Sekunde offen:
+            </p>
+
+            <ul class="steal-list">
+              <li>
+                <span class="steal-icon">⏱️</span>
+                <div>
+                  <strong data-i18n="steal_point1_strong">Die 3-Sekunden-Gnade:</strong> 
+                  <span data-i18n="steal_point1_text">Der Erst-Buzzer hat 6 Sekunden Zeit. Ticken die letzten 3 Sekunden an, leuchtet bei allen Gegnern der pulsierende Steal-Button auf.</span>
+                </div>
+              </li>
+              <li>
+                <span class="steal-icon">💥</span>
+                <div>
+                  <strong data-i18n="steal_point2_strong">Abstauben im richtigen Moment:</strong> 
+                  <span data-i18n="steal_point2_text">Wer zuerst stiehlt, schaltet die 3-Sekunden-Stealer-Phase frei und darf die Antwort selbst laut herausrufen.</span>
+                </div>
+              </li>
+              <li>
+                <span class="steal-icon">⚖️</span>
+                <div>
+                  <strong data-i18n="steal_point3_strong">Gremium-Jury:</strong> 
+                  <span data-i18n="steal_point3_text">Die beiden Duellanten sind gesperrt – neutrale Mitspieler stimmen per 3-Wege-Auswahl ab. Bei Stimmengleichstand triumphiert der mutige Stealer!</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="steal-visual">
+            <div class="pulse-steal-btn">
+              <span>STEAL!</span>
+              <small style="font-size: 0.65rem; font-weight: 700;">KLAUEN</small>
+            </div>
+            <div style="font-size: 0.82rem; color: var(--purple-light);" data-i18n="steal_box_note">
+              Pulsierender Steal-Trigger aktiviert sich bei den letzten 3 Sekunden!
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Radiant Level-Up Continuum -->
+    <section id="levels" class="section-wrap sec-levels reveal-on-scroll">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag" data-i18n="tag_levels">Der Thrill</div>
+          <h2 class="section-title" data-i18n="title_levels">Der Level-Up Thrill (Level 1 bis 10)</h2>
+          <p class="section-desc" data-i18n="desc_levels">
+            Je besser du wirst, desto gnadenloser tickt die Uhr. Wer behält bei maximalem Tempo die Nerven?
+          </p>
+        </div>
+
+        <div class="levels-grid">
+          <div class="level-card">
+            <div class="level-num">LEVEL 1</div>
+            <div class="level-time">20s</div>
+            <div class="level-desc" data-i18n="lvl_chill">Entspannter Warm-Up Modus</div>
+          </div>
+          <div class="level-card">
+            <div class="level-num">LEVEL 3</div>
+            <div class="level-time">14s</div>
+            <div class="level-desc" data-i18n="lvl_focus">Konzentration steigt spürbar</div>
+          </div>
+          <div class="level-card">
+            <div class="level-num">LEVEL 5</div>
+            <div class="level-time">8s</div>
+            <div class="level-desc" data-i18n="lvl_heat">Der Puls geht nach oben</div>
+          </div>
+          <div class="level-card">
+            <div class="level-num">LEVEL 8</div>
+            <div class="level-time">4s</div>
+            <div class="level-desc" data-i18n="lvl_extreme">Extremer Reaktionsdruck</div>
+          </div>
+          <div class="level-card featured">
+            <div class="level-num">🏆 LEVEL 10</div>
+            <div class="level-time" style="color: var(--yellow-primary);">2s</div>
+            <div class="level-desc" data-i18n="lvl_victory">Blitz-Finale – Hol dir den Sieg!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Dark Glow Highlights (6 Categories Showcase) -->
+    <section id="features" class="section-wrap sec-highlights reveal-on-scroll">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-tag" data-i18n="tag_features">Game Features</div>
+          <h2 class="section-title" data-i18n="title_features">Highlights, die BiSi einzigartig machen</h2>
+          <p class="section-desc" data-i18n="desc_features">Designt für unvergessliche Party-Nächte und spontane Spieleabende.</p>
+        </div>
+
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="feature-icon-badge">🌐</div>
+            <h3 data-i18n="f1_title">Endlose Kombinationen</h3>
+            <p data-i18n="f1_text">4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt endliche Kombinationen und unzählige spaßige Lösungen in jeder Runde!</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-badge">⚡</div>
+            <h3 data-i18n="f2_title">Echtzeit-Multiplayer</h3>
+            <p data-i18n="f2_text">Für bis zu 10 Freunde gleichzeitig. Beitritt sekundenschnell per 5-stelligem Raum-Code oder bequem per QR-Code Scan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-badge">📴</div>
+            <h3 data-i18n="f3_title">P2P & Cloud Sync</h3>
+            <p data-i18n="f3_text">Funktioniert sowohl im lokalen Netzwerk via schnellem Peer-to-Peer als auch global über zuverlässige Cloud-Server.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-badge">⚖️</div>
+            <h3 data-i18n="f4_title">Fair & Transparent</h3>
+            <p data-i18n="f4_text">Millisekundengenaue Erkennung des Erst-Buzzers, spürbares Vibrations-Feedback und demokratische Jury-Entscheidungen.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-badge">🌓</div>
+            <h3 data-i18n="f5_title">Dark & Light Mode</h3>
+            <p data-i18n="f5_text">Wechsle flexibel zwischen dem eleganten lila-gelben Dark Mode und einer klaren Light Mode Ansicht.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-badge">🔒</div>
+            <h3 data-i18n="f6_title">Zero Tracking & Privatsphäre</h3>
+            <p data-i18n="f6_text">Keine Werbebanner, kein Nutzer-Tracking und sofortiges Losspielen ohne lästigen Account-Zwang als Gast.</p>
+          </div>
+        </div>
+
+        <!-- Official Clean 6 Game Categories Showcase -->
+        <div class="categories-wrap">
+          <div class="categories-label" data-i18n="categories_label">Die 6 Kategorien im Spiel</div>
+          <div class="cat-chips">
+            <div class="cat-chip">🏙️ <span data-i18n="cat_city">Stadt</span></div>
+            <div class="cat-chip">📦 <span data-i18n="cat_item">Gegenstand</span></div>
+            <div class="cat-chip">🍎 <span data-i18n="cat_food">Lebensmittel</span></div>
+            <div class="cat-chip">⭐ <span data-i18n="cat_celebrity">Prominenter</span></div>
+            <div class="cat-chip">🌍 <span data-i18n="cat_country">Land</span></div>
+            <div class="cat-chip">🦁 <span data-i18n="cat_animal">Tier</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: Final iOS Download CTA -->
+    <section id="download" class="section-wrap sec-final-cta reveal-on-scroll">
+      <div class="container">
+        <div class="final-cta-card">
+          <h2 data-i18n="cta_title">Bist du schnell genug für Level 10?</h2>
+          <p data-i18n="cta_desc">Lade BiSi jetzt exklusiv für iOS herunter, starte eine Runde mit bis zu 10 Freunden und bring deine Party zum Kochen!</p>
+          
+          <a href="https://github.com/mbe209/quizzzGame/issues" target="_blank" class="store-badge-ios" style="background: rgba(0,0,0,0.45); border-color: var(--yellow-primary); padding: 12px 28px;">
+            <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.87-.93.04-2.02.63-2.67 1.38-.58.67-1.09 1.74-.96 2.78 1.04.08 2.08-.54 2.71-1.29z"/></svg>
+            <div>
+              <span class="store-text-sub" data-i18n="badge_ios_sub">Jetzt laden im</span>
+              <span class="store-text-main">Apple App Store <span class="exclusive-badge">Exklusiv</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand-logo">
+          <div class="brand-icon" style="width: 28px; height: 28px; font-size: 0.95rem;">⚡</div>
+          <div class="brand-name" style="font-size: 1.15rem;">BiSi<span>.</span></div>
+        </div>
+
+        <ul class="footer-links">
+          <li><a href="https://github.com/mbe209/quizzzGame/issues" target="_blank" data-i18n="footer_support">Support & Hilfe</a></li>
+          <li><a href="https://github.com/mbe209/quizzzGame/blob/main/docs/PRIVACY.md" target="_blank" data-i18n="footer_privacy">Datenschutz</a></li>
+          <li><a href="https://github.com/mbe209/quizzzGame" target="_blank">GitHub</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 BiSi: Buzz it, Say it. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></div>
+        <div style="color: var(--purple-light);" data-i18n="footer_meta">Exklusiv für iOS • Kategorie: Quiz & Familie • USK 4+</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Translation & Scroll Observer -->
+  <script>
+    var translations = {
+      de: {
+        nav_gameplay: "Spielablauf",
+        nav_steal: "Klau-Modus",
+        nav_levels: "Level-Up",
+        nav_features: "Highlights",
+        btn_get_app: "iOS App laden",
+        hero_pill: "⚡ Das #1 Reaktions-Quiz für bis zu 10 Freunde",
+        hero_title: 'Buchstabe sehen.<br>Thema checken.<br><span class="highlight">Buzzern & antworten!</span>',
+        hero_sub: "BiSi: Buzz it, Say it – Das Reaktions-Quiz",
+        hero_desc: "BiSi bringt den ultimativen Nervenkitzel von Stadt-Land-Fluss in Echtzeit auf euer iPhone & iPad. Kein Zubehör, keine Zettel, keine Ausreden: Wer zuerst auf den Buzzer haut, hat das Wort.",
+        badge_ios_sub: "Laden im",
+        proof_rating: "Bewertung",
+        proof_players: "Bis zu 10 Spieler",
+        proof_privacy: "Zero Tracking",
+        proof_age: "Freigabe 4+",
+        tag_how_it_works: "Gameplay",
+        title_how_it_works: "So einfach funktioniert's",
+        desc_how_it_works: "Keine Regelbücher, kein Einrichten – in 30 Sekunden ist deine Runde startklar.",
+        step1_title: "Synchroner Countdown",
+        step1_text: "3, 2, 1 … Bei Null erscheinen Buchstabe und Thema gleichzeitig auf allen iPhones der Gruppe.",
+        step2_title: "Schnellster Finger",
+        step2_text: "Triff den Buzzer dank ultraschneller Echtzeit-Erkennung und haptischem Taptic-Feedback vor deinen Mitspielern.",
+        step3_title: "Buzz it, Say it!",
+        step3_text: "Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen!",
+        step4_title: "Live-Voting",
+        step4_text: "Alle Mitspieler stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!",
+        steal_badge: "Spannung pur ab 3 Spielern",
+        steal_title: "Spielmodus „Klau die Antwort“",
+        steal_subtitle: "Zu früh gebuzzert und plötzlich ein Blackout? Im Steal-Modus bleibt jede Runde bis zur letzten Sekunde offen:",
+        steal_point1_strong: "Die 3-Sekunden-Gnade:",
+        steal_point1_text: "Der Erst-Buzzer hat 6 Sekunden Zeit. Ticken die letzten 3 Sekunden an, leuchtet bei allen Gegnern der pulsierende Steal-Button auf.",
+        steal_point2_strong: "Abstauben im richtigen Moment:",
+        steal_point2_text: "Wer zuerst stiehlt, schaltet die 3-Sekunden-Stealer-Phase frei und darf die Antwort selbst laut herausrufen.",
+        steal_point3_strong: "Gremium-Jury:",
+        steal_point3_text: "Die beiden Duellanten sind gesperrt – neutrale Mitspieler stimmen per 3-Wege-Auswahl ab. Bei Stimmengleichstand triumphiert der mutige Stealer!",
+        steal_box_note: "Pulsierender Steal-Trigger aktiviert sich bei den letzten 3 Sekunden!",
+        tag_levels: "Der Thrill",
+        title_levels: "Der Level-Up Thrill (Level 1 bis 10)",
+        desc_levels: "Je besser du wirst, desto gnadenloser tickt die Uhr. Wer behält bei maximalem Tempo die Nerven?",
+        lvl_chill: "Entspannter Warm-Up Modus",
+        lvl_focus: "Konzentration steigt spürbar",
+        lvl_heat: "Der Puls geht nach oben",
+        lvl_extreme: "Extremer Reaktionsdruck",
+        lvl_victory: "Blitz-Finale – Hol dir den Sieg!",
+        tag_features: "Game Features",
+        title_features: "Highlights, die BiSi einzigartig machen",
+        desc_features: "Designt für unvergessliche Party-Nächte und spontane Spieleabende.",
+        f1_title: "Endlose Kombinationen",
+        f1_text: "4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt endliche Kombinationen und unzählige spaßige Lösungen in jeder Runde!",
+        f2_title: "Echtzeit-Multiplayer",
+        f2_text: "Für bis zu 10 Freunde gleichzeitig. Beitritt sekundenschnell per 5-stelligem Raum-Code oder bequem per QR-Code Scan.",
+        f3_title: "P2P & Cloud Sync",
+        f3_text: "Funktioniert sowohl im lokalen Netzwerk via schnellem Peer-to-Peer als auch global über zuverlässige Cloud-Server.",
+        f4_title: "Fair & Transparent",
+        f4_text: "Millisekundengenaue Erkennung des Erst-Buzzers, spürbares Vibrations-Feedback und demokratische Jury-Entscheidungen.",
+        f5_title: "Dark & Light Mode",
+        f5_text: "Wechsle flexibel zwischen dem eleganten lila-gelben Dark Mode und einer klaren Light Mode Ansicht.",
+        f6_title: "Zero Tracking & Privatsphäre",
+        f6_text: "Keine Werbebanner, kein Nutzer-Tracking und sofortiges Losspielen ohne lästigen Account-Zwang als Gast.",
+        categories_label: "Die 6 Kategorien im Spiel",
+        cat_city: "Stadt",
+        cat_item: "Gegenstand",
+        cat_food: "Lebensmittel",
+        cat_celebrity: "Prominenter",
+        cat_country: "Land",
+        cat_animal: "Tier",
+        cta_title: "Bist du schnell genug für Level 10?",
+        cta_desc: "Lade BiSi jetzt exklusiv für iOS herunter, starte eine Runde mit bis zu 10 Freunden und bring deine Party zum Kochen!",
+        footer_support: "Support & Hilfe",
+        footer_privacy: "Datenschutz",
+        footer_rights: "Alle Rechte vorbehalten.",
+        footer_meta: "Exklusiv für iOS • Kategorie: Quiz & Familie • USK 4+"
+      },
+      en: {
+        nav_gameplay: "Gameplay",
+        nav_steal: "Steal Mode",
+        nav_levels: "Level-Up",
+        nav_features: "Highlights",
+        btn_get_app: "Get iOS App",
+        hero_pill: "⚡ The #1 Reaction Quiz for up to 10 Friends",
+        hero_title: 'See the letter.<br>Check topic.<br><span class="highlight">Buzz & shout!</span>',
+        hero_sub: "BiSi: Buzz it, Say it – The Fast Reaction Quiz",
+        hero_desc: "BiSi brings the classic thrill of Categories in real-time right onto your iPhone & iPad. No accessories, no paper slips, no excuses: The fastest finger gets the word.",
+        badge_ios_sub: "Download on",
+        proof_rating: "Rating",
+        proof_players: "Up to 10 Players",
+        proof_privacy: "Zero Tracking",
+        proof_age: "Rated 4+",
+        tag_how_it_works: "Gameplay",
+        title_how_it_works: "How it works",
+        desc_how_it_works: "No thick rulebooks, zero setup – ready to play in under 30 seconds.",
+        step1_title: "Synchronous Countdown",
+        step1_text: "3, 2, 1 … At zero, letter and category reveal simultaneously on everyone's iPhone.",
+        step2_title: "Fastest Finger Wins",
+        step2_text: "Hit the buzzer first thanks to ultra-precise real-time detection & Taptic haptic feedback.",
+        step3_title: "Buzz it, Say it!",
+        step3_text: "You have exactly 4 seconds to shout your answer loud and clear into the room!",
+        step4_title: "Live Peer Voting",
+        step4_text: "Everyone votes with thumbs up or down. With 50%+ approval, you advance to the next level!",
+        steal_badge: "High Tension for 3+ Players",
+        steal_title: "Game Mode: “Steal the Answer”",
+        steal_subtitle: "Buzzed too fast and went blank? In Steal Mode, no round is over until the last tick:",
+        steal_point1_strong: "The 3-Second Grace:",
+        steal_point1_text: "First buzzer gets 6 seconds. When the last 3 seconds start ticking, the pulsating Steal button unlocks for all opponents.",
+        steal_point2_strong: "Snatch at the right moment:",
+        steal_point2_text: "First to hit steal takes over in a 3-second showdown and shouts the answer.",
+        steal_point3_strong: "Neutral Peer Jury:",
+        steal_point3_text: "Both duelists are locked – impartial players vote via a 3-way choice. On a tie, the daring stealer wins!",
+        steal_box_note: "Pulsating steal button activates in the final 3 seconds!",
+        tag_levels: "The Thrill",
+        title_levels: "The Level-Up Ladder (Level 1 to 10)",
+        desc_levels: "As you progress, the timer gets relentless. Who keeps cool under extreme pressure?",
+        lvl_chill: "Relaxed warm-up round",
+        lvl_focus: "Focus intensifies",
+        lvl_heat: "Heart rate climbing",
+        lvl_extreme: "Extreme reaction rush",
+        lvl_victory: "Lightning final – Take the crown!",
+        tag_features: "Game Features",
+        title_features: "Highlights That Make BiSi Unique",
+        desc_features: "Built from scratch for unforgettable party nights and cozy gatherings.",
+        f1_title: "Infinite Combinations",
+        f1_text: "4 Languages (EN, DE, FR, ES), 6 core categories multiplied by all letters of the alphabet – creating finite combinations and countless fun solutions every round!",
+        f2_title: "Real-Time Multiplayer",
+        f2_text: "Play with up to 10 friends. Instant room join via a quick 5-digit PIN or direct QR code scan.",
+        f3_title: "P2P & Cloud Hybrid",
+        f3_text: "Runs seamlessly both in local Wi-Fi networks (peer-to-peer) and globally over low-latency cloud.",
+        f4_title: "Fair & Millisecond Precise",
+        f4_text: "Ultra-fast buzzer arbitration, rich tactile haptics, and democratic jury decisions.",
+        f5_title: "Dark & Light Mode",
+        f5_text: "Effortlessly toggle between our vibrant electric purple dark theme and a clean light interface.",
+        f6_title: "Zero Tracking & Privacy First",
+        f6_text: "No annoying banner ads, no analytics tracking, and jump in instantly as a guest without signing up.",
+        categories_label: "The 6 In-Game Categories",
+        cat_city: "City",
+        cat_item: "Item",
+        cat_food: "Food & Drinks",
+        cat_celebrity: "Celebrity",
+        cat_country: "Country",
+        cat_animal: "Animal",
+        cta_title: "Are you quick enough for Level 10?",
+        cta_desc: "Download BiSi exclusively on iOS, gather up to 10 friends, and let the buzzer showdown begin!",
+        footer_support: "Support & Issues",
+        footer_privacy: "Privacy Policy",
+        footer_rights: "All rights reserved.",
+        footer_meta: "Exclusive on iOS • Category: Trivia & Family • Rated: 4+"
+      },
+      es: {
+        nav_gameplay: "Cómo jugar",
+        nav_steal: "Modo Robo",
+        nav_levels: "Niveles",
+        nav_features: "Destacados",
+        btn_get_app: "Bajar App iOS",
+        hero_pill: "⚡ El juego de reacción #1 para hasta 10 amigos",
+        hero_title: 'Mira la letra.<br>Chequea el tema.<br><span class="highlight">¡Pulsa y responde!</span>',
+        hero_sub: "BiSi: Buzz it, Say it – El Quiz de Reacción Rápida",
+        hero_desc: "BiSi reinventa 'Basta / Tutti Frutti' en tiempo real en tu iPhone y iPad. Sin papel, sin lápices, sin excusas: el dedo más rápido tiene la palabra.",
+        badge_ios_sub: "Consíguelo en",
+        proof_rating: "Valoración",
+        proof_players: "Hasta 10 jugadores",
+        proof_privacy: "Cero Rastreo",
+        proof_age: "Clasificación 4+",
+        tag_how_it_works: "Mecánica",
+        title_how_it_works: "Así de sencillo es jugar",
+        desc_how_it_works: "Sin reglas complejas ni esperas: listos para competir en solo 30 segundos.",
+        step1_title: "Cuenta atrás sincronizada",
+        step1_text: "3, 2, 1 … A cero, la letra y la categoría se revelan a la vez en todos los iPhones del grupo.",
+        step2_title: "El más veloz gana",
+        step2_text: "Gana el turno gracias a la detección en milisegundos y la vibración háptica instantánea.",
+        step3_title: "Buzz it, Say it!",
+        step3_text: "¡Tienes exactamente 4 segundos para gritar tu respuesta en voz alta!",
+        step4_title: "Votación en vivo",
+        step4_text: "Todos votan con pulgar arriba o abajo. ¡Con el 50 % o más de apoyo subes de nivel!",
+        steal_badge: "Tensión máxima para 3+ jugadores",
+        steal_title: "Modo: «Roba la Respuesta»",
+        steal_subtitle: "¿Pulsaste antes de tiempo y te quedaste en blanco? La ronda sigue viva hasta el último segundo:",
+        steal_point1_strong: "Los 3 segundos de gracia:",
+        steal_point1_text: "El primer jugador tiene 6 segundos. Al entrar en los últimos 3 segundos, se ilumina el botón de Robo para los rivales.",
+        steal_point2_strong: "Aprovecha el momento:",
+        steal_point2_text: "El rival más rápido en pulsar el botón de robo tiene 3 segundos para cantar su respuesta.",
+        steal_point3_strong: "Jurado neutral:",
+        steal_point3_text: "Ambos duelistas quedan bloqueados. El resto de la sala vota. ¡En empate, gana el ladrón audaz!",
+        steal_box_note: "¡El botón de robo pulsa durante los últimos 3 segundos!",
+        tag_levels: "La Emoción",
+        title_levels: "Escalera de Niveles (1 al 10)",
+        desc_levels: "A medida que mejoras, el cronómetro no perdona. ¿Mantendrás la calma bajo presión?",
+        lvl_chill: "Calentamiento relajado",
+        lvl_focus: "La concentración sube",
+        lvl_heat: "El pulso se acelera",
+        lvl_extreme: "Presión máxima de respuesta",
+        lvl_victory: "¡Duelo relámpago – Hazte con la victoria!",
+        tag_features: "Características",
+        title_features: "Lo que hace único a BiSi",
+        desc_features: "Diseñado especialmente para noches de fiesta y reuniones memorables.",
+        f1_title: "Combinaciones infinitas",
+        f1_text: "4 idiomas (ES, DE, EN, FR), 6 categorías clave multiplicadas por todas las letras del alfabeto: ¡combinaciones finitas y un sinfín de respuestas divertidas!",
+        f2_title: "Multijugador en Vivo",
+        f2_text: "Hasta 10 amigos en la misma partida mediante código PIN de 5 dígitos o escaneando un código QR.",
+        f3_title: "P2P y Nube Híbrida",
+        f3_text: "Funciona en red local sin conexión a internet y también en línea global con baja latencia.",
+        f4_title: "Justo y Transparente",
+        f4_text: "Detección precisa de pulsaciones, retroalimentación táctil y decisiones consensuadas.",
+        f5_title: "Modo Oscuro y Claro",
+        f5_text: "Cambia en cualquier momento entre el modo oscuro vibrante y un modo claro refinado.",
+        f6_title: "Privacidad y Cero Anuncios",
+        f6_text: "Sin anuncios molestos, sin rastreo de datos y sin obligación de registro. Juega directo como invitado.",
+        categories_label: "Las 6 categorías del juego",
+        cat_city: "Ciudad",
+        cat_item: "Objeto",
+        cat_food: "Alimento",
+        cat_celebrity: "Famoso",
+        cat_country: "País",
+        cat_animal: "Animal",
+        cta_title: "¿Eres lo bastante rápido para el Nivel 10?",
+        cta_desc: "¡Descarga BiSi exclusivamente para iOS, reúne a tus amigos y desata la euforia en tu fiesta!",
+        footer_support: "Soporte y Ayuda",
+        footer_privacy: "Política de Privacidad",
+        footer_rights: "Todos los derechos reservados.",
+        footer_meta: "Exclusivo para iOS • Categoría: Trivia y Familia • Edad: 4+"
+      },
+      fr: {
+        nav_gameplay: "Règles",
+        nav_steal: "Mode Vol",
+        nav_levels: "Niveaux",
+        nav_features: "Atouts",
+        btn_get_app: "App iOS",
+        hero_pill: "⚡ Le jeu de réflexes #1 pour jusqu'à 10 amis",
+        hero_title: 'Vois la lettre.<br>Checke le thème.<br><span class="highlight">Buzzez & répondez !</span>',
+        hero_sub: "BiSi: Buzz it, Say it – Le Quiz de Réaction Ultime",
+        hero_desc: "BiSi transpose l'intensité du Petit Bac en temps réel sur votre iPhone & iPad. Zéro papier, zéro crayon, zéro excuse : le premier sur le buzzer prend la parole.",
+        badge_ios_sub: "Télécharger dans",
+        proof_rating: "Note",
+        proof_players: "Jusqu'à 10 joueurs",
+        proof_privacy: "Zéro Tracking",
+        proof_age: "Dès 4 ans",
+        tag_how_it_works: "Gameplay",
+        title_how_it_works: "Comment ça marche",
+        desc_how_it_works: "Aucune règle compliquée : commencez à jouer en moins de 30 secondes chrono.",
+        step1_title: "Compte à rebours synchrone",
+        step1_text: "3, 2, 1 … À zéro, la lettre et le thème s'affichent simultanément sur tous les iPhones du groupe.",
+        step2_title: "Doigt le plus rapide",
+        step2_text: "Soyez le premier sur le buzzer grâce à notre détection millimétrée et le retour haptique Taptic.",
+        step3_title: "Buzz it, Say it !",
+        step3_text: "Vous avez exactement 4 secondes pour crier votre réponse à voix haute !",
+        step4_title: "Vote instantané",
+        step4_text: "Tous les participants votent pouce levé ou baissé. Avec 50 % d'accord, vous montez d'un niveau !",
+        steal_badge: "Haute tension dès 3 joueurs",
+        steal_title: "Mode « Vole la réponse »",
+        steal_subtitle: "Buzzé trop tôt et trou de mémoire ? Avec le mode Steal, rien n'est joué jusqu'au bout :",
+        steal_point1_strong: "Le délai de 3 secondes :",
+        steal_point1_text: "Le premier joueur a 6 secondes. Dans les 3 dernières secondes, le buzzer de vol clignote chez tous les adversaires.",
+        steal_point2_strong: "Vol au bon moment :",
+        steal_point2_text: "Le premier adversaire qui appuie vole le tour pour crier sa propre réponse en 3 secondes.",
+        steal_point3_strong: "Jury neutre :",
+        steal_point3_text: "Les deux duellistes sont bloqués – le reste du groupe vote. En cas d'égalité, le voleur l'emporte !",
+        steal_box_note: "Le bouton de vol clignote durant les 3 dernières secondes !",
+        tag_levels: "Sensations",
+        title_levels: "L'ascension des Niveaux (1 à 10)",
+        desc_levels: "Plus vous progressez, plus l'horloge devient impitoyable. Garderez-vous votre calme ?",
+        lvl_chill: "Échauffement tranquille",
+        lvl_focus: "La concentration monte",
+        lvl_heat: "La pression augmente",
+        lvl_extreme: "Réflexes extrêmes exigés",
+        lvl_victory: "Finale éclair – Décrochez la victoire !",
+        tag_features: "Fonctionnalités",
+        title_features: "Ce qui rend BiSi unique",
+        desc_features: "Conçu spécialement pour dynamiser vos soirées entre amis et en famille.",
+        f1_title: "Combinaisons infinies",
+        f1_text: "4 langues (FR, DE, EN, ES), 6 catégories phares multipliées par toutes les lettres de l'alphabet : des combinaisons finies et une infinité de solutions hilarantes !",
+        f2_title: "Multijoueur en direct",
+        f2_text: "Jusqu'à 10 amis réunis instantanément grâce à un code PIN à 5 chiffres ou un simple scan QR code.",
+        f3_title: "P2P et Cloud Synchro",
+        f3_text: "Fonctionne aussi bien sur réseau local direct qu'en ligne partout dans le monde via le cloud.",
+        f4_title: "Équitable et précis",
+        f4_text: "Détection à la milliseconde près, vibrations haptiques et arbitrage collectif impartial.",
+        f5_title: "Thèmes Sombre & Clair",
+        f5_text: "Basculez facilement entre le mode sombre violet électrisant et un mode clair épuré.",
+        f6_title: "Confidentialité & Zéro Pub",
+        f6_text: "Aucune bannière publicitaire, aucun pistage et accès instantané sans création de compte.",
+        categories_label: "Les 6 catégories du jeu",
+        cat_city: "Ville",
+        cat_item: "Objet",
+        cat_food: "Aliment",
+        cat_celebrity: "Célébrité",
+        cat_country: "Pays",
+        cat_animal: "Animal",
+        cta_title: "Serez-vous assez rapide pour le Niveau 10 ?",
+        cta_desc: "Téléchargez BiSi en exclusivité sur iOS, invitez vos amis et faites vibrer votre soirée !",
+        footer_support: "Support & Assistance",
+        footer_privacy: "Confidentialité",
+        footer_rights: "Tous droits réservés.",
+        footer_meta: "Exclusif iOS • Catégorie : Quiz & Famille • Âge : 4+"
+      }
+    };
+
+    function setLanguage(lang) {
+      if (!translations[lang]) return;
+
+      var buttons = document.querySelectorAll('.lang-btn');
+      for (var i = 0; i < buttons.length; i++) {
+        var b = buttons[i];
+        if (b.getAttribute('data-lang') === lang) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      }
+
+      var data = translations[lang];
+      var elements = document.querySelectorAll('[data-i18n]');
+      for (var j = 0; j < elements.length; j++) {
+        var el = elements[j];
+        var key = el.getAttribute('data-i18n');
+        if (data[key] !== undefined) {
+          el.innerHTML = data[key];
+        }
+      }
+
+      document.documentElement.lang = lang;
+    }
+
+    // Smooth Scroll Reveal
+    document.addEventListener('DOMContentLoaded', function() {
+      var revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.remove('js-hidden');
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.08,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(function(el) {
+          el.classList.add('js-hidden');
+          observer.observe(el);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
