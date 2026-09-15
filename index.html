@@ -176,7 +176,7 @@
       box-shadow: var(--glow-yellow);
     }
 
-    /* Seamless Flowing Section Transitions */
+    /* Section Transitions */
     .section-wrap {
       padding: 110px 0;
       position: relative;
@@ -194,9 +194,8 @@
       z-index: 1;
     }
 
-    /* SECTION 1: Deep Indigo Purple to Amber Haze */
     .sec-hero {
-      padding: 85px 0 120px;
+      padding: 70px 0 100px;
       background: linear-gradient(180deg, #0d021e 0%, #16062f 60%, #1c083b 100%);
     }
 
@@ -206,7 +205,6 @@
         radial-gradient(circle at 18% 18%, rgba(123, 44, 191, 0.25) 0%, transparent 50%);
     }
 
-    /* SECTION 2: Seamless Amber Bloom (Soft Golden Atmosphere) */
     .sec-gameplay {
       background: linear-gradient(180deg, 
         #1c083b 0%, 
@@ -222,7 +220,6 @@
         radial-gradient(circle at 80% 80%, rgba(157, 78, 221, 0.15) 0%, transparent 50%);
     }
 
-    /* SECTION 3: Deep Royal Steal Mode */
     .sec-steal {
       background: linear-gradient(180deg, 
         #18062d 0%, 
@@ -238,7 +235,6 @@
         radial-gradient(circle at 25% 65%, rgba(157, 78, 221, 0.18) 0%, transparent 55%);
     }
 
-    /* SECTION 4: Radiant Level-Up Continuum */
     .sec-levels {
       background: linear-gradient(180deg, 
         #120424 0%, 
@@ -254,7 +250,6 @@
         radial-gradient(circle at 50% 80%, rgba(123, 44, 191, 0.18) 0%, transparent 60%);
     }
 
-    /* SECTION 5: Dark Glow Highlights */
     .sec-highlights {
       background: linear-gradient(180deg, 
         #0d021c 0%, 
@@ -263,7 +258,6 @@
         #110324 100%);
     }
 
-    /* SECTION 6: Final iOS Download CTA */
     .sec-final-cta {
       background: linear-gradient(180deg, 
         #110324 0%, 
@@ -272,7 +266,7 @@
       padding: 70px 0 100px;
     }
 
-    /* Safe Reveal on Scroll */
+    /* Scroll Reveal */
     .reveal-on-scroll {
       opacity: 1;
       transform: translateY(0);
@@ -290,16 +284,16 @@
       transform: translateY(0);
     }
 
-    /* Hero Layout */
+    /* Hero */
     .hero-grid {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 48px;
+      gap: 40px;
     }
 
     .hero-content {
-      flex: 1.15;
+      flex: 1.1;
     }
 
     .hero-badge-pill {
@@ -428,46 +422,154 @@
       color: var(--yellow-primary);
     }
 
-    /* Hero Visual */
+    /* -----------------------------------------------------------------
+       HERO APP SLIDER: Angepasst an Screenshots mit nativer iOS-Statusbar
+       ----------------------------------------------------------------- */
     .hero-visual {
-      flex: 1.05;
+      flex: 0.95;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       position: relative;
     }
 
     .ambient-glow {
       position: absolute;
-      width: 380px;
-      height: 380px;
-      background: radial-gradient(circle, rgba(255, 208, 0, 0.28) 0%, rgba(157, 78, 221, 0.18) 55%, transparent 70%);
+      width: 320px;
+      height: 480px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: radial-gradient(circle, rgba(255, 208, 0, 0.22) 0%, rgba(157, 78, 221, 0.24) 50%, transparent 72%);
       filter: blur(60px);
       z-index: 1;
       pointer-events: none;
     }
 
-    .hero-banner-wrapper {
+    /* Slider Positionierungs-Container mit seitlichen Buttons */
+    .slider-stage {
       position: relative;
       z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      max-width: 440px;
-      border-radius: 28px;
-      padding: 8px;
-      background: linear-gradient(145deg, rgba(255, 208, 0, 0.35), rgba(157, 78, 221, 0.2) 40%, rgba(16, 4, 34, 0.85) 100%);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), var(--glow-purple);
-      transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+      max-width: 360px;
     }
 
-    .hero-banner-wrapper:hover {
-      transform: translateY(-4px) scale(1.01);
-      box-shadow: 0 30px 75px rgba(0, 0, 0, 0.75), var(--glow-yellow);
+    /* Der Smartphone-Frame: Schlank, kein doppelter Rahmen */
+    .phone-mockup-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 270px;
+      height: 560px;
+      background: #090214;
+      border-radius: 46px;
+      padding: 7px;
+      border: 2px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.85),
+        0 0 35px rgba(157, 78, 221, 0.3);
+      user-select: none;
+      overflow: hidden;
     }
 
-    .hero-banner-img {
+    .phone-screen {
+      position: relative;
       width: 100%;
-      height: auto;
+      height: 100%;
+      border-radius: 39px;
+      overflow: hidden;
+      background: #0d031f;
+    }
+
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .slider-slide {
+      min-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .slider-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       display: block;
-      border-radius: 20px;
+      border-radius: 38px;
+    }
+
+    /* Pfeil-Buttons: Jetzt seitlich vom Smartphone platziert */
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(24, 8, 51, 0.85);
+      border: 1.5px solid rgba(255, 208, 0, 0.4);
+      color: #ffd000;
+      font-size: 1.15rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .slider-btn:hover {
+      background: var(--yellow-primary);
+      color: #120524;
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 0 16px rgba(255, 208, 0, 0.6);
+    }
+
+    .slider-btn.prev {
+      left: -6px;
+    }
+
+    .slider-btn.next {
+      right: -6px;
+    }
+
+    /* Slider Dots unterhalb */
+    .slider-dots {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .slider-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.22);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slider-dot.active {
+      background: var(--yellow-primary);
+      width: 24px;
+      border-radius: 99px;
+      box-shadow: 0 0 10px rgba(255, 208, 0, 0.6);
     }
 
     /* Section Heads */
@@ -504,7 +606,7 @@
       color: var(--text-muted);
     }
 
-    /* Gameplay Cards with Frosted Amber Highlights */
+    /* Steps */
     .steps-container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -560,7 +662,7 @@
       line-height: 1.6;
     }
 
-    /* Steal Mode Spotlight Feature */
+    /* Steal Mode */
     .steal-feature {
       background: linear-gradient(135deg, rgba(123, 44, 191, 0.22), rgba(20, 5, 42, 0.75));
       border: 1.5px solid var(--border-accent);
@@ -664,7 +766,7 @@
       100% { transform: scale(1); box-shadow: 0 0 12px rgba(255, 0, 85, 0.45); }
     }
 
-    /* Levels Continuum */
+    /* Levels */
     .levels-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -721,7 +823,7 @@
       color: #fff;
     }
 
-    /* Feature Highlights */
+    /* Highlights */
     .feature-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -771,7 +873,7 @@
       line-height: 1.6;
     }
 
-    /* Category Chips Area */
+    /* Category Chips */
     .categories-wrap {
       margin-top: 48px;
       text-align: center;
@@ -929,6 +1031,16 @@
       .hero-content h1 {
         font-size: 2.1rem;
       }
+      .phone-mockup-wrapper {
+        max-width: 240px;
+        height: 500px;
+      }
+      .slider-btn.prev {
+        left: -4px;
+      }
+      .slider-btn.next {
+        right: -4px;
+      }
       .steps-container {
         grid-template-columns: 1fr;
       }
@@ -983,7 +1095,7 @@
   </header>
 
   <main>
-    <!-- SECTION 1: Midnight Indigo Purple (Hero) -->
+    <!-- SECTION 1: Hero mit fehlerfreiem App-Slider -->
     <section class="section-wrap sec-hero">
       <div class="container hero-grid">
         <div class="hero-content">
@@ -1012,16 +1124,59 @@
           </div>
         </div>
 
+        <!-- HERO VISUAL: Perfekt abgestimmter App-Slider -->
         <div class="hero-visual">
           <div class="ambient-glow"></div>
-          <div class="hero-banner-wrapper">
-            <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/Gemini_Generated_Image_k15fvek15fvek15f.jpg" alt="BiSi Buzzer Hero Banner" class="hero-banner-img" />
+          
+          <div class="slider-stage" id="heroPhoneSlider">
+            <!-- Pfeile liegen außerhalb des Bildschirms -->
+            <button type="button" class="slider-btn prev" id="sliderPrev" aria-label="Vorheriges Bild">&#10094;</button>
+            <button type="button" class="slider-btn next" id="sliderNext" aria-label="Nächstes Bild">&#10095;</button>
+            
+            <div class="phone-mockup-wrapper">
+              <div class="phone-screen">
+                <div class="slider-track" id="sliderTrack">
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/0.PNG" alt="BiSi Screenshot 0" loading="eager" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/1.PNG" alt="BiSi Screenshot 1" loading="lazy" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/2.PNG" alt="BiSi Screenshot 2" loading="lazy" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/3.PNG" alt="BiSi Screenshot 3" loading="lazy" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/4.PNG" alt="BiSi Screenshot 4" loading="lazy" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/5.PNG" alt="BiSi Screenshot 5" loading="lazy" />
+                  </div>
+                  <div class="slider-slide">
+                    <img src="https://raw.githubusercontent.com/mbe209/Buzzitsay.it/refs/heads/main/6.PNG" alt="BiSi Screenshot 6" loading="lazy" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Dots sauber unterhalb -->
+          <div class="slider-dots" id="sliderDots">
+            <button type="button" class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
+            <button type="button" class="slider-dot" data-index="1" aria-label="Slide 2"></button>
+            <button type="button" class="slider-dot" data-index="2" aria-label="Slide 3"></button>
+            <button type="button" class="slider-dot" data-index="3" aria-label="Slide 4"></button>
+            <button type="button" class="slider-dot" data-index="4" aria-label="Slide 5"></button>
+            <button type="button" class="slider-dot" data-index="5" aria-label="Slide 6"></button>
+            <button type="button" class="slider-dot" data-index="6" aria-label="Slide 7"></button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SECTION 2: Seamless Amber Atmosphere (Gameplay) -->
+    <!-- SECTION 2: Gameplay -->
     <section id="gameplay" class="section-wrap sec-gameplay reveal-on-scroll">
       <div class="container">
         <div class="section-head">
@@ -1148,7 +1303,7 @@
       </div>
     </section>
 
-    <!-- SECTION 5: Dark Glow Highlights (6 Categories Showcase) -->
+    <!-- SECTION 5: Dark Glow Highlights -->
     <section id="features" class="section-wrap sec-highlights reveal-on-scroll">
       <div class="container">
         <div class="section-head">
@@ -1161,7 +1316,7 @@
           <div class="feature-card">
             <div class="feature-icon-badge">🌐</div>
             <h3 data-i18n="f1_title">Endlose Kombinationen</h3>
-            <p data-i18n="f1_text">4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt endliche Kombinationen und unzählige spaßige Lösungen in jeder Runde!</p>
+            <p data-i18n="f1_text">4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt unzählige spaßige Lösungen in jeder Runde!</p>
           </div>
 
           <div class="feature-card">
@@ -1195,7 +1350,6 @@
           </div>
         </div>
 
-        <!-- Official Clean 6 Game Categories Showcase -->
         <div class="categories-wrap">
           <div class="categories-label" data-i18n="categories_label">Die 6 Kategorien im Spiel</div>
           <div class="cat-chips">
@@ -1252,7 +1406,7 @@
     </div>
   </footer>
 
-  <!-- Translation & Scroll Observer -->
+  <!-- Scripts -->
   <script>
     var translations = {
       de: {
@@ -1303,7 +1457,7 @@
         title_features: "Highlights, die BiSi einzigartig machen",
         desc_features: "Designt für unvergessliche Party-Nächte und spontane Spieleabende.",
         f1_title: "Endlose Kombinationen",
-        f1_text: "4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt endliche Kombinationen und unzählige spaßige Lösungen in jeder Runde!",
+        f1_text: "4 Sprachen (DE, EN, FR, ES), 6 Kernkategorien multipliziert mit allen Buchstaben des Alphabets – das ergibt unzählige spaßige Lösungen in jeder Runde!",
         f2_title: "Echtzeit-Multiplayer",
         f2_text: "Für bis zu 10 Freunde gleichzeitig. Beitritt sekundenschnell per 5-stelligem Raum-Code oder bequem per QR-Code Scan.",
         f3_title: "P2P & Cloud Sync",
@@ -1376,7 +1530,7 @@
         title_features: "Highlights That Make BiSi Unique",
         desc_features: "Built from scratch for unforgettable party nights and cozy gatherings.",
         f1_title: "Infinite Combinations",
-        f1_text: "4 Languages (EN, DE, FR, ES), 6 core categories multiplied by all letters of the alphabet – creating finite combinations and countless fun solutions every round!",
+        f1_text: "4 Languages (EN, DE, FR, ES), 6 core categories multiplied by all letters of the alphabet – countless fun solutions every round!",
         f2_title: "Real-Time Multiplayer",
         f2_text: "Play with up to 10 friends. Instant room join via a quick 5-digit PIN or direct QR code scan.",
         f3_title: "P2P & Cloud Hybrid",
@@ -1449,7 +1603,7 @@
         title_features: "Lo que hace único a BiSi",
         desc_features: "Diseñado especialmente para noches de fiesta y reuniones memorables.",
         f1_title: "Combinaciones infinitas",
-        f1_text: "4 idiomas (ES, DE, EN, FR), 6 categorías clave multiplicadas por todas las letras del alfabeto: ¡combinaciones finitas y un sinfín de respuestas divertidas!",
+        f1_text: "4 idiomas (ES, DE, EN, FR), 6 categorías clave multiplicadas por todas las letras del alfabeto.",
         f2_title: "Multijugador en Vivo",
         f2_text: "Hasta 10 amigos en la misma partida mediante código PIN de 5 dígitos o escaneando un código QR.",
         f3_title: "P2P y Nube Híbrida",
@@ -1469,7 +1623,7 @@
         cat_animal: "Animal",
         cta_title: "¿Eres lo bastante rápido para el Nivel 10?",
         cta_desc: "¡Descarga BiSi exclusivamente para iOS, reúne a tus amigos y desata la euforia en tu fiesta!",
-        footer_support: "Soporte y Ayuda",
+        footer_support: "Support & Ayuda",
         footer_privacy: "Política de Privacidad",
         footer_rights: "Todos los derechos reservados.",
         footer_meta: "Exclusivo para iOS • Categoría: Trivia y Familia • Edad: 4+"
@@ -1522,7 +1676,7 @@
         title_features: "Ce qui rend BiSi unique",
         desc_features: "Conçu spécialement pour dynamiser vos soirées entre amis et en famille.",
         f1_title: "Combinaisons infinies",
-        f1_text: "4 langues (FR, DE, EN, ES), 6 catégories phares multipliées par toutes les lettres de l'alphabet : des combinaisons finies et une infinité de solutions hilarantes !",
+        f1_text: "4 langues (FR, DE, EN, ES), 6 catégories phares multipliées par toutes les lettres de l'alphabet.",
         f2_title: "Multijoueur en direct",
         f2_text: "Jusqu'à 10 amis réunis instantanément grâce à un code PIN à 5 chiffres ou un simple scan QR code.",
         f3_title: "P2P et Cloud Synchro",
@@ -1575,7 +1729,7 @@
       document.documentElement.lang = lang;
     }
 
-    // Smooth Scroll Reveal
+    // Scroll Observer
     document.addEventListener('DOMContentLoaded', function() {
       var revealElements = document.querySelectorAll('.reveal-on-scroll');
 
@@ -1598,6 +1752,98 @@
           observer.observe(el);
         });
       }
+
+      // Slider Navigation (0.PNG bis 6.PNG)
+      var currentSlide = 0;
+      var totalSlides = 7;
+      var track = document.getElementById('sliderTrack');
+      var dots = document.querySelectorAll('.slider-dot');
+      var prevBtn = document.getElementById('sliderPrev');
+      var nextBtn = document.getElementById('sliderNext');
+      var sliderStage = document.getElementById('heroPhoneSlider');
+      var autoSlideInterval;
+
+      function updateSlider(index) {
+        if (index < 0) {
+          currentSlide = totalSlides - 1;
+        } else if (index >= totalSlides) {
+          currentSlide = 0;
+        } else {
+          currentSlide = index;
+        }
+
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+
+        dots.forEach(function(dot, i) {
+          if (i === currentSlide) {
+            dot.classList.add('active');
+          } else {
+            dot.classList.remove('active');
+          }
+        });
+      }
+
+      function nextSlide() {
+        updateSlider(currentSlide + 1);
+      }
+
+      function prevSlide() {
+        updateSlider(currentSlide - 1);
+      }
+
+      function startAutoSlide() {
+        stopAutoSlide();
+        autoSlideInterval = setInterval(nextSlide, 4000);
+      }
+
+      function stopAutoSlide() {
+        if (autoSlideInterval) {
+          clearInterval(autoSlideInterval);
+        }
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', function() {
+        nextSlide();
+        startAutoSlide();
+      });
+
+      if (prevBtn) prevBtn.addEventListener('click', function() {
+        prevSlide();
+        startAutoSlide();
+      });
+
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          var targetIndex = parseInt(this.getAttribute('data-index'), 10);
+          updateSlider(targetIndex);
+          startAutoSlide();
+        });
+      });
+
+      if (sliderStage) {
+        sliderStage.addEventListener('mouseenter', stopAutoSlide);
+        sliderStage.addEventListener('mouseleave', startAutoSlide);
+
+        var touchStartX = 0;
+        var touchEndX = 0;
+
+        sliderStage.addEventListener('touchstart', function(e) {
+          touchStartX = e.changedTouches[0].screenX;
+          stopAutoSlide();
+        }, { passive: true });
+
+        sliderStage.addEventListener('touchend', function(e) {
+          touchEndX = e.changedTouches[0].screenX;
+          if (touchStartX - touchEndX > 40) {
+            nextSlide();
+          } else if (touchEndX - touchStartX > 40) {
+            prevSlide();
+          }
+          startAutoSlide();
+        }, { passive: true });
+      }
+
+      startAutoSlide();
     });
   </script>
 </body>
