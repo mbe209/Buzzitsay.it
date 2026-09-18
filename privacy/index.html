@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BISI – Datenschutzerklärung / Privacy Policy</title>
+    <meta name="description" content="Offizielle Datenschutzerklärung für BISI: Buzz it, Say it. Maximaler Datenschutz, kein Tracking, keine Werbung.">
+    <style>
+        :root {
+            --bg-base: #0f071a;
+            --bg-card: rgba(36, 17, 61, 0.75);
+            --bg-card-border: rgba(142, 68, 237, 0.25);
+            --accent-purple: #8b3dff;
+            --accent-gold: #ffc400;
+            --accent-gold-glow: rgba(255, 196, 0, 0.3);
+            --text-main: #f5f3f8;
+            --text-muted: #b8a9cf;
+            --text-heading: #ffffff;
+            --pill-active: #ffc400;
+            --pill-active-text: #17072b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: radial-gradient(circle at 50% 0%, #301454 0%, var(--bg-base) 70%);
+            color: var(--text-main);
+            line-height: 1.65;
+            min-height: 100vh;
+            padding: 20px 20px 80px;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* Top Language Switcher Bar */
+        .top-nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            margin-bottom: 30px;
+            background: rgba(27, 12, 48, 0.85);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 999px;
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 16px;
+            z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            background: rgba(49, 23, 84, 0.7);
+            border: 1px solid rgba(142, 68, 237, 0.3);
+            color: var(--text-main);
+            padding: 8px 18px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-size: 0.92rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-btn:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-1px);
+        }
+
+        .lang-btn.active {
+            background: var(--pill-active);
+            color: var(--pill-active-text);
+            border-color: var(--pill-active);
+            box-shadow: 0 4px 14px var(--accent-gold-glow);
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 196, 0, 0.12);
+            border: 1px solid rgba(255, 196, 0, 0.35);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+
+        h1 {
+            font-size: 2.35rem;
+            font-weight: 800;
+            color: var(--text-heading);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+            transition: opacity 0.2s ease;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .meta-date {
+            display: block;
+            margin-top: 6px;
+            font-size: 0.85rem;
+            color: rgba(184, 169, 207, 0.75);
+            transition: opacity 0.2s ease;
+        }
+
+        /* Highlights Grid */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .highlight-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 14px;
+            padding: 14px 16px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .highlight-icon {
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+
+        .highlight-title {
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .highlight-desc {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Policy Card */
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid var(--bg-card-border);
+            border-radius: 20px;
+            padding: 36px 32px;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .lang-section {
+            display: none;
+        }
+
+        .lang-section.active {
+            display: block;
+            animation: fadeIn 0.25s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            font-size: 1.65rem;
+            font-weight: 800;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(142, 68, 237, 0.2);
+        }
+
+        h3 {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 28px 0 10px;
+        }
+
+        h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin: 18px 0 6px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-main);
+        }
+
+        ul {
+            margin: 10px 0 18px 24px;
+            color: var(--text-main);
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        li strong {
+            color: #ffffff;
+        }
+
+        .contact-box {
+            background: rgba(139, 61, 255, 0.15);
+            border: 1px solid rgba(139, 61, 255, 0.4);
+            border-radius: 14px;
+            padding: 20px;
+            margin: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .contact-info strong {
+            display: block;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        .contact-info span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .btn-email {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-gold);
+            color: #17072b;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 10px 20px;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-email:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px var(--accent-gold-glow);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            color: var(--text-muted);
+            font-size: 0.88rem;
+        }
+
+        footer a {
+            color: var(--accent-gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.85rem; }
+            .policy-card { padding: 24px 18px; }
+            .contact-box { flex-direction: column; align-items: flex-start; }
+            .top-nav { border-radius: 16px; justify-content: space-between; }
+            .lang-btn { padding: 6px 12px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 1. Language Switcher ganz oben platziert -->
+        <nav class="top-nav" aria-label="Language selection">
+            <button class="lang-btn active" onclick="setLang('de')">🇩🇪 Deutsch</button>
+            <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
+            <button class="lang-btn" onclick="setLang('fr')">🇫🇷 Français</button>
+            <button class="lang-btn" onclick="setLang('es')">🇪🇸 Español</button>
+        </nav>
+
+        <!-- 2. Header (dynamisch übersetzt) -->
+        <header>
+            <div class="brand-badge" id="header-badge">⚡ BISI: Buzz it, Say it</div>
+            <h1 id="header-title">Datenschutzerklärung</h1>
+            <div class="subtitle" id="header-subtitle">Transparenz & Schutz deiner Privatsphäre</div>
+            <span class="meta-date" id="header-meta">Gültig ab: September 2026 • Letzte Aktualisierung: 18. September 2026</span>
+        </header>
+
+        <!-- 3. Key privacy guarantees (dynamisch übersetzt) -->
+        <div class="highlights">
+            <div class="highlight-card">
+                <div class="highlight-icon">🛡️</div>
+                <div class="highlight-title" id="hl-1-title">Zero Tracking</div>
+                <div class="highlight-desc" id="hl-1-desc">Keine Werbe-SDKs, kein Tracking</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">👤</div>
+                <div class="highlight-title" id="hl-2-title">Gast-Modus</div>
+                <div class="highlight-desc" id="hl-2-desc">100% anonym ohne Account spielbar</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">📡</div>
+                <div class="highlight-title" id="hl-3-title">Lokal & Sicher</div>
+                <div class="highlight-desc" id="hl-3-desc">P2P im Raum oder temporäre Cloud</div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">🗑️</div>
+                <div class="highlight-title" id="hl-4-title">Datenlöschung</div>
+                <div class="highlight-desc" id="hl-4-desc">In der App jederzeit mit 2 Klicks</div>
+            </div>
+        </div>
+
+        <!-- 4. Policy Text-Bereiche -->
+        <main class="policy-card">
+            <!-- ================= DEUTSCH ================= -->
+            <section id="lang-de" class="lang-section active">
+                <h2>Datenschutzerklärung (Deutsch)</h2>
+                <p>Der Schutz deiner persönlichen Daten ist uns ein zentrales Anliegen. Die App <strong>BISI: Buzz it, Say it</strong> (im Folgenden „App“) wurde nach dem Grundsatz der Datensparsamkeit („Privacy by Design“) entwickelt.</p>
+
+                <h3>1. Verantwortlicher & Kontakt</h3>
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <strong>Martin Bechtold</strong>
+                        <span>Entwickler & Verantwortlicher für die Datenverarbeitung</span><br>
+                        <span>E-Mail & Support: hello@buzzitsay.it</span>
+                    </div>
+                    <a href="mailto:hello@buzzitsay.it" class="btn-email">✉️ Support schreiben</a>
+                </div>
+
+                <h3>2. Welche Daten verarbeitet werden und warum</h3>
+                
+                <h4>A. Lokale Profildaten (Spitzname & Avatar)</h4>
+                <ul>
+                    <li><strong>Erfasste Daten:</strong> Dein selbst gewählter Spitzname (max. 15 Zeichen) und dein ausgewähltes Emoji-Avatar.</li>
+                    <li><strong>Zweck:</strong> Anzeige in der Spielliste und bei Spielrunden für deine Mitspieler.</li>
+                    <li><strong>Speicherung:</strong> Diese Daten verbleiben primär lokal auf deinem Gerät (<code>UserDefaults</code>).</li>
+                    <li><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung / Durchführung des Spiels).</li>
+                </ul>
+
+                <h4>B. Anmeldedaten (Apple Sign-In / Gast-Modus)</h4>
+                <ul>
+                    <li><strong>Sign in with Apple:</strong> Wenn du dich mit Apple anmeldest, erhalten wir lediglich eine anonymisierte Nutzerkennung (<code>userIdentifier</code>) und auf Wunsch deine verschleierte Relay-E-Mail von Apple. Wir speichern keine Passwörter.</li>
+                    <li><strong>Gast-Modus:</strong> Du kannst BISI uneingeschränkt als Gast nutzen, ohne persönliche Identifikatoren anzugeben.</li>
+                    <li><strong>Konto-Löschung:</strong> In den Einstellungen der App kannst du dein Profil und alle zugehörigen Daten jederzeit unwiderruflich von deinem Gerät löschen.</li>
+                </ul>
+
+                <h4>C. Lokales Netzwerk & Bluetooth (Multipeer / Bonjour)</h4>
+                <ul>
+                    <li><strong>Zweck:</strong> BISI verbindet Smartphones im selben Raum per lokalem Peer-to-Peer-Netzwerk (WLAN/Bonjour oder Bluetooth).</li>
+                    <li><strong>Datenfluss:</strong> Spieldaten (Buzzer-Reaktionszeiten, Spielernamen, Abstimmungen) werden direkt zwischen den beteiligten Geräten ausgetauscht. Kein Routing über zentrale Server für lokale Runden.</li>
+                </ul>
+
+                <h4>D. Optionale Online-Räume (Firebase Realtime Database)</h4>
+                <ul>
+                    <li><strong>Zweck:</strong> Ermöglicht Partien über Mobilfunk oder getrennte Netzwerke per Raum-Code oder QR-Code.</li>
+                    <li><strong>Daten:</strong> Temporäre Speicherung von 5-stelligem Raum-Code, Host-ID, Spielernamen und Spielereignissen.</li>
+                    <li><strong>Bereinigung:</strong> Räume werden sofort gelöscht, wenn der Host das Spiel beendet, und verfallen automatisch nach spätestens 3 Stunden.</li>
+                </ul>
+
+                <h4>E. Kamera-Nutzung</h4>
+                <ul>
+                    <li><strong>Zweck:</strong> Ausschließlich zum Scannen von Raum-QR-Codes. Es werden keine Bilder oder Videos gespeichert oder übertragen.</li>
+                </ul>
+
+                <h3>3. Kein Tracking & Keine Werbedaten</h3>
+                <p>BISI enthält <strong>keine Werbe-SDKs</strong>, <strong>keine Analysedienste von Drittanbietern</strong> und <strong>kein Tracking</strong> deines Nutzungsverhaltens über andere Apps oder Webseiten hinweg (Apple App Tracking Transparency: <code>false</code>).</p>
+
+                <h3>4. Deine Rechte</h3>
+                <p>Nach der DSGVO hast du das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17) und Einschränkung der Verarbeitung (Art. 18). Für Auskünfte oder Anliegen wende dich bitte direkt per E-Mail an <a href="mailto:hello@buzzitsay.it" style="color: var(--accent-gold);">hello@buzzitsay.it</a>.</p>
+            </section>
+
+            <!-- ================= ENGLISH ================= -->
+            <section id="lang-en" class="lang-section">
+                <h2>Privacy Policy (English)</h2>
+                <p>Protecting your personal data is our highest priority. <strong>BISI: Buzz it, Say it</strong> (the "App") is engineered under the strict principle of data minimization ("Privacy by Design").</p>
+
+                <h3>1. Data Controller & Contact</h3>
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <strong>Martin Bechtold</strong>
+                        <span>Developer & Data Controller</span><br>
+                        <span>Email & Support: hello@buzzitsay.it</span>
+                    </div>
+                    <a href="mailto:hello@buzzitsay.it" class="btn-email">✉️ Contact Support</a>
+                </div>
+
+                <h3>2. Data We Process and Why</h3>
+                
+                <h4>A. Local Profile Data (Nickname & Avatar)</h4>
+                <ul>
+                    <li><strong>Collected Data:</strong> Your chosen player nickname (up to 15 characters) and emoji avatar.</li>
+                    <li><strong>Purpose:</strong> Displaying your player card in lobby and game rounds to fellow players.</li>
+                    <li><strong>Storage:</strong> Stored locally on your device (<code>UserDefaults</code>).</li>
+                    <li><strong>Legal Basis:</strong> Art. 6 (1) (b) GDPR (contract performance / gameplay execution).</li>
+                </ul>
+
+                <h4>B. Authentication (Sign in with Apple / Guest Mode)</h4>
+                <ul>
+                    <li><strong>Sign in with Apple:</strong> We receive only an anonymized identifier (<code>userIdentifier</code>) and optionally Apple's private relay email. We never store passwords.</li>
+                    <li><strong>Guest Mode:</strong> You may enjoy BISI completely as a guest without providing any personal identifiers.</li>
+                    <li><strong>Account Deletion:</strong> You can permanently delete your account and all stored local data with two taps inside the app settings.</li>
+                </ul>
+
+                <h4>C. Local Network & Bluetooth (Multipeer / Bonjour)</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Connects players in the same physical room peer-to-peer via local Wi-Fi, Bonjour, or Bluetooth.</li>
+                    <li><strong>Data Flow:</strong> Buzzer timings, player names, and votes transfer directly between devices. No central servers are involved for local games.</li>
+                </ul>
+
+                <h4>D. Optional Online Rooms (Firebase Realtime Database)</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Enables multiplayer across cellular or separate networks using 5-digit room codes or QR codes.</li>
+                    <li><strong>Data:</strong> Ephemeral storage of room code, host ID, player nicknames, and gameplay events.</li>
+                    <li><strong>Retention:</strong> Rooms are deleted immediately when the host leaves, and expire automatically within 3 hours.</li>
+                </ul>
+
+                <h4>E. Camera Access</h4>
+                <ul>
+                    <li><strong>Purpose:</strong> Strictly for scanning room QR codes. No photo or video data is recorded or stored.</li>
+                </ul>
+
+                <h3>3. Zero Tracking & No Ads</h3>
+                <p>BISI contains <strong>no advertising SDKs</strong>, <strong>no third-party tracking libraries</strong>, and <strong>no cross-app tracking</strong> (Apple App Tracking Transparency: <code>false</code>).</p>
+
+                <h3>4. Your Rights</h3>
+                <p>Under GDPR and applicable privacy regulations, you have the right to access, rectify, and erase your data. For inquiries or support, please contact <a href="mailto:hello@buzzitsay.it" style="color: var(--accent-gold);">hello@buzzitsay.it</a>.</p>
+            </section>
+
+            <!-- ================= FRANÇAIS ================= -->
+            <section id="lang-fr" class="lang-section">
+                <h2>Politique de Confidentialité (Français)</h2>
+                <p>La protection de vos données personnelles est primordiale. L'application <strong>BISI: Buzz it, Say it</strong> (ci-après l'« Application ») est conçue selon le principe de minimisation des données (« Privacy by Design »).</p>
+
+                <h3>1. Responsable du traitement & Contact</h3>
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <strong>Martin Bechtold</strong>
+                        <span>Développeur & Responsable du traitement</span><br>
+                        <span>E-mail & Support : hello@buzzitsay.it</span>
+                    </div>
+                    <a href="mailto:hello@buzzitsay.it" class="btn-email">✉️ Contacter le support</a>
+                </div>
+
+                <h3>2. Données traitées et finalités</h3>
+                
+                <h4>A. Données de profil locales (Pseudo & Avatar)</h4>
+                <ul>
+                    <li><strong>Données collectées :</strong> Pseudo choisi (15 caractères max.) et avatar emoji.</li>
+                    <li><strong>Finalité :</strong> Affichage auprès des autres joueurs lors des parties.</li>
+                    <li><strong>Stockage :</strong> Stocké localement sur votre appareil (<code>UserDefaults</code>).</li>
+                </ul>
+
+                <h4>B. Authentification (Connexion Apple / Mode Invité)</h4>
+                <ul>
+                    <li><strong>Connexion avec Apple :</strong> Seul un identifiant anonymisé (<code>userIdentifier</code>) et un e-mail masqué éventuel sont traités. Aucun mot de passe n'est stocké.</li>
+                    <li><strong>Mode Invité :</strong> Vous pouvez jouer librement sans renseigner de données personnelles.</li>
+                    <li><strong>Suppression du compte :</strong> Un bouton dans les paramètres permet de supprimer immédiatement et définitivement toutes vos données locales.</li>
+                </ul>
+
+                <h4>C. Réseau local et Bluetooth (Multipeer / Bonjour)</h4>
+                <ul>
+                    <li><strong>Finalité :</strong> Connexion directe de pair à pair entre appareils dans la même pièce. Aucun serveur central n'est utilisé pour les parties locales.</li>
+                </ul>
+
+                <h4>D. Salons en ligne optionnels (Firebase Realtime Database)</h4>
+                <ul>
+                    <li><strong>Finalité :</strong> Permet de jouer à distance via un code à 5 chiffres ou un code QR.</li>
+                    <li><strong>Conservation :</strong> Les salons sont éphémères et automatiquement supprimés dès la fin de la partie (délai maximal de 3 heures).</li>
+                </ul>
+
+                <h4>E. Appareil photo</h4>
+                <ul>
+                    <li><strong>Finalité :</strong> Utilisé exclusivement pour scanner le code QR d'un salon. Aucune image ni vidéo n'est enregistrée.</li>
+                </ul>
+
+                <h3>3. Absence de traçage et de publicité</h3>
+                <p>BISI ne contient <strong>aucun SDK publicitaire</strong>, <strong>aucun outil d'analyse tiers</strong> et ne pratique <strong>aucun pistage</strong> de votre activité (Apple Tracking Transparency: <code>false</code>).</p>
+
+                <h3>4. Vos droits</h3>
+                <p>Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et d'effacement de vos données. Pour toute demande, écrivez à <a href="mailto:hello@buzzitsay.it" style="color: var(--accent-gold);">hello@buzzitsay.it</a>.</p>
+            </section>
+
+            <!-- ================= ESPAÑOL ================= -->
+            <section id="lang-es" class="lang-section">
+                <h2>Política de Privacidad (Español)</h2>
+                <p>La protección de tus datos personales es fundamental para nosotros. La aplicación <strong>BISI: Buzz it, Say it</strong> (en adelante la "Aplicación") ha sido desarrollada bajo el principio de minimización de datos ("Privacy by Design").</p>
+
+                <h3>1. Responsable del Tratamiento & Contacto</h3>
+                <div class="contact-box">
+                    <div class="contact-info">
+                        <strong>Martin Bechtold</strong>
+                        <span>Desarrollador & Responsable del tratamiento</span><br>
+                        <span>Correo & Soporte: hello@buzzitsay.it</span>
+                    </div>
+                    <a href="mailto:hello@buzzitsay.it" class="btn-email">✉️ Contactar soporte</a>
+                </div>
+
+                <h3>2. Datos recopilados y fines del tratamiento</h3>
+                
+                <h4>A. Datos de perfil local (Apodo y Avatar)</h4>
+                <ul>
+                    <li><strong>Datos recopilados:</strong> Tu apodo de jugador (máx. 15 caracteres) y el avatar emoji seleccionado.</li>
+                    <li><strong>Finalidad:</strong> Mostrar tu perfil a los demás jugadores en la sala y durante las rondas.</li>
+                    <li><strong>Almacenamiento:</strong> Se guarda de forma local en tu dispositivo (<code>UserDefaults</code>).</li>
+                </ul>
+
+                <h4>B. Autenticación (Iniciar sesión con Apple / Modo Invitado)</h4>
+                <ul>
+                    <li><strong>Iniciar sesión con Apple:</strong> Recibimos únicamente un identificador anónimo (<code>userIdentifier</code>) y, opcionalmente, la dirección de correo privada de Apple. No almacenamos contraseñas.</li>
+                    <li><strong>Modo Invitado:</strong> Puedes disfrutar de BISI al 100% como invitado sin proporcionar datos personales.</li>
+                    <li><strong>Eliminación de cuenta:</strong> Puedes borrar tu cuenta y todos los datos locales en cualquier momento desde los ajustes de la app.</li>
+                </ul>
+
+                <h4>C. Red local y Bluetooth (Multipeer / Bonjour)</h4>
+                <ul>
+                    <li><strong>Finalidad :</strong> Conectar dispositivos en la misma sala mediante red local de punto a punto (Wi-Fi/Bonjour o Bluetooth) sin servidores intermedios.</li>
+                </ul>
+
+                <h4>D. Salas online opcionales (Firebase Realtime Database)</h4>
+                <ul>
+                    <li><strong>Finalidad:</strong> Permite jugar a través de redes móviles usando códigos de sala de 5 dígitos o códigos QR.</li>
+                    <li><strong>Conservación:</strong> Las salas son efímeras y se eliminan inmediatamente cuando finaliza la partida (máximo 3 horas).</li>
+                </ul>
+
+                <h4>E. Acceso a la cámara</h4>
+                <ul>
+                    <li><strong>Finalidad:</strong> Exclusivamente para escanear códigos QR de unión a salas. No se guarda ninguna foto ni vídeo.</li>
+                </ul>
+
+                <h3>3. Sin rastreo ni publicidad</h3>
+                <p>BISI <strong>no incluye publicidad</strong>, <strong>no utiliza herramientas de análisis de terceros</strong> y <strong>no rastrea</strong> tu actividad (Apple Tracking Transparency: <code>false</code>).</p>
+
+                <h3>4. Tus derechos</h3>
+                <p>Conforme al RGPD, tienes derecho de acceso, rectificación y supresión de tus datos. Para cualquier consulta, escribe a <a href="mailto:hello@buzzitsay.it" style="color: var(--accent-gold);">hello@buzzitsay.it</a>.</p>
+            </section>
+        </main>
+
+        <!-- 5. Footer (dynamisch übersetzt) -->
+        <footer>
+            <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it">www.buzzitsay.it</a></p>
+            <p id="footer-tagline" style="margin-top: 6px; font-size: 0.8rem;">BISI: Buzz it, Say it ist ein eingetragenes Produkt.</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            de: {
+                title: "Datenschutzerklärung",
+                subtitle: "Transparenz & Schutz deiner Privatsphäre",
+                meta: "Gültig ab: September 2026 • Letzte Aktualisierung: 18. September 2026",
+                hl1Title: "Zero Tracking",
+                hl1Desc: "Keine Werbe-SDKs, kein Tracking",
+                hl2Title: "Gast-Modus",
+                hl2Desc: "100% anonym ohne Account spielbar",
+                hl3Title: "Lokal & Sicher",
+                hl3Desc: "P2P im Raum oder temporäre Cloud",
+                hl4Title: "Datenlöschung",
+                hl4Desc: "In der App jederzeit mit 2 Klicks",
+                footerCopy: "© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
+                footerTagline: "BISI: Buzz it, Say it ist ein eingetragenes Produkt."
+            },
+            en: {
+                title: "Privacy Policy",
+                subtitle: "Transparency & Privacy Protection",
+                meta: "Effective: September 2026 • Last updated: September 18, 2026",
+                hl1Title: "Zero Tracking",
+                hl1Desc: "No ad SDKs, no behavioral tracking",
+                hl2Title: "Guest Mode",
+                hl2Desc: "100% anonymous gameplay without an account",
+                hl3Title: "Local & Secure",
+                hl3Desc: "Direct P2P in room or ephemeral cloud",
+                hl4Title: "Data Erasure",
+                hl4Desc: "Delete in app anytime with 2 taps",
+                footerCopy: "© 2026 Martin Bechtold. All rights reserved. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
+                footerTagline: "BISI: Buzz it, Say it is a registered product."
+            },
+            fr: {
+                title: "Politique de Confidentialité",
+                subtitle: "Transparence et protection de votre vie privée",
+                meta: "En vigueur : Septembre 2026 • Dernière mise à jour : 18 septembre 2026",
+                hl1Title: "Zéro Pistage",
+                hl1Desc: "Aucun SDK publicitaire, aucun traçage",
+                hl2Title: "Mode Invité",
+                hl2Desc: "Jouez à 100 % anonymement sans compte",
+                hl3Title: "Local & Sécurisé",
+                hl3Desc: "P2P direct dans la pièce ou cloud éphémère",
+                hl4Title: "Suppression",
+                hl4Desc: "Effacez vos données dans l'app en 2 clics",
+                footerCopy: "© 2026 Martin Bechtold. Tous droits réservés. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
+                footerTagline: "BISI: Buzz it, Say it est un produit déposé."
+            },
+            es: {
+                title: "Política de Privacidad",
+                subtitle: "Transparencia y protección de tu privacidad",
+                meta: "Vigente desde: Septiembre 2026 • Última actualización: 18 de septiembre de 2026",
+                hl1Title: "Cero Rastreo",
+                hl1Desc: "Sin SDKs publicitarios ni seguimiento",
+                hl2Title: "Modo Invitado",
+                hl2Desc: "Juega 100% anónimo sin registrarte",
+                hl3Title: "Local y Seguro",
+                hl3Desc: "P2P directo en sala o nube efímera",
+                hl4Title: "Borrado de Datos",
+                hl4Desc: "Borra todo en la app en 2 toques",
+                footerCopy: "© 2026 Martin Bechtold. Todos los derechos reservados. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
+                footerTagline: "BISI: Buzz it, Say it es un producto registrado."
+            }
+        };
+
+        function setLang(lang) {
+            // Update active buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = Array.from(document.querySelectorAll('.lang-btn')).find(b => b.getAttribute('onclick').includes(lang));
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Update main policy body
+            document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+            const targetSection = document.getElementById('lang-' + lang);
+            if (targetSection) targetSection.classList.add('active');
+
+            // Update header and highlights
+            const t = translations[lang] || translations.de;
+            document.getElementById('header-title').textContent = t.title;
+            document.getElementById('header-subtitle').textContent = t.subtitle;
+            document.getElementById('header-meta').textContent = t.meta;
+
+            document.getElementById('hl-1-title').textContent = t.hl1Title;
+            document.getElementById('hl-1-desc').textContent = t.hl1Desc;
+            document.getElementById('hl-2-title').textContent = t.hl2Title;
+            document.getElementById('hl-2-desc').textContent = t.hl2Desc;
+            document.getElementById('hl-3-title').textContent = t.hl3Title;
+            document.getElementById('hl-3-desc').textContent = t.hl3Desc;
+            document.getElementById('hl-4-title').textContent = t.hl4Title;
+            document.getElementById('hl-4-desc').textContent = t.hl4Desc;
+
+            document.getElementById('footer-copy').innerHTML = t.footerCopy;
+            document.getElementById('footer-tagline').textContent = t.footerTagline;
+
+            document.documentElement.lang = lang;
+            window.location.hash = lang;
+        }
+
+        // Initialize from URL hash or default to German
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '').toLowerCase();
+            if (['de', 'en', 'fr', 'es'].includes(hash)) {
+                setLang(hash);
+            }
+        });
+    </script>
+</body>
+</html>
