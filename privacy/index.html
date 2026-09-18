@@ -567,7 +567,7 @@
         <!-- 5. Footer (dynamisch übersetzt) -->
         <footer>
             <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it">www.buzzitsay.it</a></p>
-            <p id="footer-tagline" style="margin-top: 6px; font-size: 0.8rem;">BISI: Buzz it, Say it ist ein eingetragenes Produkt.</p>
+            <p style="margin-top: 6px; font-size: 0.8rem;"><a href="https://www.buzzitsay.it/support/#de" id="footer-support-link">Hilfe & Support</a> • <span id="footer-tagline">BISI: Buzz it, Say it ist ein eingetragenes Produkt.</span></p>
         </footer>
     </div>
 
@@ -586,7 +586,8 @@
                 hl4Title: "Datenlöschung",
                 hl4Desc: "In der App jederzeit mit 2 Klicks",
                 footerCopy: "© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
-                footerTagline: "BISI: Buzz it, Say it ist ein eingetragenes Produkt."
+                footerTagline: "BISI: Buzz it, Say it ist ein eingetragenes Produkt.",
+                footerSupport: "Hilfe & Support"
             },
             en: {
                 title: "Privacy Policy",
@@ -601,7 +602,8 @@
                 hl4Title: "Data Erasure",
                 hl4Desc: "Delete in app anytime with 2 taps",
                 footerCopy: "© 2026 Martin Bechtold. All rights reserved. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
-                footerTagline: "BISI: Buzz it, Say it is a registered product."
+                footerTagline: "BISI: Buzz it, Say it is a registered product.",
+                footerSupport: "Help & Support"
             },
             fr: {
                 title: "Politique de Confidentialité",
@@ -613,10 +615,11 @@
                 hl2Desc: "Jouez à 100 % anonymement sans compte",
                 hl3Title: "Local & Sécurisé",
                 hl3Desc: "P2P direct dans la pièce ou cloud éphémère",
-                hl4Title: "Suppression",
-                hl4Desc: "Effacez vos données dans l'app en 2 clics",
+                hl4Title: "Suppression des Données",
+                hl4Desc: "Suppression en 2 clics dans l'app",
                 footerCopy: "© 2026 Martin Bechtold. Tous droits réservés. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
-                footerTagline: "BISI: Buzz it, Say it est un produit déposé."
+                footerTagline: "BISI: Buzz it, Say it est un produit déposé.",
+                footerSupport: "Aide & Support"
             },
             es: {
                 title: "Política de Privacidad",
@@ -631,7 +634,8 @@
                 hl4Title: "Borrado de Datos",
                 hl4Desc: "Borra todo en la app en 2 toques",
                 footerCopy: "© 2026 Martin Bechtold. Todos los derechos reservados. • <a href='https://www.buzzitsay.it'>www.buzzitsay.it</a>",
-                footerTagline: "BISI: Buzz it, Say it es un producto registrado."
+                footerTagline: "BISI: Buzz it, Say it es un producto registrado.",
+                footerSupport: "Ayuda y Soporte"
             }
         };
 
@@ -663,18 +667,26 @@
 
             document.getElementById('footer-copy').innerHTML = t.footerCopy;
             document.getElementById('footer-tagline').textContent = t.footerTagline;
+            const supportLink = document.getElementById('footer-support-link');
+            if (supportLink) {
+                supportLink.textContent = t.footerSupport;
+                supportLink.href = `https://www.buzzitsay.it/support/#${lang}`;
+            }
 
             document.documentElement.lang = lang;
             window.location.hash = lang;
         }
 
         // Initialize from URL hash or default to German
-        window.addEventListener('DOMContentLoaded', () => {
+        function initHash() {
             const hash = window.location.hash.replace('#', '').toLowerCase();
             if (['de', 'en', 'fr', 'es'].includes(hash)) {
                 setLang(hash);
             }
-        });
+        }
+
+        window.addEventListener('DOMContentLoaded', initHash);
+        window.addEventListener('hashchange', initHash);
     </script>
 </body>
 </html>
