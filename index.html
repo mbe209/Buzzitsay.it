@@ -118,7 +118,7 @@
     nav ul {
       display: flex;
       list-style: none;
-      gap: 26px;
+      gap: 20px;
     }
 
     nav a {
@@ -1073,6 +1073,7 @@
           <li><a href="#levels" data-i18n="nav_levels">Level-Up</a></li>
           <li><a href="#features" data-i18n="nav_features">Highlights</a></li>
           <li><a href="/support/#de" id="nav-support-link" data-i18n="footer_support">Support & Hilfe</a></li>
+          <li><a href="/privacy/#de" id="nav-privacy-link" data-i18n="nav_privacy">Datenschutz</a></li>
         </ul>
       </nav>
 
@@ -1408,6 +1409,7 @@
         nav_steal: "Klau-Modus",
         nav_levels: "Level-Up",
         nav_features: "Highlights",
+        nav_privacy: "Datenschutz",
         btn_get_app: "iOS App laden",
         hero_pill: "⚡ Das #1 Reaktions-Quiz für bis zu 10 Freunde",
         hero_title: 'Buchstabe sehen.<br>Thema checken.<br><span class="highlight">Buzzern & antworten!</span>',
@@ -1480,6 +1482,7 @@
         nav_steal: "Steal Mode",
         nav_levels: "Level-Up",
         nav_features: "Highlights",
+        nav_privacy: "Privacy Policy",
         btn_get_app: "Get iOS App",
         hero_pill: "⚡ The #1 Reaction Quiz for up to 10 Friends",
         hero_title: 'See the letter.<br>Check topic.<br><span class="highlight">Buzz & shout!</span>',
@@ -1552,6 +1555,7 @@
         nav_steal: "Modo Robo",
         nav_levels: "Niveles",
         nav_features: "Destacados",
+        nav_privacy: "Privacidad",
         btn_get_app: "Bajar App iOS",
         hero_pill: "⚡ El juego de reacción #1 para hasta 10 amigos",
         hero_title: 'Mira la letra.<br>Chequea el tema.<br><span class="highlight">¡Pulsa y responde!</span>',
@@ -1624,6 +1628,7 @@
         nav_steal: "Mode Vol",
         nav_levels: "Niveaux",
         nav_features: "Atouts",
+        nav_privacy: "Confidentialité",
         btn_get_app: "App iOS",
         hero_pill: "⚡ Le jeu de réflexes #1 pour jusqu'à 10 amis",
         hero_title: 'Vois la lettre.<br>Checke le thème.<br><span class="highlight">Buzzez & répondez !</span>',
@@ -1718,10 +1723,17 @@
 
       var navSupport = document.getElementById('nav-support-link');
       if (navSupport) navSupport.href = '/support/#' + lang;
+      var navPrivacy = document.getElementById('nav-privacy-link');
+      if (navPrivacy) navPrivacy.href = '/privacy/#' + lang;
       var footSupport = document.getElementById('footer-support-link');
       if (footSupport) footSupport.href = '/support/#' + lang;
       var footPrivacy = document.getElementById('footer-privacy-link');
       if (footPrivacy) footPrivacy.href = '/privacy/#' + lang;
+
+      // Preserve active language in URL hash without triggering anchor scroll
+      if (window.location.hash !== '#' + lang && (!window.location.hash || ['#de', '#en', '#fr', '#es'].includes(window.location.hash))) {
+        history.replaceState(null, '', '#' + lang);
+      }
 
       document.documentElement.lang = lang;
     }

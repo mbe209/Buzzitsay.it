@@ -42,13 +42,12 @@
             margin: 0 auto;
         }
 
-        /* Top Language Switcher Bar */
+        /* Top Nav & Language Switcher */
         .top-nav {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px;
-            padding: 12px 16px;
+            padding: 10px 20px;
             margin-bottom: 30px;
             background: rgba(27, 12, 48, 0.85);
             border: 1px solid var(--bg-card-border);
@@ -59,21 +58,45 @@
             z-index: 100;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
             flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-gold);
+        }
+
+        .lang-switch-wrap {
+            display: flex;
+            gap: 6px;
         }
 
         .lang-btn {
             background: rgba(49, 23, 84, 0.7);
             border: 1px solid rgba(142, 68, 237, 0.3);
             color: var(--text-main);
-            padding: 8px 18px;
+            padding: 6px 14px;
             border-radius: 999px;
             cursor: pointer;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             font-weight: 600;
             transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
 
         .lang-btn:hover {
@@ -290,23 +313,30 @@
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 680px) {
             h1 { font-size: 1.85rem; }
             .policy-card { padding: 24px 18px; }
             .contact-box { flex-direction: column; align-items: flex-start; }
-            .top-nav { border-radius: 16px; justify-content: space-between; }
-            .lang-btn { padding: 6px 12px; font-size: 0.85rem; }
+            .top-nav { border-radius: 16px; flex-direction: column; align-items: stretch; }
+            .nav-links { justify-content: space-around; }
+            .lang-switch-wrap { justify-content: center; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- 1. Language Switcher ganz oben platziert -->
-        <nav class="top-nav" aria-label="Language selection">
-            <button class="lang-btn active" onclick="setLang('de')">🇩🇪 Deutsch</button>
-            <button class="lang-btn" onclick="setLang('en')">🇬🇧 English</button>
-            <button class="lang-btn" onclick="setLang('fr')">🇫🇷 Français</button>
-            <button class="lang-btn" onclick="setLang('es')">🇪🇸 Español</button>
+        <!-- 1. Top Bar mit Links und Sprachumschalter -->
+        <nav class="top-nav" aria-label="Privacy navigation">
+            <div class="nav-links">
+                <a href="https://www.buzzitsay.it/#de" class="nav-link" id="nav-home">⚡ Startseite</a>
+                <a href="https://www.buzzitsay.it/support/#de" class="nav-link" id="nav-support">💬 Support & Hilfe</a>
+            </div>
+            <div class="lang-switch-wrap">
+                <button class="lang-btn active" onclick="setLang('de')">🇩🇪 DE</button>
+                <button class="lang-btn" onclick="setLang('en')">🇬🇧 EN</button>
+                <button class="lang-btn" onclick="setLang('fr')">🇫🇷 FR</button>
+                <button class="lang-btn" onclick="setLang('es')">🇪🇸 ES</button>
+            </div>
         </nav>
 
         <!-- 2. Header (dynamisch übersetzt) -->
@@ -568,7 +598,7 @@
 
         <!-- 5. Footer (dynamisch übersetzt) -->
         <footer>
-            <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it">www.buzzitsay.it</a></p>
+            <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it/#de">www.buzzitsay.it</a></p>
             <p style="margin-top: 6px; font-size: 0.8rem;"><a href="https://www.buzzitsay.it/support/#de" id="footer-support-link">Hilfe & Support</a> • <span id="footer-tagline">BISI: Buzz it, Say it ist ein eingetragenes Produkt.</span></p>
         </footer>
     </div>
@@ -576,6 +606,8 @@
     <script>
         const translations = {
             de: {
+                navHome: "⚡ Startseite",
+                navSupport: "💬 Support & Hilfe",
                 title: "Datenschutzerklärung",
                 subtitle: "Transparenz & Schutz deiner Privatsphäre",
                 meta: "Gültig ab: September 2026 • Letzte Aktualisierung: 18. September 2026",
@@ -592,6 +624,8 @@
                 footerSupport: "Hilfe & Support"
             },
             en: {
+                navHome: "⚡ Home",
+                navSupport: "💬 Support & Help",
                 title: "Privacy Policy",
                 subtitle: "Transparency & Privacy Protection",
                 meta: "Effective: September 2026 • Last updated: September 18, 2026",
@@ -608,6 +642,8 @@
                 footerSupport: "Help & Support"
             },
             fr: {
+                navHome: "⚡ Accueil",
+                navSupport: "💬 Support & Aide",
                 title: "Politique de Confidentialité",
                 subtitle: "Transparence et protection de votre vie privée",
                 meta: "En vigueur : Septembre 2026 • Dernière mise à jour : 18 septembre 2026",
@@ -624,6 +660,8 @@
                 footerSupport: "Aide & Support"
             },
             es: {
+                navHome: "⚡ Inicio",
+                navSupport: "💬 Soporte y Ayuda",
                 title: "Política de Privacidad",
                 subtitle: "Transparencia y protección de tu privacidad",
                 meta: "Vigente desde: Septiembre 2026 • Última actualización: 18 de septiembre de 2026",
@@ -654,6 +692,18 @@
 
             // Update header and highlights
             const t = translations[lang] || translations.de;
+
+            const navHome = document.getElementById('nav-home');
+            if (navHome) {
+                navHome.textContent = t.navHome;
+                navHome.href = `https://www.buzzitsay.it/#${lang}`;
+            }
+            const navSupport = document.getElementById('nav-support');
+            if (navSupport) {
+                navSupport.textContent = t.navSupport;
+                navSupport.href = `https://www.buzzitsay.it/support/#${lang}`;
+            }
+
             document.getElementById('header-title').textContent = t.title;
             document.getElementById('header-subtitle').textContent = t.subtitle;
             document.getElementById('header-meta').textContent = t.meta;
@@ -667,7 +717,7 @@
             document.getElementById('hl-4-title').textContent = t.hl4Title;
             document.getElementById('hl-4-desc').textContent = t.hl4Desc;
 
-            document.getElementById('footer-copy').innerHTML = t.footerCopy;
+            document.getElementById('footer-copy').innerHTML = t.footerCopy.replace("href='https://www.buzzitsay.it'", `href='https://www.buzzitsay.it/#${lang}'`);
             document.getElementById('footer-tagline').textContent = t.footerTagline;
             const supportLink = document.getElementById('footer-support-link');
             if (supportLink) {

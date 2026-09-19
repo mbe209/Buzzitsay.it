@@ -331,8 +331,8 @@
         <!-- 1. Top Bar mit Links und Sprachumschalter -->
         <nav class="top-nav" aria-label="Support navigation">
             <div class="nav-links">
-                <a href="https://www.buzzitsay.it" class="nav-link" id="nav-home">⚡ Startseite</a>
-                <a href="https://www.buzzitsay.it/privacy/" class="nav-link" id="nav-privacy">🛡️ Datenschutz</a>
+                <a href="https://www.buzzitsay.it/#de" class="nav-link" id="nav-home">⚡ Startseite</a>
+                <a href="https://www.buzzitsay.it/privacy/#de" class="nav-link" id="nav-privacy">🛡️ Datenschutz</a>
             </div>
             <div class="lang-switch-wrap">
                 <button class="lang-btn active" onclick="setLang('de')">🇩🇪 DE</button>
@@ -429,8 +429,8 @@
 
         <!-- 6. Footer -->
         <footer>
-            <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it">www.buzzitsay.it</a></p>
-            <p style="margin-top: 6px; font-size: 0.8rem;"><a href="https://www.buzzitsay.it/privacy/" id="footer-privacy-link">Datenschutzerklärung</a> • BISI: Buzz it, Say it</p>
+            <p id="footer-copy">© 2026 Martin Bechtold. Alle Rechte vorbehalten. • <a href="https://www.buzzitsay.it/#de">www.buzzitsay.it</a></p>
+            <p style="margin-top: 6px; font-size: 0.8rem;"><a href="https://www.buzzitsay.it/privacy/#de" id="footer-privacy-link">Datenschutzerklärung</a> • BISI: Buzz it, Say it</p>
         </footer>
     </div>
 
@@ -595,6 +595,7 @@
             const t = translations[lang] || translations.de;
 
             document.getElementById('nav-home').textContent = t.navHome;
+            document.getElementById('nav-home').href = `https://www.buzzitsay.it/#${lang}`;
             document.getElementById('nav-privacy').textContent = t.navPrivacy;
             document.getElementById('nav-privacy').href = `https://www.buzzitsay.it/privacy/#${lang}`;
 
@@ -636,7 +637,7 @@
             document.getElementById('faq-q4').textContent = t.faqQ4;
             document.getElementById('faq-a4').textContent = t.faqA4;
 
-            document.getElementById('footer-copy').innerHTML = t.footerCopy;
+            document.getElementById('footer-copy').innerHTML = t.footerCopy.replace("href='https://www.buzzitsay.it'", `href='https://www.buzzitsay.it/#${lang}'`);
             document.getElementById('footer-privacy-link').textContent = t.footerPrivacy;
             document.getElementById('footer-privacy-link').href = `https://www.buzzitsay.it/privacy/#${lang}`;
 
