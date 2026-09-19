@@ -478,23 +478,40 @@
       height: 100%;
       border-radius: 39px;
       overflow: hidden;
-      background: #0d031f;
+      background: #000;
     }
 
     .slider-track {
-      display: flex;
+      position: relative;
       width: 100%;
       height: 100%;
-      transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
     }
 
     .slider-slide {
-      min-width: 100%;
+      position: absolute;
+      inset: 0;
+      width: 100%;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: #000;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: scale(0.98);
+      will-change: opacity, transform;
+      pointer-events: none;
+      z-index: 1;
+      border-radius: 38px;
+    }
+
+    .slider-slide.active {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      pointer-events: auto;
+      z-index: 2;
     }
 
     .slider-slide img {
@@ -1132,26 +1149,26 @@
             <div class="phone-mockup-wrapper">
               <div class="phone-screen">
                 <div class="slider-track" id="sliderTrack">
-                  <div class="slider-slide">
-                    <img id="slider-img-0" src="./assets/animations/00_home_hero_loop_de.gif" alt="BiSi Home Screen Loop" loading="eager" />
+                  <div class="slider-slide active">
+                    <img id="slider-img-0" src="./assets/animations/00_home_hero_loop_de.gif" alt="BiSi Home Screen Loop" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-1" src="./assets/animations/01_welcome_brand_de.gif" alt="BiSi Einstieg & Marke" loading="lazy" />
+                    <img id="slider-img-1" src="./assets/animations/01_welcome_brand_de.gif" alt="BiSi Einstieg & Marke" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-2" src="./assets/animations/02_game_round_buzzer_de.gif" alt="BiSi Buzzer Runde" loading="lazy" />
+                    <img id="slider-img-2" src="./assets/animations/02_game_round_buzzer_de.gif" alt="BiSi Buzzer Runde" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-3" src="./assets/animations/03_steal_the_answer_de.gif" alt="BiSi Klau die Antwort" loading="lazy" />
+                    <img id="slider-img-3" src="./assets/animations/03_steal_the_answer_de.gif" alt="BiSi Klau die Antwort" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-4" src="./assets/animations/04_community_voting_de.gif" alt="BiSi Live Community Voting" loading="lazy" />
+                    <img id="slider-img-4" src="./assets/animations/04_community_voting_de.gif" alt="BiSi Live Community Voting" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-5" src="./assets/animations/05_victory_level_10_de.gif" alt="BiSi Sieg & Level 10" loading="lazy" />
+                    <img id="slider-img-5" src="./assets/animations/05_victory_level_10_de.gif" alt="BiSi Sieg & Level 10" loading="eager" decoding="async" />
                   </div>
                   <div class="slider-slide">
-                    <img id="slider-img-6" src="./assets/animations/06_countdown_stage_de.gif" alt="BiSi Countdown Stage" loading="lazy" />
+                    <img id="slider-img-6" src="./assets/animations/06_countdown_stage_de.gif" alt="BiSi Countdown Stage" loading="eager" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -1698,18 +1715,34 @@
       }
     };
 
+    function swapImageWithPreload(imgElement, newSrc) {
+      if (!imgElement) return;
+      if (imgElement.getAttribute('src') === newSrc || imgElement.src.endsWith(newSrc.replace(/^\.\//, ''))) return;
+
+      var tempImg = new Image();
+      tempImg.src = newSrc;
+
+      var applySrc = function() {
+        imgElement.src = newSrc;
+      };
+
+      if ('decode' in tempImg) {
+        tempImg.decode().then(applySrc).catch(applySrc);
+      } else {
+        tempImg.onload = applySrc;
+      }
+    }
+
     function setLanguage(lang) {
       if (!translations[lang]) return;
 
-      var buttons = document.querySelectorAll('.lang-btn');
-      for (var i = 0; i < buttons.length; i++) {
-        var b = buttons[i];
-        if (b.getAttribute('data-lang') === lang) {
-          b.classList.add('active');
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('active');
         } else {
-          b.classList.remove('active');
+          btn.classList.remove('active');
         }
-      }
+      });
 
       var data = translations[lang];
       var elements = document.querySelectorAll('[data-i18n]');
@@ -1730,27 +1763,14 @@
       var footPrivacy = document.getElementById('footer-privacy-link');
       if (footPrivacy) footPrivacy.href = '/privacy/#' + lang;
 
-      // Update Hero Slider Media according to selected language (All 7 Animated GIFs)
-      var s0 = document.getElementById('slider-img-0');
-      if (s0) s0.src = './assets/animations/00_home_hero_loop_' + lang + '.gif';
-
-      var s1 = document.getElementById('slider-img-1');
-      if (s1) s1.src = './assets/animations/01_welcome_brand_' + lang + '.gif';
-
-      var s2 = document.getElementById('slider-img-2');
-      if (s2) s2.src = './assets/animations/02_game_round_buzzer_' + lang + '.gif';
-
-      var s3 = document.getElementById('slider-img-3');
-      if (s3) s3.src = './assets/animations/03_steal_the_answer_' + lang + '.gif';
-
-      var s4 = document.getElementById('slider-img-4');
-      if (s4) s4.src = './assets/animations/04_community_voting_' + lang + '.gif';
-
-      var s5 = document.getElementById('slider-img-5');
-      if (s5) s5.src = './assets/animations/05_victory_level_10_' + lang + '.gif';
-
-      var s6 = document.getElementById('slider-img-6');
-      if (s6) s6.src = './assets/animations/06_countdown_stage_' + lang + '.gif';
+      // Update Hero Slider Media with zero-flicker preloading (All 7 Animated GIFs)
+      swapImageWithPreload(document.getElementById('slider-img-0'), './assets/animations/00_home_hero_loop_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-1'), './assets/animations/01_welcome_brand_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-2'), './assets/animations/02_game_round_buzzer_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-3'), './assets/animations/03_steal_the_answer_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-4'), './assets/animations/04_community_voting_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-5'), './assets/animations/05_victory_level_10_' + lang + '.gif');
+      swapImageWithPreload(document.getElementById('slider-img-6'), './assets/animations/06_countdown_stage_' + lang + '.gif');
 
       // Preserve active language in URL hash without triggering anchor scroll
       if (window.location.hash !== '#' + lang && (!window.location.hash || ['#de', '#en', '#fr', '#es'].includes(window.location.hash))) {
@@ -1794,10 +1814,10 @@
         });
       }
 
-      // Slider Navigation
+      // Slider Navigation (Seamless Stacked Cross-Fade)
       var currentSlide = 0;
       var totalSlides = 7;
-      var track = document.getElementById('sliderTrack');
+      var slides = document.querySelectorAll('.slider-slide');
       var dots = document.querySelectorAll('.slider-dot');
       var prevBtn = document.getElementById('sliderPrev');
       var nextBtn = document.getElementById('sliderNext');
@@ -1813,7 +1833,13 @@
           currentSlide = index;
         }
 
-        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        for (var s = 0; s < slides.length; s++) {
+          if (s === currentSlide) {
+            slides[s].classList.add('active');
+          } else {
+            slides[s].classList.remove('active');
+          }
+        }
 
         dots.forEach(function(dot, i) {
           if (i === currentSlide) {
@@ -1884,7 +1910,19 @@
         }, { passive: true });
       }
 
+      function preloadSliderImages() {
+        for (var i = 0; i < totalSlides; i++) {
+          var img = document.getElementById('slider-img-' + i);
+          if (img && img.src) {
+            var p = new Image();
+            p.src = img.src;
+            if ('decode' in p) p.decode().catch(function() {});
+          }
+        }
+      }
+
       startAutoSlide();
+      setTimeout(preloadSliderImages, 100);
     });
   </script>
 </body>
