@@ -1133,25 +1133,25 @@
               <div class="phone-screen">
                 <div class="slider-track" id="sliderTrack">
                   <div class="slider-slide">
-                    <img src="./0.PNG" alt="BiSi Screenshot 0" loading="eager" />
+                    <img id="slider-img-0" src="./assets/animations/home_de.gif" alt="BiSi Home Screen Loop" loading="eager" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./1.PNG" alt="BiSi Screenshot 1" loading="lazy" />
+                    <img id="slider-img-1" src="./assets/animations/countdown_de.gif" alt="BiSi Countdown Stage" loading="lazy" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./2.PNG" alt="BiSi Screenshot 2" loading="lazy" />
+                    <img id="slider-img-2" src="./assets/screenshots/de/01_welcome_brand.png" alt="BiSi Einstieg & Marke" loading="lazy" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./3.PNG" alt="BiSi Screenshot 3" loading="lazy" />
+                    <img id="slider-img-3" src="./assets/screenshots/de/02_game_round_buzzer.png" alt="BiSi Buzzer Runde" loading="lazy" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./4.PNG" alt="BiSi Screenshot 4" loading="lazy" />
+                    <img id="slider-img-4" src="./assets/screenshots/de/03_steal_the_answer.png" alt="BiSi Klau die Antwort" loading="lazy" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./5.PNG" alt="BiSi Screenshot 5" loading="lazy" />
+                    <img id="slider-img-5" src="./assets/screenshots/de/04_community_voting.png" alt="BiSi Live Community Voting" loading="lazy" />
                   </div>
                   <div class="slider-slide">
-                    <img src="./6.PNG" alt="BiSi Screenshot 6" loading="lazy" />
+                    <img id="slider-img-6" src="./assets/screenshots/de/05_victory_level_10.png" alt="BiSi Sieg & Level 10" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -1730,6 +1730,28 @@
       var footPrivacy = document.getElementById('footer-privacy-link');
       if (footPrivacy) footPrivacy.href = '/privacy/#' + lang;
 
+      // Update Hero Slider Media according to selected language
+      var s0 = document.getElementById('slider-img-0');
+      if (s0) s0.src = './assets/animations/home_' + lang + '.gif';
+
+      var s1 = document.getElementById('slider-img-1');
+      if (s1) s1.src = './assets/animations/countdown_' + lang + '.gif';
+
+      var s2 = document.getElementById('slider-img-2');
+      if (s2) s2.src = './assets/screenshots/' + lang + '/01_welcome_brand.png';
+
+      var s3 = document.getElementById('slider-img-3');
+      if (s3) s3.src = './assets/screenshots/' + lang + '/02_game_round_buzzer.png';
+
+      var s4 = document.getElementById('slider-img-4');
+      if (s4) s4.src = './assets/screenshots/' + lang + '/03_steal_the_answer.png';
+
+      var s5 = document.getElementById('slider-img-5');
+      if (s5) s5.src = './assets/screenshots/' + lang + '/04_community_voting.png';
+
+      var s6 = document.getElementById('slider-img-6');
+      if (s6) s6.src = './assets/screenshots/' + lang + '/05_victory_level_10.png';
+
       // Preserve active language in URL hash without triggering anchor scroll
       if (window.location.hash !== '#' + lang && (!window.location.hash || ['#de', '#en', '#fr', '#es'].includes(window.location.hash))) {
         history.replaceState(null, '', '#' + lang);
@@ -1812,7 +1834,7 @@
 
       function startAutoSlide() {
         stopAutoSlide();
-        autoSlideInterval = setInterval(nextSlide, 4000);
+        autoSlideInterval = setInterval(nextSlide, 6000);
       }
 
       function stopAutoSlide() {
