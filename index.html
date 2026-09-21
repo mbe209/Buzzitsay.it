@@ -318,6 +318,96 @@
       margin-bottom: 20px;
     }
 
+    .hero-trust-price-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 208, 0, 0.12);
+      border: 1px solid rgba(255, 208, 0, 0.4);
+      color: #ffe066;
+      padding: 8px 16px;
+      border-radius: 99px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+      box-shadow: 0 0 20px rgba(255, 208, 0, 0.15);
+    }
+
+    .sec-party-dynamic {
+      padding: 30px 0 50px 0;
+    }
+
+    .party-dynamic-card {
+      background: linear-gradient(135deg, rgba(139, 61, 255, 0.18) 0%, rgba(255, 208, 0, 0.08) 100%);
+      border: 1px solid rgba(255, 208, 0, 0.3);
+      border-radius: 24px;
+      padding: 36px 32px;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .party-dynamic-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      letter-spacing: 4px;
+    }
+
+    .party-dynamic-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+
+    .party-dynamic-text {
+      color: var(--text-muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .pricing-anchor-card {
+      background: rgba(255, 208, 0, 0.08);
+      border: 1px solid rgba(255, 208, 0, 0.35);
+      border-radius: 20px;
+      padding: 24px 28px;
+      max-width: 640px;
+      margin: 0 auto 30px auto;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(255, 208, 0, 0.12);
+    }
+
+    .pricing-anchor-tag {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--yellow-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .pricing-anchor-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .pricing-anchor-desc {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+
     .hero-content h1 {
       font-family: 'Outfit', sans-serif;
       font-size: 3.1rem;
@@ -1133,6 +1223,9 @@
           <div class="hero-badge-pill" data-i18n="hero_pill">⚡ Das #1 Reaktions-Quiz für bis zu 10 Freunde</div>
           <h1 data-i18n="hero_title">Buchstabe sehen.<br>Thema checken.<br><span class="highlight">Buzzern & antworten!</span></h1>
           <div class="hero-subtitle" data-i18n="hero_sub">BiSi: Buzz it, Say it – Das Reaktions-Quiz</div>
+          <div class="hero-trust-price-badge" data-i18n="hero_trust_price">
+            🥤 Billiger als das Getränk in deiner Location – Unendlicher Spielspaß für 3,99 €
+          </div>
           <p class="hero-desc" data-i18n="hero_desc">
             BiSi bringt den ultimativen Nervenkitzel von Stadt-Land-Fluss in Echtzeit auf euer iPhone & iPad. Kein Zubehör, keine Zettel, keine Ausreden: Wer zuerst auf den Buzzer haut, hat das Wort.
           </p>
@@ -1230,14 +1323,27 @@
           <div class="step-box-flowing">
             <div class="step-index-flowing">3</div>
             <h3 class="step-title-flowing" data-i18n="step3_title">Buzz it, Say it!</h3>
-            <p class="step-text-flowing" data-i18n="step3_text">Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen!</p>
+            <p class="step-text-flowing" data-i18n="step3_text">Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen (keine Texteingabe – dein Wort zählt!).</p>
           </div>
 
           <div class="step-box-flowing">
             <div class="step-index-flowing">4</div>
-            <h3 class="step-title-flowing" data-i18n="step4_title">Live-Voting</h3>
-            <p class="step-text-flowing" data-i18n="step4_text">Alle Mitspieler stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!</p>
+            <h3 class="step-title-flowing" data-i18n="step4_title">Mensch zu Mensch Live-Voting</h3>
+            <p class="step-text-flowing" data-i18n="step4_text">Deine Mitspieler hören zu und stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2B: In-Person Party Dynamic -->
+    <section class="section-wrap sec-party-dynamic reveal-on-scroll">
+      <div class="container">
+        <div class="party-dynamic-card">
+          <div class="party-dynamic-icon">🛋️ 🥤 👥</div>
+          <h2 class="party-dynamic-title" data-i18n="party_dynamic_title">Mensch zu Mensch: Echte Party-Stimmung statt stummes Handy-Starren</h2>
+          <p class="party-dynamic-text" data-i18n="party_dynamic_text">
+            BiSi ist kein steriles Handy-Quiz, bei dem alle schweigend auf ihr Display starren. Dein Smartphone ist nur der unbestechliche Buzzer und Schiedsrichter. Die eigentliche Action, die Diskussionen, das laute Herausrufen und die Lacher finden direkt zwischen euch im Raum statt! Setzt euch an einen Tisch, stellt die Getränke bereit und erlebt den Nervenkitzel echter Gesellschaftsspiele.
+          </p>
         </div>
       </div>
     </section>
@@ -1397,6 +1503,14 @@
     <section id="download" class="section-wrap sec-final-cta reveal-on-scroll">
       <div class="container">
         <div class="final-cta-card">
+          <div class="pricing-anchor-card">
+            <div class="pricing-anchor-tag" data-i18n="price_anchor_tag">🥤 Preis-Versprechen</div>
+            <h3 class="pricing-anchor-title" data-i18n="price_anchor_title">Günstiger als das Getränk in deiner Location</h3>
+            <p class="pricing-anchor-desc" data-i18n="price_anchor_desc">
+              Ein Erfrischungsgetränk oder Kaffee ist schnell leer. BiSi kostet einmalig nur 3,99 € – kein Abo, keine Werbung, keine versteckten Kosten – und liefert unendlich viele geladene Spieleabende für deine gesamte Freundesgruppe!
+            </p>
+          </div>
+
           <h2 data-i18n="cta_title">Bist du schnell genug für Level 10?</h2>
           <p data-i18n="cta_desc">Lade BiSi jetzt exklusiv für iOS herunter, starte eine Runde mit bis zu 10 Freunden und bring deine Party zum Kochen!</p>
           
@@ -1429,14 +1543,7 @@
 
       <div class="footer-bottom">
         <div>&copy; 2026 Martin Bechtold • BiSi: Buzz it, Say it. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></div>
-        <div style="color: var(--purple-light);" data-i18n="footer_meta">Exklusiv für iOS • Kategorie: Quiz & Familie • USK 4+</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script>
-    var translations = {
+        <div style="color: var(--purple-light);" data-i18n    var translations = {
       de: {
         nav_gameplay: "Spielablauf",
         nav_steal: "Klau-Modus",
@@ -1447,6 +1554,7 @@
         hero_pill: "⚡ Das #1 Reaktions-Quiz für bis zu 10 Freunde",
         hero_title: 'Buchstabe sehen.<br>Thema checken.<br><span class="highlight">Buzzern & antworten!</span>',
         hero_sub: "BiSi: Buzz it, Say it – Das Reaktions-Quiz",
+        hero_trust_price: "🥤 Billiger als das Getränk in deiner Location – Unendlicher Spielspaß für 3,99 €",
         hero_desc: "BiSi bringt den ultimativen Nervenkitzel von Stadt-Land-Fluss in Echtzeit auf euer iPhone & iPad. Kein Zubehör, keine Zettel, keine Ausreden: Wer zuerst auf den Buzzer haut, hat das Wort.",
         badge_ios_sub: "Laden im",
         proof_players: "Bis zu 10 Spieler",
@@ -1460,9 +1568,11 @@
         step2_title: "Schnellster Finger",
         step2_text: "Triff den Buzzer dank ultraschneller Echtzeit-Erkennung und haptischem Taptic-Feedback vor deinen Mitspielern.",
         step3_title: "Buzz it, Say it!",
-        step3_text: "Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen!",
-        step4_title: "Live-Voting",
-        step4_text: "Alle Mitspieler stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!",
+        step3_text: "Du hast genau 4 Sekunden Zeit, um deine Antwort laut & deutlich in den Raum zu rufen (keine Texteingabe – dein Wort zählt!).",
+        step4_title: "Mensch zu Mensch Live-Voting",
+        step4_text: "Deine Mitspieler hören zu und stimmen direkt per Daumen ab. Bei mindestens 50 % Zustimmung steigst du ein Level auf!",
+        party_dynamic_title: "Mensch zu Mensch: Echte Party-Stimmung statt stummes Handy-Starren",
+        party_dynamic_text: "BiSi ist kein steriles Handy-Quiz, bei dem alle schweigend auf ihr Display starren. Dein Smartphone ist nur der unbestechliche Buzzer und Schiedsrichter. Die eigentliche Action, die Diskussionen, das laute Herausrufen und die Lacher finden direkt zwischen euch im Raum statt! Setzt euch an einen Tisch, stellt die Getränke bereit und erlebt den Nervenkitzel echter Gesellschaftsspiele.",
         steal_badge: "Spannung pur ab 3 Spielern",
         steal_title: "Spielmodus „Klau die Antwort“",
         steal_subtitle: "Zu früh gebuzzert und plötzlich ein Blackout? Im Steal-Modus bleibt jede Runde bis zur letzten Sekunde offen:",
@@ -1503,6 +1613,9 @@
         cat_celebrity: "Prominenter",
         cat_country: "Land",
         cat_animal: "Tier",
+        price_anchor_tag: "🥤 Preis-Versprechen",
+        price_anchor_title: "Günstiger als das Getränk in deiner Location",
+        price_anchor_desc: "Ein Erfrischungsgetränk oder Kaffee ist schnell leer. BiSi kostet einmalig nur 3,99 € – kein Abo, keine Werbung, keine versteckten Kosten – und liefert unendlich viele geladene Spieleabende für deine gesamte Freundesgruppe!",
         cta_title: "Bist du schnell genug für Level 10?",
         cta_desc: "Lade BiSi jetzt exklusiv für iOS herunter, starte eine Runde mit bis zu 10 Freunden und bring deine Party zum Kochen!",
         footer_support: "Support & Hilfe",
@@ -1520,6 +1633,7 @@
         hero_pill: "⚡ The #1 Reaction Quiz for up to 10 Friends",
         hero_title: 'See the letter.<br>Check topic.<br><span class="highlight">Buzz & shout!</span>',
         hero_sub: "BiSi: Buzz it, Say it – The Fast Reaction Quiz",
+        hero_trust_price: "🥤 Cheaper than the drink at your table – Endless party fun for $3.99 / 3.99 €",
         hero_desc: "BiSi brings the classic thrill of Categories in real-time right onto your iPhone & iPad. No accessories, no paper slips, no excuses: The fastest finger gets the word.",
         badge_ios_sub: "Download on",
         proof_players: "Up to 10 Players",
@@ -1533,9 +1647,11 @@
         step2_title: "Fastest Finger Wins",
         step2_text: "Hit the buzzer first thanks to ultra-precise real-time detection & Taptic haptic feedback.",
         step3_title: "Buzz it, Say it!",
-        step3_text: "You have exactly 4 seconds to shout your answer loud and clear into the room!",
-        step4_title: "Live Peer Voting",
-        step4_text: "Everyone votes with thumbs up or down. With 50%+ approval, you advance to the next level!",
+        step3_text: "You have exactly 4 seconds to shout your answer loud and clear into the room (no typing required – your spoken word counts!).",
+        step4_title: "Human-to-Human Live Voting",
+        step4_text: "Your friends in the room listen and vote directly with thumbs up or down. With 50%+ approval, you advance to the next level!",
+        party_dynamic_title: "Human to Human: Real Party Energy Instead of Silent Phone Gazing",
+        party_dynamic_text: "BiSi is not a sterile phone quiz where everyone stares silently at a screen. Your iPhone is just the impartial referee and precision buzzer. The real thrill, the banter, the shouting out, and the laughter happen right between people in the room! Sit around a table, grab your drinks, and experience the buzz of true social gaming.",
         steal_badge: "High Tension for 3+ Players",
         steal_title: "Game Mode: “Steal the Answer”",
         steal_subtitle: "Buzzed too fast and went blank? In Steal Mode, no round is over until the last tick:",
@@ -1576,6 +1692,9 @@
         cat_celebrity: "Celebrity",
         cat_country: "Country",
         cat_animal: "Animal",
+        price_anchor_tag: "🥤 Value Promise",
+        price_anchor_title: "Cheaper Than the Drink at Your Table",
+        price_anchor_desc: "A coffee or soft drink is finished in 20 minutes. BiSi costs a one-time $3.99 / 3.99 € – no subscription, zero ads, no hidden fees – and delivers endless unforgettable party game nights for your entire crew!",
         cta_title: "Are you quick enough for Level 10?",
         cta_desc: "Download BiSi exclusively on iOS, gather up to 10 friends, and let the buzzer showdown begin!",
         footer_support: "Support & Help",
@@ -1593,6 +1712,7 @@
         hero_pill: "⚡ El juego de reacción #1 para hasta 10 amigos",
         hero_title: 'Mira la letra.<br>Chequea el tema.<br><span class="highlight">¡Pulsa y responde!</span>',
         hero_sub: "BiSi: Buzz it, Say it – El Quiz de Reacción Rápida",
+        hero_trust_price: "🥤 Más barato que la bebida en tu mesa – Diversión infinita por 3,99 €",
         hero_desc: "BiSi reinventa 'Basta / Tutti Frutti' en tiempo real en tu iPhone y iPad. Sin papel, sin lápices, sin excusas: el dedo más rápido tiene la palabra.",
         badge_ios_sub: "Consíguelo en",
         proof_players: "Hasta 10 jugadores",
@@ -1606,9 +1726,11 @@
         step2_title: "El más veloz gana",
         step2_text: "Gana el turno gracias a la detección en milisegundos y la vibración háptica instantánea.",
         step3_title: "Buzz it, Say it!",
-        step3_text: "¡Tienes exactamente 4 segundos para gritar tu respuesta en voz alta!",
-        step4_title: "Votación en vivo",
-        step4_text: "Todos votan con pulgar arriba o abajo. ¡Con el 50 % o más de apoyo subes de nivel!",
+        step3_text: "¡Tienes exactamente 4 segundos para gritar tu respuesta en voz alta en la sala (sin teclear nada: ¡tu palabra cuenta!)!",
+        step4_title: "Votación Humano a Humano",
+        step4_text: "Tus amigos escuchan y votan directamente con pulgar arriba o abajo. ¡Con el 50 % o más de apoyo subes de nivel!",
+        party_dynamic_title: "De Persona a Persona: Auténtica fiesta en lugar de pantallas silenciosas",
+        party_dynamic_text: "BiSi no es un quiz frío donde todos miran callados a sus móviles. Tu iPhone es solo el árbitro implacable y el pulsador de precisión. Las risas, los piques y las respuestas gritadas suceden cara a cara en la misma sala. Juntaos alrededor de la mesa, disfrutad de vuestras bebidas y vivid la emoción del juego social.",
         steal_badge: "Tensión máxima para 3+ jugadores",
         steal_title: "Modo: «Roba la Respuesta»",
         steal_subtitle: "¿Pulsaste antes de tiempo y te quedaste en blanco? La ronda sigue viva hasta el último segundo:",
@@ -1649,6 +1771,9 @@
         cat_celebrity: "Famoso",
         cat_country: "País",
         cat_animal: "Animal",
+        price_anchor_tag: "🥤 Promesa de Precio",
+        price_anchor_title: "Más barato que la bebida en tu mesa",
+        price_anchor_desc: "Un refresco o un café se acaba en 20 minutos. BiSi cuesta un pago único de solo 3,99 € —sin suscripciones, sin publicidad ni pagos sorpresa— y ofrece infinitas noches de risas para todo tu grupo de amigos.",
         cta_title: "¿Eres lo bastante rápido para el Nivel 10?",
         cta_desc: "¡Descarga BiSi exclusivamente para iOS, reúne a tus amigos y desata la euforia en tu fiesta!",
         footer_support: "Soporte y Ayuda",
@@ -1666,6 +1791,7 @@
         hero_pill: "⚡ Le jeu de réflexes #1 pour jusqu'à 10 amis",
         hero_title: 'Vois la lettre.<br>Checke le thème.<br><span class="highlight">Buzzez & répondez !</span>',
         hero_sub: "BiSi: Buzz it, Say it – Le Quiz de Réaction Ultime",
+        hero_trust_price: "🥤 Moins cher que la boisson à ta table – Des parties infinies pour 3,99 €",
         hero_desc: "BiSi transpose l'intensité du Petit Bac en temps réel sur votre iPhone & iPad. Zéro papier, zéro crayon, zéro excuse : le premier sur le buzzer prend la parole.",
         badge_ios_sub: "Télécharger dans",
         proof_players: "Jusqu'à 10 joueurs",
@@ -1679,9 +1805,11 @@
         step2_title: "Doigt le plus rapide",
         step2_text: "Soyez le premier sur le buzzer grâce à notre détection millimétrée et le retour haptique Taptic.",
         step3_title: "Buzz it, Say it !",
-        step3_text: "Vous avez exactement 4 secondes pour crier votre réponse à voix haute !",
-        step4_title: "Vote instantané",
-        step4_text: "Tous les participants votent pouce levé ou baissé. Avec 50 % d'accord, vous montez d'un niveau !",
+        step3_text: "Vous avez exactement 4 secondes pour crier votre réponse à voix haute dans la pièce (pas de saisie : seule votre voix compte !) !",
+        step4_title: "Vote Humain en Direct",
+        step4_text: "Vos amis écoutent et votent pouce levé ou baissé. Avec 50 % d'accord, vous montez d'un niveau !",
+        party_dynamic_title: "D'Humain à Humain : Vraie énergie de fête au lieu d'écrans silencieux",
+        party_dynamic_text: "BiSi n'est pas un quiz mobile anonyme où chacun fixe son écran en silence. Votre iPhone n'est que l'arbitre incorruptible et le buzzer instantané. L'action, les éclats de rire et les débats ont lieu directement entre vous dans la même pièce ! Réunissez-vous autour d'une table, préparez vos boissons et vivez le grand frisson du jeu de société moderne.",
         steal_badge: "Haute tension dès 3 joueurs",
         steal_title: "Mode « Vole la réponse »",
         steal_subtitle: "Buzzé trop tôt et trou de mémoire ? Avec le mode Steal, rien n'est joué jusqu'au bout :",
@@ -1722,6 +1850,9 @@
         cat_celebrity: "Célébrité",
         cat_country: "Pays",
         cat_animal: "Animal",
+        price_anchor_tag: "🥤 Promesse de Prix",
+        price_anchor_title: "Moins cher que la boisson à votre table",
+        price_anchor_desc: "Un soda ou un café est vite terminé. BiSi coûte seulement 3,99 € une fois pour toutes — sans abonnement, sans publicité ni frais cachés — et offre des soirées de jeu inoubliables pour toute votre bande !",
         cta_title: "Serez-vous assez rapide pour le Niveau 10 ?",
         cta_desc: "Téléchargez BiSi en exclusivité sur iOS, invitez vos amis et faites vibrer votre soirée !",
         footer_support: "Support & Assistance",
