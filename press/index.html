@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>BiSi – Presse & Media Kit</title>
+    <link rel="icon" type="image/png" href="../app-icon.png">
+    <link rel="apple-touch-icon" href="../app-icon.png">
+    <meta name="description" content="BiSi Presse & Media Kit: Pressetexte, Screenshots, Logos und Markenrichtlinien.">
+    <style>
+        :root {
+            --bg-base: #0f071a;
+            --bg-card: rgba(36, 17, 61, 0.75);
+            --bg-card-border: rgba(142, 68, 237, 0.25);
+            --accent-purple: #8b3dff;
+            --accent-gold: #ffc400;
+            --accent-gold-glow: rgba(255, 196, 0, 0.3);
+            --text-main: #f5f3f8;
+            --text-muted: #b8a9cf;
+            --text-heading: #ffffff;
+            --pill-active: #ffc400;
+            --pill-active-text: #17072b;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: radial-gradient(circle at 50% 0%, #301454 0%, var(--bg-base) 70%);
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.65;
+            min-height: 100vh;
+            padding: 20px 16px 80px;
+        }
+        .container { max-width: 980px; margin: 0 auto; }
+        a { color: var(--accent-gold); }
+
+        /* Top nav */
+        .top-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px 20px; margin-bottom: 34px;
+            background: rgba(27, 12, 48, 0.85); border: 1px solid var(--bg-card-border);
+            border-radius: 999px; backdrop-filter: blur(20px);
+            position: sticky; top: 16px; z-index: 100;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45); flex-wrap: wrap; gap: 12px;
+        }
+        .nav-links { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+        .nav-link { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 600; }
+        .nav-link:hover { color: var(--accent-gold); }
+        .lang-switch-wrap { display: flex; gap: 6px; flex-wrap: wrap; }
+        .lang-btn {
+            background: rgba(49, 23, 84, 0.7); border: 1px solid rgba(142, 68, 237, 0.3); color: var(--text-main);
+            padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: 0.88rem; font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover { border-color: var(--accent-gold); transform: translateY(-1px); }
+        .lang-btn.active { background: var(--pill-active); color: var(--pill-active-text); border-color: var(--pill-active); box-shadow: 0 4px 14px var(--accent-gold-glow); }
+
+        /* Header */
+        header { text-align: center; margin-bottom: 40px; }
+        .hero-logo { width: 132px; height: 132px; margin: 0 auto 14px; display: block; filter: drop-shadow(0 0 22px rgba(255,196,0,.28)); }
+        .brand-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255, 196, 0, 0.12); border: 1px solid rgba(255, 196, 0, 0.35); color: var(--accent-gold);
+            padding: 6px 16px; border-radius: 999px; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em;
+            text-transform: uppercase; margin-bottom: 14px;
+        }
+        h1 { font-size: 2.35rem; font-weight: 800; color: var(--text-heading); letter-spacing: -0.02em; margin-bottom: 10px; line-height: 1.2; }
+        .subtitle { color: var(--text-muted); font-size: 1.08rem; max-width: 660px; margin: 0 auto 24px; }
+        .cta-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            padding: 12px 22px; border-radius: 999px; transition: all 0.2s ease; cursor: pointer; border: none;
+        }
+        .btn-gold { background: var(--accent-gold); color: var(--pill-active-text); box-shadow: 0 6px 20px var(--accent-gold-glow); }
+        .btn-gold:hover { transform: translateY(-2px); }
+        .btn-ghost { background: rgba(49, 23, 84, 0.7); color: var(--text-main); border: 1px solid rgba(142, 68, 237, 0.45); }
+        .btn-ghost:hover { border-color: var(--accent-gold); }
+
+        /* Sections */
+        section { margin-bottom: 26px; }
+        .card {
+            background: var(--bg-card); border: 1px solid var(--bg-card-border); border-radius: 20px;
+            padding: 28px; backdrop-filter: blur(14px);
+        }
+        h2 { font-size: 1.45rem; font-weight: 800; color: var(--text-heading); margin-bottom: 6px; letter-spacing: -0.01em; }
+        h2 .dot { color: var(--accent-gold); }
+        h3 { font-size: 1.05rem; font-weight: 700; color: #fff; margin: 22px 0 10px; }
+        .lead { color: var(--text-muted); margin-bottom: 18px; font-size: 0.97rem; }
+
+        /* Facts */
+        .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .fact { background: rgba(23, 10, 41, 0.6); border: 1px solid var(--bg-card-border); border-radius: 16px; padding: 18px; }
+        .fact b { display: block; font-size: 2rem; font-weight: 900; color: var(--accent-gold); line-height: 1; letter-spacing: -0.02em; }
+        .fact span { display: block; margin-top: 8px; color: var(--text-muted); font-size: 0.88rem; line-height: 1.35; }
+
+        /* Boilerplate */
+        .boiler { position: relative; background: rgba(23, 10, 41, 0.6); border: 1px dashed rgba(255,196,0,.35); border-radius: 14px; padding: 18px 18px 18px; margin-top: 18px; }
+        .boiler p { color: var(--text-main); font-size: 0.95rem; padding-right: 4px; }
+        .copy-btn {
+            margin-top: 12px; background: transparent; color: var(--accent-gold); border: 1px solid rgba(255,196,0,.5);
+            border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 0.82rem; cursor: pointer;
+        }
+        .copy-btn:hover { background: rgba(255,196,0,.12); }
+
+        /* Downloads table */
+        .table-wrap { overflow-x: auto; }
+        table.dl { width: 100%; border-collapse: collapse; font-size: 0.93rem; min-width: 640px; }
+        table.dl th, table.dl td { padding: 12px 10px; border-bottom: 1px solid rgba(142,68,237,.22); text-align: left; }
+        table.dl th { color: var(--text-muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .06em; }
+        table.dl td:first-child { color: #fff; font-weight: 600; }
+        table.dl td small { display: block; color: var(--text-muted); font-weight: 400; font-size: 0.8rem; }
+        table.dl a.pill {
+            display: inline-block; text-decoration: none; font-weight: 700; font-size: 0.82rem; padding: 5px 12px; border-radius: 999px;
+            background: rgba(49, 23, 84, 0.8); border: 1px solid rgba(142, 68, 237, 0.4); color: var(--text-main);
+        }
+        table.dl a.pill:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+        table.dl a.pill.cur { background: var(--accent-gold); color: var(--pill-active-text); border-color: var(--accent-gold); }
+        table.dl .pills { display: flex; flex-wrap: wrap; gap: 5px; }
+
+        /* Screenshots */
+        .shots { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+        .shots a { display: block; border-radius: 16px; overflow: hidden; border: 1px solid var(--bg-card-border); background: #0b0614; aspect-ratio: 1290 / 2796; }
+        .shots img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s ease; }
+        .shots a:hover img { transform: scale(1.04); }
+
+        /* Brand */
+        .logos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+        .logo-tile { background: rgba(23, 10, 41, 0.6); border: 1px solid var(--bg-card-border); border-radius: 16px; padding: 14px; text-align: center; }
+        .logo-tile .prev { height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 10px;
+            background: repeating-conic-gradient(rgba(255,255,255,.05) 0% 25%, transparent 0% 50%) 50% / 16px 16px; }
+        .logo-tile .prev img { max-height: 110px; max-width: 100%; border-radius: 12px; }
+        .logo-tile .name { font-size: 0.85rem; color: #fff; font-weight: 600; line-height: 1.3; min-height: 2.6em; }
+        .logo-tile a { display: inline-block; margin-top: 8px; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+
+        .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+        .swatch { border-radius: 14px; overflow: hidden; border: 1px solid var(--bg-card-border); background: rgba(23, 10, 41, 0.6); cursor: pointer; text-align: left; color: inherit; font: inherit; padding: 0; }
+        .swatch:hover { border-color: var(--accent-gold); }
+        .swatch .chip { height: 70px; }
+        .swatch .meta { padding: 10px 12px; }
+        .swatch .meta b { display: block; color: #fff; font-size: 0.88rem; }
+        .swatch .meta code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 0.82rem; color: var(--accent-gold); }
+        .swatch .meta span { display: block; font-size: 0.76rem; color: var(--text-muted); line-height: 1.35; margin-top: 3px; }
+
+        .type-demo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .type-box { background: rgba(23, 10, 41, 0.6); border: 1px solid var(--bg-card-border); border-radius: 16px; padding: 18px; }
+        .wordmark { font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; font-weight: 900; font-size: 3rem; color: #fff; line-height: 1; letter-spacing: -0.02em; }
+        .wordmark i { font-style: normal; color: #FBBF24; }
+        .claim { font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif; font-weight: 900; letter-spacing: .2em; color: #FBBF24; margin-top: 8px; font-size: 0.95rem; }
+        .type-box p { color: var(--text-muted); font-size: 0.9rem; margin-top: 10px; }
+
+        .rules { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .rule { border-radius: 16px; padding: 18px; border: 1px solid; }
+        .rule.do { background: rgba(41, 196, 112, .08); border-color: rgba(41, 196, 112, .35); }
+        .rule.dont { background: rgba(240, 77, 77, .08); border-color: rgba(240, 77, 77, .35); }
+        .rule h4 { font-size: 0.95rem; margin-bottom: 8px; }
+        .rule.do h4 { color: #4ade80; } .rule.dont h4 { color: #f87171; }
+        .rule ul { list-style: none; }
+        .rule li { font-size: 0.9rem; color: var(--text-main); padding-left: 18px; position: relative; margin-bottom: 6px; }
+        .rule.do li::before { content: "✓"; position: absolute; left: 0; color: #4ade80; font-weight: 800; }
+        .rule.dont li::before { content: "✕"; position: absolute; left: 0; color: #f87171; font-weight: 800; }
+
+        .contact { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
+            background: linear-gradient(135deg, rgba(124,58,237,.45), rgba(36,17,61,.85)); border-color: rgba(167,139,250,.45); }
+        .contact .mail { font-size: 1.3rem; font-weight: 800; color: var(--accent-gold); }
+        .note { color: var(--text-muted); font-size: 0.88rem; margin-top: 6px; max-width: 560px; }
+
+        footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 36px; }
+        footer a { color: var(--text-muted); }
+        .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); opacity: 0;
+            background: var(--accent-gold); color: var(--pill-active-text); font-weight: 700; padding: 10px 18px; border-radius: 999px;
+            transition: all .25s ease; pointer-events: none; z-index: 200; }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+        @media (max-width: 860px) {
+            .facts, .logos, .swatches { grid-template-columns: repeat(2, 1fr); }
+            .shots { grid-template-columns: repeat(4, 1fr); }
+            .type-demo, .rules { grid-template-columns: 1fr; }
+            h1 { font-size: 1.85rem; }
+        }
+        @media (max-width: 480px) {
+            .top-nav { border-radius: 22px; }
+            .card { padding: 20px; }
+            .shots { grid-template-columns: repeat(3, 1fr); }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="top-nav" aria-label="Press navigation">
+        <div class="nav-links">
+            <a href="https://www.buzzitsay.it/#de" class="nav-link" id="nav-home" data-i18n="navHome">⚡ Startseite</a>
+            <a href="#downloads" class="nav-link" data-i18n="navDownloads">Downloads</a>
+            <a href="#brand" class="nav-link" data-i18n="navBrand">Marke & CI</a>
+            <a href="#contact" class="nav-link" data-i18n="navContact">Kontakt</a>
+        </div>
+        <div class="lang-switch-wrap">
+            <button class="lang-btn active" data-lang="de">🇩🇪 DE</button>
+            <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+            <button class="lang-btn" data-lang="fr">🇫🇷 FR</button>
+            <button class="lang-btn" data-lang="es">🇪🇸 ES</button>
+        </div>
+    </nav>
+
+    <header>
+        <img class="hero-logo" src="brand/BiSi_Logo_Badge_transparent.png" alt="BiSi Logo">
+        <div class="brand-badge" data-i18n="badge">⚡ Presse & Media Kit</div>
+        <h1 data-i18n="title">Alles für eure Berichterstattung über BiSi</h1>
+        <div class="subtitle" data-i18n="subtitle"></div>
+        <div class="cta-row">
+            <a class="btn btn-gold" id="cta-kit" href="downloads/BiSi_MediaKit_DE.zip" download><span data-i18n="ctaKit">Media Kit herunterladen</span></a>
+            <a class="btn btn-ghost" id="cta-test" href="mailto:hello@buzzitsay.it"><span data-i18n="ctaTest">Testzugang anfragen</span></a>
+        </div>
+    </header>
+
+    <!-- At a glance -->
+    <section class="card">
+        <h2><span data-i18n="factsHeading">Auf einen Blick</span><span class="dot">.</span></h2>
+        <p class="lead" data-i18n="factsLead"></p>
+        <div class="facts">
+            <div class="fact"><b>2–10</b><span data-i18n="f1"></span></div>
+            <div class="fact"><b>12</b><span data-i18n="f2"></span></div>
+            <div class="fact"><b>26</b><span data-i18n="f3"></span></div>
+            <div class="fact"><b>4</b><span data-i18n="f4"></span></div>
+        </div>
+        <div class="boiler">
+            <h3 style="margin-top:0" data-i18n="boilerHeading">Über BiSi</h3>
+            <p id="boiler-text"></p>
+            <button class="copy-btn" id="copy-boiler" data-i18n="copy">Text kopieren</button>
+        </div>
+    </section>
+
+    <!-- Downloads -->
+    <section class="card" id="downloads">
+        <h2><span data-i18n="dlHeading">Downloads</span><span class="dot">.</span></h2>
+        <p class="lead" data-i18n="dlLead"></p>
+        <div class="table-wrap">
+            <table class="dl">
+                <thead><tr><th data-i18n="dlDoc">Dokument</th><th>DE</th><th>EN</th><th>FR</th><th>ES</th></tr></thead>
+                <tbody id="dl-body"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section class="card">
+        <h2><span data-i18n="shotsHeading">Screenshots</span><span class="dot">.</span></h2>
+        <p class="lead" data-i18n="shotsLead"></p>
+        <div class="shots" id="shots"></div>
+    </section>
+
+    <!-- Video -->
+    <section class="card">
+        <h2><span data-i18n="videoHeading">Promo-Video</span><span class="dot">.</span></h2>
+        <p class="lead" style="margin-bottom:0" data-i18n="videoLead"></p>
+    </section>
+
+    <!-- Brand / CI -->
+    <section class="card" id="brand">
+        <h2><span data-i18n="ciHeading">Marke & CI</span><span class="dot">.</span></h2>
+        <p class="lead" data-i18n="ciLead"></p>
+
+        <h3 data-i18n="logoHeading">Logos & Icons</h3>
+        <div class="logos">
+            <div class="logo-tile"><div class="prev"><img src="brand/BiSi_Logo_Badge_transparent.png" alt=""></div>
+                <div class="name" data-i18n="logo1">Logo-Badge · PNG, transparent</div>
+                <a href="brand/BiSi_Logo_Badge_transparent.png" download data-i18n="download">Download</a></div>
+            <div class="logo-tile"><div class="prev"><img src="brand/BiSi_AppIcon_1024_abgerundet.png" alt=""></div>
+                <div class="name" data-i18n="logo2">App-Icon abgerundet · 1024 px</div>
+                <a href="brand/BiSi_AppIcon_1024_abgerundet.png" download data-i18n="download">Download</a></div>
+            <div class="logo-tile"><div class="prev"><img src="brand/BiSi_AppIcon_1024.png" alt=""></div>
+                <div class="name" data-i18n="logo3">App-Icon eckig · 1024 px</div>
+                <a href="brand/BiSi_AppIcon_1024.png" download data-i18n="download">Download</a></div>
+            <div class="logo-tile"><div class="prev"><img src="brand/BiSi_Header_2760x1504.jpg" alt=""></div>
+                <div class="name" data-i18n="logo4">Header-Bild · 2760 × 1504</div>
+                <a href="brand/BiSi_Header_2760x1504.jpg" download data-i18n="download">Download</a></div>
+        </div>
+
+        <h3 data-i18n="colorHeading">Farben</h3>
+        <p class="lead" style="margin-bottom:12px" data-i18n="colorLead"></p>
+        <div class="swatches" id="swatches"></div>
+
+        <h3 data-i18n="typeHeading">Wortmarke & Typografie</h3>
+        <div class="type-demo">
+            <div class="type-box" style="background:#160B28">
+                <div class="wordmark">BiSi<i>.</i></div>
+                <div class="claim">BUZZ IT, SAY IT!</div>
+                <p data-i18n="typeWordmark"></p>
+            </div>
+            <div class="type-box">
+                <p style="margin-top:0" data-i18n="typeFonts"></p>
+                <p data-i18n="typeName"></p>
+            </div>
+        </div>
+
+        <h3 data-i18n="rulesHeading">Do's & Don'ts</h3>
+        <div class="rules">
+            <div class="rule do"><h4 data-i18n="doHeading">Bitte so</h4><ul id="do-list"></ul></div>
+            <div class="rule dont"><h4 data-i18n="dontHeading">Bitte nicht</h4><ul id="dont-list"></ul></div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="card contact" id="contact">
+        <div>
+            <h2><span data-i18n="contactHeading">Pressekontakt</span><span class="dot">.</span></h2>
+            <div class="mail">hello@buzzitsay.it</div>
+            <p class="note"><b style="color:#fff">Martin Bechtold</b> · <span data-i18n="contactRole">Entwickler</span></p>
+            <p class="note" data-i18n="contactTest"></p>
+        </div>
+        <a class="btn btn-gold" id="contact-btn" href="mailto:hello@buzzitsay.it"><span data-i18n="contactBtn">E-Mail schreiben</span></a>
+    </section>
+
+    <footer>
+        <p data-i18n="footer"></p>
+        <p style="margin-top:6px"><a href="https://www.buzzitsay.it/privacy/#de" id="footer-privacy" data-i18n="privacy">Datenschutz</a></p>
+    </footer>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+    const COLORS = [
+        { hex: "#7C3AED", rgb: "124, 58, 237", name: "Royal Purple", role: "primary" },
+        { hex: "#5B21B6", rgb: "91, 33, 182",  name: "Purple Dark",  role: "primaryDark" },
+        { hex: "#A78BFA", rgb: "167, 139, 250", name: "Purple Light", role: "purpleLight" },
+        { hex: "#FBBF24", rgb: "251, 191, 36", name: "Sunshine Buzz", role: "yellow" },
+        { hex: "#FEF08A", rgb: "254, 240, 138", name: "Yellow Glow",  role: "yellowGlow" },
+        { hex: "#D97706", rgb: "217, 119, 6",  name: "Yellow Dark",  role: "yellowDark" },
+        { hex: "#160B28", rgb: "22, 11, 40",   name: "Deep Velvet",  role: "bgDark" },
+        { hex: "#261442", rgb: "38, 20, 66",   name: "Clay Card",    role: "card" },
+        { hex: "#3F226D", rgb: "63, 34, 109",  name: "Card Border",  role: "border" },
+        { hex: "#FFFBEB", rgb: "255, 251, 235", name: "Clay Cream",  role: "cream" },
+        { hex: "#F6F4FE", rgb: "246, 244, 254", name: "Soft Lavender", role: "bgLight" }
+    ];
+    const SHOTS = ["00_home_hero_loop", "06_countdown_stage", "02_game_round_buzzer", "03_steal_the_answer", "04_community_voting", "05_victory_level_10", "01_welcome_brand"];
+    // base file names (without extension) per language; formats per document type
+    const DOCS = {
+        de: { fs: "BiSi_FactSheet_DE", pm: "BiSi_Pressemitteilung_DE", gs: "BiSi_Gruendergeschichte_DE", zip: "BiSi_MediaKit_DE" },
+        en: { fs: "BiSi_FactSheet_EN", pm: "BiSi_PressRelease_EN", gs: "BiSi_FounderStory_EN", zip: "BiSi_MediaKit_EN" },
+        fr: { fs: "BiSi_FactSheet_FR", pm: "BiSi_PressRelease_FR", gs: "BiSi_HistoireFondateur_FR", zip: "BiSi_MediaKit_FR" },
+        es: { fs: "BiSi_FactSheet_ES", pm: "BiSi_PressRelease_ES", gs: "BiSi_HistoriaFundador_ES", zip: "BiSi_MediaKit_ES" }
+    };
+    const FORMATS = { zip: ["zip"], fs: ["pdf"], pm: ["pdf", "docx", "txt"], gs: ["pdf", "docx", "txt"] };
+
+    const T = {
+        de: {
+            navHome: "⚡ Startseite", navDownloads: "Downloads", navBrand: "Marke & CI", navContact: "Kontakt",
+            badge: "⚡ Presse & Media Kit", title: "Alles für eure Berichterstattung über BiSi",
+            subtitle: "Pressetexte, Screenshots, Logos und Markenrichtlinien in vier Sprachen. Frei verwendbar für die redaktionelle Berichterstattung.",
+            ctaKit: "Media Kit herunterladen (ZIP)", ctaTest: "Testzugang anfragen", testSubject: "Testzugang BiSi",
+            factsHeading: "Auf einen Blick",
+            factsLead: "BiSi: Buzz it, Say it ist ein Echtzeit-Reaktions-Quiz für iPhone und iPad: Stadt-Land-Fluss als Gameshow. Buchstabe sehen, Thema checken, buzzern und die Antwort laut in die Runde rufen.",
+            f1: "Spieler, jeder mit eigenem Gerät", f2: "Kategorien, von Stadt bis Markenname", f3: "Buchstaben für immer neue Runden", f4: "Sprachen: DE · EN · FR · ES",
+            boilerHeading: "Über BiSi (Textbaustein zum Kopieren)",
+            boiler: "BiSi: Buzz it, Say it ist ein Echtzeit-Reaktions-Quiz für iPhone und iPad, entwickelt von Martin Bechtold. Die App verbindet das Spielprinzip von Stadt-Land-Fluss mit dem Tempo einer TV-Gameshow und richtet sich an Freundesgruppen, Partygäste und Familien. BiSi ist auf Deutsch, Englisch, Französisch und Spanisch verfügbar und verzichtet vollständig auf Tracking und Werbung.",
+            copy: "Text kopieren", copied: "Kopiert!",
+            dlHeading: "Downloads", dlLead: "Alle Dokumente je Sprache: als PDF zum Lesen, als Word (DOCX) und Text (TXT) zum direkten Übernehmen in eure Artikel. Das Media-Kit-ZIP enthält alles zusammen, dazu Screenshots in Originalauflösung für iPhone und iPad sowie Logos und Icons.",
+            dlDoc: "Dokument", dlZip: "Media Kit komplett", dlZipSub: "ZIP · ca. 20 MB · alle Dateien", dlFs: "Fact Sheet", dlFsSub: "PDF · 2 Seiten", dlPm: "Pressemitteilung", dlPmSub: "PDF · Word · Text", dlGs: "Gründer-Geschichte", dlGsSub: "Kurzporträt + Story · PDF · Word · Text",
+            shotsHeading: "Screenshots", shotsLead: "Vorschau in der gewählten Sprache. Klick öffnet das Bild. Originalauflösung (iPhone 1290 × 2796, iPad 2048 × 2732) im Media-Kit-ZIP.",
+            videoHeading: "Promo-Video", videoLead: "Das Promo-Video in 16:9 und 9:16 folgt in Kürze und wird hier ergänzt.",
+            ciHeading: "Marke & CI", ciLead: "Für Artikel, Banner und Werbung. Bitte haltet euch an diese Vorgaben, damit BiSi überall sofort wiedererkennbar ist.",
+            logoHeading: "Logos & Icons", logo1: "Logo-Badge · PNG, transparent", logo2: "App-Icon abgerundet · 1024 px", logo3: "App-Icon eckig · 1024 px", logo4: "Header-Bild · 2760 × 1504", download: "Download",
+            colorHeading: "Farben", colorLead: "Lila und Gelb stehen im Mittelpunkt. Gelb ist für Buzzer, Highlights und Gewinner-Momente reserviert. Klick auf eine Farbe kopiert den HEX-Code.",
+            roles: { primary: "Primärfarbe, Buttons, Marke", primaryDark: "Verläufe, Tiefen, Schatten", purpleLight: "Lichtkanten, Akzente", yellow: "Buzzer, Highlights, Claim", yellowGlow: "Glow, Lichtreflexe", yellowDark: "Buzzer-Schattierung", bgDark: "Hintergrund dunkel", card: "Karten, Flächen", border: "Ränder", cream: "Text auf Dunkel, Wortmarke", bgLight: "Hintergrund hell" },
+            typeHeading: "Wortmarke & Typografie",
+            typeWordmark: "Wortmarke „BiSi.“ in Weiß oder Cream mit gelbem Punkt. Claim „BUZZ IT, SAY IT!“ in Versalien, gesperrt, in Sunshine Yellow.",
+            typeFonts: "Schrift: SF Pro Rounded (Black / Heavy) für Headlines, SF Pro für Fließtext. Außerhalb von Apple-Plattformen eignet sich eine runde, kräftige Sans-Serif wie Nunito Black als Ersatz.",
+            typeName: "Schreibweise: „BiSi“ mit großem B und S. Voller Name: „BiSi: Buzz it, Say it“. Der Claim „Buzz it, Say it!“ bleibt in allen Sprachen unverändert.",
+            rulesHeading: "Do's & Don'ts", doHeading: "Bitte so", dontHeading: "Bitte nicht",
+            dos: ["Logo auf dunklem Lila oder ruhigem Hintergrund mit genug Freiraum", "Gelb sparsam als Akzent für Buzzer und Highlights", "Echte Screenshots aus dem Media Kit verwenden", "Name und Claim exakt wie angegeben schreiben"],
+            donts: ["Logo verzerren, umfärben, drehen oder beschneiden", "Alte Namen wie „Quizzz“ oder ein „Q“-Logo verwenden", "App-Oberflächen nachbauen oder Funktionen erfinden", "Preise nennen, ohne den aktuellen App-Store-Stand zu prüfen"],
+            contactHeading: "Pressekontakt", contactRole: "Entwickler",
+            contactTest: "Testzugang: BiSi macht ab 2 Spielern Spaß, der Modus „Klau die Antwort“ startet ab 3. Für einen aussagekräftigen Test stellen wir gern Zugänge für mehrere Geräte bereit.",
+            contactBtn: "E-Mail schreiben", contactSubject: "Presseanfrage BiSi",
+            footer: "© 2026 Martin Bechtold · Alle Materialien sind für die redaktionelle Berichterstattung frei verwendbar.", privacy: "Datenschutz"
+        },
+        en: {
+            navHome: "⚡ Home", navDownloads: "Downloads", navBrand: "Brand & CI", navContact: "Contact",
+            badge: "⚡ Press & Media Kit", title: "Everything you need to cover BiSi",
+            subtitle: "Press texts, screenshots, logos and brand guidelines in four languages. Free to use for editorial coverage.",
+            ctaKit: "Download media kit (ZIP)", ctaTest: "Request review access", testSubject: "BiSi review access",
+            factsHeading: "At a glance",
+            factsLead: "BiSi: Buzz it, Say it is a real-time reaction quiz for iPhone and iPad: the classic categories word game as a game show. See the letter, check the topic, buzz in and shout your answer out loud.",
+            f1: "players, each on their own device", f2: "categories, from cities to brands", f3: "letters for endless new rounds", f4: "languages: EN · DE · FR · ES",
+            boilerHeading: "About BiSi (boilerplate to copy)",
+            boiler: "BiSi: Buzz it, Say it is a real-time reaction quiz for iPhone and iPad, developed by Martin Bechtold. The app combines the classic categories word game with the pace of a TV game show and is made for groups of friends, party guests and families. BiSi is available in English, German, French and Spanish and uses no tracking and no advertising.",
+            copy: "Copy text", copied: "Copied!",
+            dlHeading: "Downloads", dlLead: "Every document per language: as PDF to read, and as Word (DOCX) and plain text (TXT) to drop straight into your article. The media kit ZIP bundles everything, plus full-resolution screenshots for iPhone and iPad, logos and icons.",
+            dlDoc: "Document", dlZip: "Complete media kit", dlZipSub: "ZIP · approx. 20 MB · all files", dlFs: "Fact sheet", dlFsSub: "PDF · 2 pages", dlPm: "Press release", dlPmSub: "PDF · Word · text", dlGs: "Founder story", dlGsSub: "Short profile + story · PDF · Word · text",
+            shotsHeading: "Screenshots", shotsLead: "Preview in the selected language. Click to open. Full resolution (iPhone 1290 × 2796, iPad 2048 × 2732) in the media kit ZIP.",
+            videoHeading: "Promo video", videoLead: "The promo video in 16:9 and 9:16 is coming soon and will be added here.",
+            ciHeading: "Brand & CI", ciLead: "For articles, banners and ads. Please follow these guidelines so BiSi is instantly recognizable everywhere.",
+            logoHeading: "Logos & icons", logo1: "Logo badge · PNG, transparent", logo2: "App icon, rounded · 1024 px", logo3: "App icon, square · 1024 px", logo4: "Header image · 2760 × 1504", download: "Download",
+            colorHeading: "Colors", colorLead: "Purple and yellow are at the heart of the brand. Yellow is reserved for buzzers, highlights and winning moments. Click a color to copy its HEX code.",
+            roles: { primary: "Primary color, buttons, brand", primaryDark: "Gradients, depth, shadows", purpleLight: "Light edges, accents", yellow: "Buzzer, highlights, claim", yellowGlow: "Glow, reflections", yellowDark: "Buzzer shading", bgDark: "Dark background", card: "Cards, surfaces", border: "Borders", cream: "Text on dark, wordmark", bgLight: "Light background" },
+            typeHeading: "Wordmark & typography",
+            typeWordmark: "Wordmark “BiSi.” in white or cream with a yellow dot. Claim “BUZZ IT, SAY IT!” in caps, letter-spaced, in Sunshine Yellow.",
+            typeFonts: "Typeface: SF Pro Rounded (Black / Heavy) for headlines, SF Pro for body text. Outside Apple platforms, a bold rounded sans-serif such as Nunito Black works as a substitute.",
+            typeName: "Spelling: “BiSi” with a capital B and S. Full name: “BiSi: Buzz it, Say it”. The claim “Buzz it, Say it!” stays the same in every language.",
+            rulesHeading: "Do's & don'ts", doHeading: "Please do", dontHeading: "Please don't",
+            dos: ["Place the logo on dark purple or a calm background with enough clear space", "Use yellow sparingly as an accent for buzzers and highlights", "Use real screenshots from the media kit", "Write the name and claim exactly as shown"],
+            donts: ["Distort, recolor, rotate or crop the logo", "Use old names like “Quizzz” or a “Q” logo", "Recreate app screens or invent features", "Quote prices without checking the current App Store listing"],
+            contactHeading: "Press contact", contactRole: "Developer",
+            contactTest: "Review access: BiSi is fun from 2 players, and “Steal the Answer” mode starts at 3. For a meaningful test we’re happy to provide access for several devices.",
+            contactBtn: "Send an email", contactSubject: "BiSi press inquiry",
+            footer: "© 2026 Martin Bechtold · All materials may be used freely for editorial coverage.", privacy: "Privacy"
+        },
+        fr: {
+            navHome: "⚡ Accueil", navDownloads: "Téléchargements", navBrand: "Marque & CI", navContact: "Contact",
+            badge: "⚡ Presse & kit média", title: "Tout pour parler de BiSi",
+            subtitle: "Textes presse, captures d’écran, logos et charte graphique en quatre langues. Libres d’utilisation pour un usage rédactionnel.",
+            ctaKit: "Télécharger le kit média (ZIP)", ctaTest: "Demander un accès test", testSubject: "Accès test BiSi",
+            factsHeading: "En bref",
+            factsLead: "BiSi: Buzz it, Say it est un quiz de réflexes en temps réel pour iPhone et iPad : le Petit Bac version jeu télévisé. Vois la lettre, découvre le thème, buzze et crie ta réponse.",
+            f1: "joueurs, chacun sur son appareil", f2: "catégories, des villes aux marques", f3: "lettres pour des parties toujours nouvelles", f4: "langues : FR · EN · DE · ES",
+            boilerHeading: "À propos de BiSi (texte à copier)",
+            boiler: "BiSi: Buzz it, Say it est un quiz de réflexes en temps réel pour iPhone et iPad, développé par Martin Bechtold. L’app associe le principe du Petit Bac au rythme d’un jeu télévisé et s’adresse aux groupes d’amis, aux soirées et aux familles. BiSi est disponible en français, anglais, allemand et espagnol, sans aucun pistage ni publicité.",
+            copy: "Copier le texte", copied: "Copié !",
+            dlHeading: "Téléchargements", dlLead: "Chaque document par langue : en PDF pour la lecture, en Word (DOCX) et en texte brut (TXT) pour une reprise directe dans vos articles. Le ZIP du kit média regroupe tout, avec les captures d’écran en pleine résolution pour iPhone et iPad, les logos et les icônes.",
+            dlDoc: "Document", dlZip: "Kit média complet", dlZipSub: "ZIP · env. 20 Mo · tous les fichiers", dlFs: "Fiche produit", dlFsSub: "PDF · 2 pages", dlPm: "Communiqué de presse", dlPmSub: "PDF · Word · texte", dlGs: "Histoire du fondateur", dlGsSub: "Portrait + histoire · PDF · Word · texte",
+            shotsHeading: "Captures d’écran", shotsLead: "Aperçu dans la langue choisie. Cliquez pour ouvrir. Pleine résolution (iPhone 1290 × 2796, iPad 2048 × 2732) dans le ZIP du kit média.",
+            videoHeading: "Vidéo promo", videoLead: "La vidéo promo en 16:9 et 9:16 arrive bientôt et sera ajoutée ici.",
+            ciHeading: "Marque & CI", ciLead: "Pour les articles, bannières et publicités. Merci de respecter ces règles pour que BiSi soit reconnaissable partout.",
+            logoHeading: "Logos & icônes", logo1: "Badge logo · PNG, transparent", logo2: "Icône arrondie · 1024 px", logo3: "Icône carrée · 1024 px", logo4: "Image d’en-tête · 2760 × 1504", download: "Télécharger",
+            colorHeading: "Couleurs", colorLead: "Le violet et le jaune sont au cœur de la marque. Le jaune est réservé aux buzzers, aux points forts et aux moments de victoire. Cliquez sur une couleur pour copier son code HEX.",
+            roles: { primary: "Couleur principale, boutons, marque", primaryDark: "Dégradés, profondeur, ombres", purpleLight: "Reflets, accents", yellow: "Buzzer, points forts, slogan", yellowGlow: "Halo, reflets", yellowDark: "Ombrage du buzzer", bgDark: "Fond sombre", card: "Cartes, surfaces", border: "Bordures", cream: "Texte sur fond sombre, logotype", bgLight: "Fond clair" },
+            typeHeading: "Logotype & typographie",
+            typeWordmark: "Logotype « BiSi. » en blanc ou crème avec un point jaune. Slogan « BUZZ IT, SAY IT! » en capitales, espacé, en Sunshine Yellow.",
+            typeFonts: "Police : SF Pro Rounded (Black / Heavy) pour les titres, SF Pro pour le texte courant. Hors plateformes Apple, une sans-serif arrondie et grasse comme Nunito Black convient en remplacement.",
+            typeName: "Orthographe : « BiSi » avec un B et un S majuscules. Nom complet : « BiSi: Buzz it, Say it ». Le slogan « Buzz it, Say it! » reste identique dans toutes les langues.",
+            rulesHeading: "À faire & à éviter", doHeading: "À faire", dontHeading: "À éviter",
+            dos: ["Placer le logo sur un fond violet foncé ou sobre, avec assez d’espace", "Utiliser le jaune avec parcimonie, comme accent", "Utiliser les vraies captures d’écran du kit média", "Écrire le nom et le slogan exactement comme indiqué"],
+            donts: ["Déformer, recolorer, pivoter ou recadrer le logo", "Utiliser d’anciens noms comme « Quizzz » ou un logo « Q »", "Recréer des écrans de l’app ou inventer des fonctions", "Indiquer un prix sans vérifier la fiche App Store actuelle"],
+            contactHeading: "Contact presse", contactRole: "développeur",
+            contactTest: "Accès test : BiSi se joue dès 2 joueurs, le mode « Vole la réponse » dès 3. Pour un test représentatif, nous fournissons volontiers des accès pour plusieurs appareils.",
+            contactBtn: "Écrire un e-mail", contactSubject: "Demande presse BiSi",
+            footer: "© 2026 Martin Bechtold · Tous les éléments sont libres d’utilisation pour un usage rédactionnel.", privacy: "Confidentialité"
+        },
+        es: {
+            navHome: "⚡ Inicio", navDownloads: "Descargas", navBrand: "Marca y CI", navContact: "Contacto",
+            badge: "⚡ Prensa y kit de medios", title: "Todo lo que necesitas para hablar de BiSi",
+            subtitle: "Textos de prensa, capturas, logotipos y guía de marca en cuatro idiomas. De uso libre con fines editoriales.",
+            ctaKit: "Descargar kit de medios (ZIP)", ctaTest: "Solicitar acceso de prueba", testSubject: "Acceso de prueba BiSi",
+            factsHeading: "De un vistazo",
+            factsLead: "BiSi: Buzz it, Say it es un quiz de reflejos en tiempo real para iPhone y iPad: el clásico «Stop» convertido en concurso. Mira la letra, descubre el tema, pulsa y grita tu respuesta.",
+            f1: "jugadores, cada uno con su dispositivo", f2: "categorías, de ciudades a marcas", f3: "letras para rondas siempre nuevas", f4: "idiomas: ES · EN · DE · FR",
+            boilerHeading: "Sobre BiSi (texto para copiar)",
+            boiler: "BiSi: Buzz it, Say it es un quiz de reflejos en tiempo real para iPhone y iPad, desarrollado por Martin Bechtold. La app combina la mecánica del clásico «Stop» con el ritmo de un concurso de televisión y está pensada para grupos de amigos, fiestas y familias. BiSi está disponible en español, inglés, alemán y francés y no utiliza rastreo ni publicidad.",
+            copy: "Copiar texto", copied: "¡Copiado!",
+            dlHeading: "Descargas", dlLead: "Cada documento por idioma: en PDF para leer y en Word (DOCX) y texto plano (TXT) para incorporarlo directamente a tus artículos. El ZIP del kit de medios lo reúne todo, con capturas a resolución completa para iPhone y iPad, logotipos e iconos.",
+            dlDoc: "Documento", dlZip: "Kit de medios completo", dlZipSub: "ZIP · aprox. 20 MB · todos los archivos", dlFs: "Ficha técnica", dlFsSub: "PDF · 2 páginas", dlPm: "Nota de prensa", dlPmSub: "PDF · Word · texto", dlGs: "Historia del fundador", dlGsSub: "Perfil breve + historia · PDF · Word · texto",
+            shotsHeading: "Capturas", shotsLead: "Vista previa en el idioma seleccionado. Haz clic para abrir. Resolución completa (iPhone 1290 × 2796, iPad 2048 × 2732) en el ZIP del kit de medios.",
+            videoHeading: "Vídeo promocional", videoLead: "El vídeo promocional en 16:9 y 9:16 llegará pronto y se añadirá aquí.",
+            ciHeading: "Marca y CI", ciLead: "Para artículos, banners y publicidad. Respeta estas pautas para que BiSi sea reconocible en todas partes.",
+            logoHeading: "Logotipos e iconos", logo1: "Insignia del logo · PNG, transparente", logo2: "Icono redondeado · 1024 px", logo3: "Icono cuadrado · 1024 px", logo4: "Imagen de cabecera · 2760 × 1504", download: "Descargar",
+            colorHeading: "Colores", colorLead: "El morado y el amarillo son el corazón de la marca. El amarillo se reserva para pulsadores, destacados y momentos de victoria. Haz clic en un color para copiar su código HEX.",
+            roles: { primary: "Color principal, botones, marca", primaryDark: "Degradados, profundidad, sombras", purpleLight: "Brillos, acentos", yellow: "Pulsador, destacados, eslogan", yellowGlow: "Resplandor, reflejos", yellowDark: "Sombreado del pulsador", bgDark: "Fondo oscuro", card: "Tarjetas, superficies", border: "Bordes", cream: "Texto sobre oscuro, logotipo", bgLight: "Fondo claro" },
+            typeHeading: "Logotipo y tipografía",
+            typeWordmark: "Logotipo «BiSi.» en blanco o crema con un punto amarillo. Eslogan «BUZZ IT, SAY IT!» en mayúsculas, espaciado, en Sunshine Yellow.",
+            typeFonts: "Tipografía: SF Pro Rounded (Black / Heavy) para titulares y SF Pro para el texto. Fuera de las plataformas de Apple, una sans-serif redondeada y gruesa como Nunito Black sirve de sustituta.",
+            typeName: "Escritura: «BiSi», con B y S mayúsculas. Nombre completo: «BiSi: Buzz it, Say it». El eslogan «Buzz it, Say it!» no cambia en ningún idioma.",
+            rulesHeading: "Qué hacer y qué evitar", doHeading: "Así sí", dontHeading: "Así no",
+            dos: ["Logo sobre morado oscuro o un fondo tranquilo, con espacio suficiente", "Amarillo con moderación, como acento", "Usar capturas reales del kit de medios", "Escribir el nombre y el eslogan exactamente como se indica"],
+            donts: ["Deformar, recolorear, girar o recortar el logo", "Usar nombres antiguos como «Quizzz» o un logo con «Q»", "Recrear pantallas de la app o inventar funciones", "Indicar precios sin comprobar la ficha actual del App Store"],
+            contactHeading: "Contacto de prensa", contactRole: "desarrollador",
+            contactTest: "Acceso de prueba: BiSi se disfruta desde 2 jugadores y el modo «Roba la respuesta» empieza con 3. Para una prueba representativa, con gusto facilitamos accesos para varios dispositivos.",
+            contactBtn: "Escribir un e-mail", contactSubject: "Consulta de prensa BiSi",
+            footer: "© 2026 Martin Bechtold · Todos los materiales pueden usarse libremente con fines editoriales.", privacy: "Privacidad"
+        }
+    };
+
+    let current = "de";
+    const LANGS = ["de", "en", "fr", "es"];
+
+    function toast(msg) {
+        const t = document.getElementById("toast");
+        t.textContent = msg; t.classList.add("show");
+        clearTimeout(window.__toast); window.__toast = setTimeout(() => t.classList.remove("show"), 1600);
+    }
+    async function copyText(text) {
+        try { await navigator.clipboard.writeText(text); }
+        catch (e) {
+            const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+            ta.select(); try { document.execCommand("copy"); } catch (_) {} ta.remove();
+        }
+        toast(T[current].copied);
+    }
+
+    function renderDownloads(t) {
+        const rows = [["dlZip", "dlZipSub", "zip"], ["dlFs", "dlFsSub", "fs"], ["dlPm", "dlPmSub", "pm"], ["dlGs", "dlGsSub", "gs"]];
+        document.getElementById("dl-body").innerHTML = rows.map(([k, sub, key]) =>
+            `<tr><td>${t[k]}<small>${t[sub]}</small></td>` +
+            LANGS.map(l => {
+                const base = DOCS[l][key];
+                const links = FORMATS[key].map(ext => {
+                    const href = key === "zip" ? `downloads/${base}.zip` : `downloads/${l}/${base}.${ext}`;
+                    const label = FORMATS[key].length === 1 ? l.toUpperCase() : ext.toUpperCase();
+                    return `<a class="pill${l === current ? " cur" : ""}" href="${href}" download>${label}</a>`;
+                }).join("");
+                return `<td><div class="pills">${links}</div></td>`;
+            }).join("") + `</tr>`).join("");
+    }
+    function renderShots() {
+        document.getElementById("shots").innerHTML = SHOTS.map(s =>
+            `<a href="../assets/screenshots/${current}/${s}.png" target="_blank" rel="noopener"><img loading="lazy" src="../assets/screenshots/${current}/${s}.png" alt="BiSi ${s.replace(/_/g, " ")}"></a>`).join("");
+    }
+    function renderSwatches(t) {
+        document.getElementById("swatches").innerHTML = COLORS.map(c =>
+            `<button class="swatch" data-hex="${c.hex}"><div class="chip" style="background:${c.hex}"></div>` +
+            `<div class="meta"><b>${c.name}</b><code>${c.hex}</code><span>RGB ${c.rgb}</span><span>${t.roles[c.role]}</span></div></button>`).join("");
+        document.querySelectorAll(".swatch").forEach(b => b.addEventListener("click", () => copyText(b.dataset.hex)));
+    }
+
+    function setLang(lang) {
+        if (!T[lang]) lang = "de";
+        current = lang;
+        const t = T[lang];
+        document.querySelectorAll("[data-i18n]").forEach(el => { const k = el.dataset.i18n; if (t[k] !== undefined) el.textContent = t[k]; });
+        document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
+        document.getElementById("boiler-text").textContent = t.boiler;
+        document.getElementById("cta-kit").href = `downloads/${DOCS[lang].zip}.zip`;
+        document.getElementById("cta-test").href = `mailto:hello@buzzitsay.it?subject=${encodeURIComponent(t.testSubject)}`;
+        document.getElementById("contact-btn").href = `mailto:hello@buzzitsay.it?subject=${encodeURIComponent(t.contactSubject)}`;
+        document.getElementById("nav-home").href = `https://www.buzzitsay.it/#${lang}`;
+        document.getElementById("footer-privacy").href = `https://www.buzzitsay.it/privacy/#${lang}`;
+        document.getElementById("do-list").innerHTML = t.dos.map(x => `<li>${x}</li>`).join("");
+        document.getElementById("dont-list").innerHTML = t.donts.map(x => `<li>${x}</li>`).join("");
+        renderDownloads(t); renderShots(); renderSwatches(t);
+        document.documentElement.lang = lang;
+        if (window.location.hash.replace("#", "") !== lang && LANGS.includes(lang)) history.replaceState(null, "", "#" + lang);
+    }
+
+    document.querySelectorAll(".lang-btn").forEach(b => b.addEventListener("click", () => setLang(b.dataset.lang)));
+    document.getElementById("copy-boiler").addEventListener("click", () => copyText(T[current].boiler));
+
+    function initHash() {
+        const h = window.location.hash.replace("#", "").toLowerCase();
+        if (LANGS.includes(h)) return setLang(h);
+        const nav = (navigator.language || "de").slice(0, 2).toLowerCase();
+        setLang(LANGS.includes(nav) ? nav : "de");
+    }
+    window.addEventListener("DOMContentLoaded", initHash);
+    window.addEventListener("hashchange", () => {
+        const h = window.location.hash.replace("#", "").toLowerCase();
+        if (LANGS.includes(h) && h !== current) setLang(h);
+    });
+</script>
+</body>
+</html>

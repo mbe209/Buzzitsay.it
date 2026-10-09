@@ -1,0 +1,55 @@
+NOTA DE PRENSA
+
+Pulsadores en lugar de papel: BiSi convierte el clásico «Stop» en un concurso en tiempo real
+
+Una nueva app para iPhone y iPad lleva la emoción de un concurso de televisión a la mesa: mira la letra, descubre el tema, pulsa y grita tu respuesta. Para 2 a 10 amigos, sin accesorios, sin anuncios, sin suscripción.
+
+[Ciudad], [fecha] – «BiSi: Buzz it, Say it», un quiz de reflejos para iPhone y iPad, llega próximamente y reinventa el clásico juego «Stop». En lugar de papel y bolígrafo, cada jugador usa su móvil como pulsador. Una letra y un tema aparecen a la vez en todos los dispositivos. Quien pulsa primero tiene la palabra. La respuesta no se escribe: se grita en voz alta. BiSi es obra de Martin Bechtold. La idea surgió a finales de agosto de 2026, durante unas vacaciones con amigos en Bélgica: en pocas horas el primer prototipo resultó tan divertido que, en apenas un mes, acabó convirtiéndose en una app de juego apasionante y cargada de emociones, que entusiasma gracias a la interacción personal entre los jugadores y deja el móvil en segundo plano.
+
+Así funciona BiSi
+
+Una ronda dura a menudo solo unos segundos y se desarrolla en cuatro pasos:
+1. Cuenta atrás: una cuenta atrás sincronizada arranca en todos los dispositivos. Si pulsas antes de tiempo, pierdes potencia.
+2. Pulsar: aparecen la letra y el tema, por ejemplo «Ciudad con M». Gana el dedo más rápido, con detección al milisegundo.
+3. Responder en voz alta: quien pulsó primero tiene 4 segundos para gritar su respuesta al grupo.
+4. Votar: los demás votan con el pulgar arriba o abajo. Con un 50 % de aprobación o más, el jugador sube de nivel.
+
+El móvil es solo el pulsador y el árbitro. La verdadera diversión ocurre en la mesa, entre personas reales, sin discusiones al contar los puntos.
+
+Roba la respuesta, sistema de niveles y juego limpio
+
+El modo «Roba la respuesta» añade aún más tensión. A partir de 3 jugadores, quien pulsa primero tiene 6 segundos. En los últimos 3 segundos, se ilumina un botón de robo para todos los rivales. El primero en lanzarse puede responder, y en caso de empate decide un jurado neutral formado por el resto de jugadores.
+
+Cada nivel sube la presión: el tiempo para pulsar se reduce de 20 segundos en el nivel 1 a solo 2 segundos en el nivel 9. Quien llega primero al nivel 10 gana la partida.
+
+BiSi se probó en condiciones reales desde el primer día: cuando en el wifi del hotel nadie podía ver la partida recién creada, nacieron el emparejamiento local y un componente de red robusto. Hoy garantizan pulsaciones justas y precisas al milisegundo incluso en redes aisladas.
+
+Más características de un vistazo:
+- 12 categorías, de ciudades y animales a películas y marcas, combinadas con las 26 letras
+- Disponible en español, inglés, alemán y francés
+- Acceso a la partida con un código de sala de 5 caracteres o un código QR
+- Sin conexión mediante peer-to-peer local por wifi o punto de acceso, o en línea a través de la nube
+- Protección contra salidas en falso y pulsaciones repetidas para duelos justos
+- Sin rastreo, sin anuncios, sin suscripción; se puede jugar como invitado, sin cuenta
+
+Un juego para la mesa, no para la pantalla
+
+«Quería llevar a casa la sensación de un concurso de televisión sin que todos se quedaran mirando el móvil», explica el desarrollador Martin Bechtold. «En BiSi, el móvil es solo el pulsador. Las risas, los gritos y la indignación fingida cuando alguien te roba la respuesta ocurren en la mesa.»
+
+Que alguien que trabaja a diario con datos e IA renuncie a recopilar datos es una decisión consciente: «Aquí votan las personas de la mesa, no un complejo modelo de IA que analiza una grabación de voz y calcula probabilidades», afirma Bechtold. «Lo primero son las personas y la diversión, sin preocuparse por los datos.»
+
+Disponibilidad
+
+BiSi llegará próximamente al App Store para iPhone y iPad (iOS / iPadOS 17 o posterior). La app se ofrece como pago único, sin suscripción y sin anuncios. Cada jugador necesita su propio dispositivo con la app. Clasificación por edad: 4+.
+
+Material de prensa y acceso de prueba
+
+La ficha técnica, la historia del fundador, capturas en cuatro idiomas, el icono y el logotipo están disponibles para su descarga. Próximamente habrá un vídeo promocional. Las redacciones pueden solicitar un acceso de prueba; para una prueba representativa recomendamos al menos 3 dispositivos.
+
+Contacto de prensa: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
+
+Sobre BiSi
+
+BiSi: Buzz it, Say it es un quiz de reflejos en tiempo real para iPhone y iPad, desarrollado por Martin Bechtold. La app combina la mecánica del clásico «Stop» con el ritmo de un concurso de televisión y está pensada para grupos de amigos, fiestas y familias. BiSi está disponible en español, inglés, alemán y francés y no utiliza rastreo ni publicidad.
+
+– Fin de la nota de prensa –

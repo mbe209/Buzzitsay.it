@@ -1,0 +1,57 @@
+GRÜNDER-GESCHICHTE
+
+Kurzporträt · ca. 150 Wörter
+Ein Apfel, ein Buzzer und ein Abend, der nicht enden wollte
+
+Belgien, Ende August 2026. Ein Tisch, vier Freunde, ein Ferienabend – und keine Stifte für Stadt-Land-Fluss. Also baut Martin Bechtold, einer aus der Runde, kurzerhand einen Prototyp. Wenige Stunden später wird gebuzzert, gelacht, gestritten und wieder gelacht. Das Handy? Ist nur noch Schiedsrichter.
+
+Und dann so ein Moment: Jemand buzzert zu früh und weiß plötzlich kein einziges Lebensmittel mit A. Stille. Ein anderer klaut die Antwort, schaut auf den Tisch und ruft: „Apfel!“ Der ganze Tisch bricht in Gelächter aus.
+
+Aus diesen Abenden wird in rund einem Monat BiSi: Buzz it, Say it, Martins erste eigene App und ein kleiner Traum, der wahr geworden ist. Eine App, die bewusst keine Daten sammelt: „Bei uns stimmen die Menschen in der Runde ab, nicht ein KI-Modell. Mensch und Spaß stehen im Vordergrund.“
+
+—
+
+Die ganze Geschichte · ca. 550 Wörter
+„Spielen wir das morgen wieder?“ Wie BiSi entstand
+
+„Lebensmittel mit A.“ Der Buzzer ertönt. Jemand war schneller als sein Kopf. Alle Blicke wandern zu ihm, die Sekunden ticken. Nichts. Völlige Leere. Dann, vom anderen Ende des Tisches, ein Tipp auf „Klau die Antwort“, ein kurzer Blick nach unten: „Apfel!“ Er lag die ganze Zeit da. Der Tisch explodiert vor Lachen.
+
+Solche Momente gibt es in fast jeder BiSi-Runde. Sie sind der Grund, warum es diese App gibt.
+
+Ein Abend ohne Stifte
+
+Ende August 2026, Urlaub mit befreundeten Familien in Belgien. Abends sitzen alle zusammen, Stadt-Land-Fluss soll es sein. Und schon geht es los: Was spielen wir? Wer hat Stifte? Wer zählt die Punkte?
+
+Eine eigene App war für Martin Bechtold schon lange ein kleiner Traum. Mit KI-gestütztem Programmieren wird er in diesem Urlaub plötzlich greifbar. Wenige Stunden später liegt der erste Prototyp auf dem Tisch.
+
+Gebuzzert, gelacht, gestritten
+
+Und er zündet sofort. Die vier Erwachsenen sind nicht mehr zu bremsen: Wissen, Tempo, der Kampf um den Buzzer. Man jubelt, man ärgert sich, man diskutiert. Das Handy sorgt dabei nur für Fairness, mit Countdown, Reaktionszeit und Abstimmung. Die Freude bleibt da, wo sie hingehört: zwischen den Menschen. Selbst die Kinder drängeln sich heran und wollen mitbuzzern.
+
+„Das Spiel hat sofort Spaß gemacht. Erstaunlich, wie schnell der Drang entstand: Spielen wir das morgen wieder?“, erinnert sich ein Mitspieler aus der Runde in Belgien.
+
+Der Abend, an dem nichts mehr ging
+
+Am ersten Abend im Airbnb läuft alles wie am Schnürchen. Am nächsten Tag im Hotel dann der Schock: Niemand sieht das Spiel, kein Match startet. Ratlose Gesichter, wo gestern noch gelacht wurde. Bis klar ist: Das Hotel-WLAN schottet jedes Gerät ab.
+
+Aufgeben? Keine Option. „Es muss funktionieren“, sagt Martin. Aus diesem Rückschlag entstehen das lokale Matchmaking und eine robuste Netzwerktechnik, die faires Buzzern auf die Millisekunde sichert, egal wie störrisch das WLAN ist.
+
+Ein Monat voller Spieleabende
+
+Rund einen Monat dauert es vom Prototyp bis zur ersten Version. Jeder Abend mit Freunden ist Testlauf, Ideenschmiede und Party zugleich. Es gibt Frust, wenn mal etwas hakt, und noch mehr Freude, wenn es wieder läuft. Und am Ende immer dieselbe Frage: „Spielen wir das morgen wieder?“
+
+Warum BiSi?
+
+Erst hieß die App „Quizzz“. Doch drei Z klingen nach Schnarchen und Einschlafen, nach dem Gegenteil von dem, was am Tisch passiert. BiSi klingt wie „busy“, denn wer spielt, bleibt beschäftigt. Und es steht für das, worum es geht: Buzz it, Say it.
+
+Menschen statt Algorithmen
+
+Martin arbeitet beruflich mit Daten und KI. Und trotzdem sammelt BiSi bewusst keine Daten über seine Spieler. Für ihn kein Widerspruch, sondern eine klare Entscheidung:
+
+„Bei BiSi geht es um Spiel, Spaß und Spannung zwischen Freunden. Dafür braucht es keine Tonnen von Daten, die analysiert und verarbeitet werden müssen. Deshalb stimmen bei uns die Menschen in der Runde ab und nicht ein komplexes KI-Modell, das eine Sprachaufzeichnung auswertet und Wahrscheinlichkeiten berechnet. Mensch und Spaß stehen im Vordergrund, ohne Sorge um Daten.“
+
+Was als Nächstes kommt
+
+In Belgien haben die Kinder gezeigt, wie viel Spaß schon die Kleinsten am Buzzern haben. Deshalb ist die nächste Idee schon da: eine Version mit Symbolen statt Buchstaben, für alle, die noch nicht lesen können. Damit noch mehr Menschen an einem Tisch zusammenkommen und das Handy einfach nur der Buzzer ist.
+
+Kontakt: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it

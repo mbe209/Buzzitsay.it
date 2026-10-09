@@ -1,0 +1,57 @@
+L’HISTOIRE DU FONDATEUR
+
+Portrait express · env. 150 mots
+Une pomme, un buzzer et une soirée qui ne voulait pas finir
+
+Belgique, fin août 2026. Une table, quatre amis, une soirée de vacances – et pas assez de stylos pour un Petit Bac. Alors Martin Bechtold, l’un des joueurs, construit aussitôt un prototype. Quelques heures plus tard, on buzze, on rit, on se dispute et on rit de plus belle. Le téléphone ? Il n’est plus que l’arbitre.
+
+Et puis, un moment comme celui-ci : quelqu’un buzze trop tôt et ne trouve soudain plus un seul aliment en A. Silence. Un autre joueur lui vole la réponse, jette un œil sur la table et s’écrie : « Pomme ! » Toute la table éclate de rire.
+
+En un mois environ, ces soirées deviennent BiSi: Buzz it, Say it, la première app de Martin et un petit rêve devenu réalité. Une app qui ne collecte délibérément aucune donnée : « Chez nous, ce sont les joueurs qui votent, pas un modèle d’IA. L’humain et le plaisir passent avant tout. »
+
+—
+
+L’histoire complète · env. 650 mots
+« On y rejoue demain ? » La naissance de BiSi
+
+« Un aliment en A. » Le buzzer retentit. Le doigt a été plus rapide que la tête. Tous les regards se tournent vers lui, les secondes défilent. Rien. Le trou noir. Puis, à l’autre bout de la table, une pression sur « Vole la réponse », un rapide coup d’œil vers le bas : « Pomme ! » Elle était là depuis le début. La table éclate de rire.
+
+Des moments comme celui-ci, il y en a dans presque chaque partie de BiSi. C’est pour eux que cette app existe.
+
+Une soirée sans stylos
+
+Fin août 2026, des vacances en Belgique avec des amis et leurs familles. Le soir, tout le monde se retrouve autour de la table pour un Petit Bac. Et ça commence : à quoi joue-t-on ? Qui a des stylos ? Qui compte les points ?
+
+Avoir sa propre app, c’était depuis longtemps un petit rêve pour Martin Bechtold. Grâce à la programmation assistée par l’IA, il devient soudain accessible pendant ces vacances. Quelques heures plus tard, le premier prototype est sur la table.
+
+On buzze, on rit, on se dispute
+
+Et c’est un succès immédiat. Les quatre adultes ne s’arrêtent plus : la culture, la vitesse, la course au buzzer. On exulte, on râle, on discute. Le téléphone se contente de garantir l’équité, avec le compte à rebours, le temps de réaction et le vote. La joie reste là où elle doit être : entre les personnes. Même les enfants se pressent autour de la table pour buzzer eux aussi.
+
+« Le jeu a tout de suite plu. C’est fou comme l’envie est vite venue : on y rejoue demain ? », se souvient l’un des joueurs du groupe en Belgique.
+
+Le soir où plus rien ne marchait
+
+Le premier soir, dans l’Airbnb, tout fonctionne à merveille. Le lendemain, à l’hôtel, c’est le choc : personne ne voit la partie, aucun match ne démarre. Des visages perplexes là où, la veille, on riait encore. Jusqu’à ce qu’on comprenne : le Wi-Fi de l’hôtel isole chaque appareil.
+
+Abandonner ? Hors de question. « Ça doit marcher », dit Martin. De ce revers naissent le matchmaking local et une technologie réseau robuste qui garantit un buzz équitable à la milliseconde près, aussi capricieux que soit le Wi-Fi.
+
+Un mois de soirées jeux
+
+Il faut environ un mois pour passer du prototype à la première version. Chaque soirée entre amis est à la fois un test, un laboratoire d’idées et une fête. Il y a de la frustration quand quelque chose coince, et encore plus de joie quand tout repart. Et à la fin, toujours la même question : « On y rejoue demain ? »
+
+Pourquoi BiSi ?
+
+Au départ, l’app s’appelait « Quizzz ». Mais trois Z, ça évoque le ronflement et l’endormissement, l’inverse de ce qui se passe autour de la table. BiSi se prononce comme l’anglais « busy », car quand on joue, on reste occupé. Et c’est l’abréviation de l’essentiel : Buzz it, Say it.
+
+L’humain plutôt que les algorithmes
+
+Martin travaille au quotidien avec la data et l’IA. Et pourtant, BiSi ne collecte délibérément aucune donnée sur ses joueurs. Pour lui, ce n’est pas une contradiction, mais un choix clair :
+
+« BiSi, c’est le jeu, le plaisir et le suspense entre amis. Pour ça, pas besoin de tonnes de données à analyser et à traiter. C’est pourquoi, chez nous, ce sont les joueurs autour de la table qui votent, et non un modèle d’IA complexe qui analyse un enregistrement vocal et calcule des probabilités. L’humain et le plaisir passent avant tout, sans se soucier des données. »
+
+Et ensuite ?
+
+En Belgique, les enfants ont montré à quel point même les plus petits adorent buzzer. La prochaine idée est donc déjà là : une version avec des symboles à la place des lettres, pour tous ceux qui ne savent pas encore lire. Pour que toujours plus de personnes se retrouvent autour d’une table, et que le téléphone ne soit qu’un buzzer.
+
+Contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it

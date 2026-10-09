@@ -1,0 +1,57 @@
+FOUNDER STORY
+
+Short profile · approx. 150 words
+An apple, a buzzer and an evening that never wanted to end
+
+Belgium, late August 2026. One table, four friends, a vacation evening – and not enough pens for a round of the classic categories game. So Martin Bechtold, one of the group, builds a prototype on the spot. A few hours later, people are buzzing, laughing, arguing and laughing all over again. The phone? It’s just the referee.
+
+And then a moment like this: someone buzzes too early and suddenly can’t think of a single food starting with A. Silence. Another player steals the answer, glances at the table and shouts: “Apple!” The whole table bursts out laughing.
+
+In about a month, those evenings turn into BiSi: Buzz it, Say it, Martin’s first app and a small dream come true. An app that deliberately collects no data: “With us, the people at the table vote, not an AI model. People and fun come first.”
+
+—
+
+The full story · approx. 550 words
+“Are we playing this again tomorrow?” How BiSi came to be
+
+“Food starting with A.” The buzzer goes off. Someone’s finger was faster than their brain. Every eye turns to him, the seconds tick by. Nothing. Total blank. Then, from the other end of the table, a tap on “Steal the Answer”, a quick glance down: “Apple!” It had been sitting there the whole time. The table explodes with laughter.
+
+Moments like this happen in almost every round of BiSi. They are the reason this app exists.
+
+An evening without pens
+
+Late August 2026, a vacation in Belgium with friends and their families. In the evening everyone gathers around the table for the classic categories game. And right away it starts: What do we play? Who has pens? Who keeps score?
+
+Having his own app had long been a small dream for Martin Bechtold. With AI-assisted coding, it suddenly feels within reach on this vacation. A few hours later, the first prototype is on the table.
+
+Buzzing, laughing, arguing
+
+And it’s an instant hit. The four adults can’t get enough: knowledge, speed, the race for the buzzer. People cheer, people groan, people argue. The phone simply keeps things fair, with the countdown, reaction time and voting. The joy stays where it belongs: between the people. Even the kids crowd in, wanting to buzz along.
+
+“The game was fun right away. It’s amazing how quickly everyone wanted to know: are we playing this again tomorrow?” recalls one of the players from the group in Belgium.
+
+The night nothing worked
+
+On the first evening at the Airbnb, everything runs like clockwork. The next day at the hotel comes the shock: nobody can see the game, no match will start. Puzzled faces where yesterday there was laughter. Until it becomes clear: the hotel Wi-Fi walls off every device.
+
+Give up? Not an option. “It has to work,” says Martin. This setback gives rise to local matchmaking and resilient networking that guarantees fair, millisecond-accurate buzzing, no matter how stubborn the Wi-Fi is.
+
+A month full of game nights
+
+It takes about a month to go from prototype to first version. Every evening with friends is test run, idea lab and party all at once. There’s frustration when something breaks, and even more joy when it works again. And at the end, always the same question: “Are we playing this again tomorrow?”
+
+Why BiSi?
+
+At first the app was called “Quizzz”. But three Zs sound like snoring and dozing off, the opposite of what happens at the table. BiSi sounds like “busy”, because when you play, you stay busy. And it stands for what it’s all about: Buzz it, Say it.
+
+People, not algorithms
+
+Martin works with data and AI for a living. And yet BiSi deliberately collects no data about its players. For him, that’s no contradiction but a clear choice:
+
+“BiSi is about play, fun and excitement among friends. That doesn’t take tons of data that has to be analyzed and processed. That’s why the people at the table vote, not a complex AI model that analyzes voice recordings and calculates probabilities. People and fun come first, with no worries about data.”
+
+What’s next
+
+In Belgium, the kids showed how much even the youngest love to buzz. So the next idea is already here: a version with symbols instead of letters, for everyone who can’t read yet. So that even more people come together around one table, and the phone is simply the buzzer.
+
+Contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it

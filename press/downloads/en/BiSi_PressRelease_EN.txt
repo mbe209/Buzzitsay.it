@@ -1,0 +1,55 @@
+PRESS RELEASE
+
+Buzzers, not pencils: BiSi turns the classic categories game into a real-time game show
+
+New iPhone and iPad app brings the game-show feeling to the table: see the letter, check the topic, buzz in and shout your answer out loud. For 2 to 10 friends, no extras needed, no ads, no subscription.
+
+[City], [Date] – “BiSi: Buzz it, Say it”, a new reaction quiz for iPhone and iPad, is coming soon and reinvents the classic categories word game. Instead of pen and paper, every player holds their smartphone as a buzzer. A letter and a topic appear on every device at the same moment. Whoever buzzes first gets the floor. Answers aren’t typed, they’re shouted out loud. BiSi was created by Martin Bechtold. The idea came about in late August 2026 on a vacation with friends in Belgium: within hours the first prototype was so much fun that, in just about a month, it grew into an exciting, emotion-packed game app that wins players over through personal interaction and puts the smartphone in the background.
+
+How BiSi works
+
+A round often takes just a few seconds and runs in four steps:
+1. Countdown: A synchronized countdown starts on every device. Tap too early and you lose power.
+2. Buzz in: Letter and topic appear, for example “City starting with M”. The fastest finger wins, with millisecond-accurate detection.
+3. Say it out loud: The player who buzzed first has 4 seconds to shout their answer to the group.
+4. Vote: The other players vote thumbs up or thumbs down. With 50 percent approval or more, the player moves up a level.
+
+The phone is just the buzzer and the referee. The real fun happens around the table, between real people, with no arguing over the scores.
+
+Steal the Answer, level system and true fair play
+
+The “Steal the Answer” mode adds extra suspense. With 3 or more players, the first to buzz gets 6 seconds. In the final 3 seconds, a steal button lights up for every opponent. Whoever strikes first gets to answer, and in a tie, a neutral jury of the remaining players decides.
+
+Every level ramps up the pressure: the time to buzz in shrinks from 20 seconds at Level 1 to just 2 seconds at Level 9. The first player to reach Level 10 wins the match.
+
+BiSi was tested under real conditions from day one: when nobody could see the newly created match on the vacation hotel’s Wi-Fi, local matchmaking and a resilient networking component were born. Today they ensure fair, millisecond-accurate buzzing even on locked-down networks.
+
+More features at a glance:
+- 12 categories, from cities and animals to movies and brand names, combined with all 26 letters
+- Playable in English, German, French and Spanish
+- Join with a 5-character room code or QR code
+- Offline via local peer-to-peer over Wi-Fi or hotspot, or online via the cloud
+- Protection against false starts and button mashing for fair duels
+- No tracking, no ads, no subscription; play as a guest without an account
+
+A game for the table, not the screen
+
+“I wanted to bring the feeling of a quiz show home without everyone just staring at their phones,” says developer Martin Bechtold. “In BiSi, the smartphone is only the buzzer. The laughing, the shouting and the mock outrage when someone steals your answer all happen around the table.”
+
+That someone who works with data and AI for a living deliberately collects no data at all is no accident: “With us, the people at the table vote, not a complex AI model that analyzes voice recordings and calculates probabilities,” says Bechtold. “People and fun come first, with no worries about data.”
+
+Availability
+
+BiSi is coming soon to the App Store for iPhone and iPad (iOS / iPadOS 17 or later). The app is a one-time purchase, with no subscription and no ads. Each player needs their own device with the app. Age rating: 4+.
+
+Press assets and review access
+
+Fact sheet, founder story, screenshots in four languages, app icon and logo are available for download. A promo video will follow. Editors can request review access; for a meaningful test we recommend at least 3 devices.
+
+Press contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
+
+About BiSi
+
+BiSi: Buzz it, Say it is a real-time reaction quiz for iPhone and iPad, developed by Martin Bechtold. The app combines the classic categories word game with the pace of a TV game show and is made for groups of friends, party guests and families. BiSi is available in English, German, French and Spanish and uses no tracking and no advertising.
+
+– End of press release –

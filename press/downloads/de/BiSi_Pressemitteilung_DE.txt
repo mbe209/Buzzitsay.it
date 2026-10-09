@@ -1,0 +1,55 @@
+PRESSEMITTEILUNG
+
+Buzzern statt Zettel: BiSi macht Stadt-Land-Fluss zur Echtzeit-Gameshow
+
+Neue iPhone- und iPad-App bringt das Gameshow-Gefühl an den Tisch: Buchstabe sehen, Thema checken, buzzern und die Antwort laut in die Runde rufen. Für 2 bis 10 Freunde, ohne Zubehör, ohne Werbung, ohne Abo.
+
+[Ort], [Datum] – Mit „BiSi: Buzz it, Say it“ erscheint demnächst ein Reaktions-Quiz für iPhone und iPad, das den Spieleklassiker Stadt-Land-Fluss neu erfindet. Statt Zettel und Stift hat jeder Spieler sein Smartphone als Buzzer in der Hand. Auf allen Geräten erscheinen gleichzeitig ein Buchstabe und ein Thema. Wer zuerst drückt, hat das Wort. Die Antwort wird nicht getippt, sondern laut gerufen. Entwickelt hat BiSi Martin Bechtold. Die Idee entstand Ende August 2026 während eines Urlaubs mit Freunden in Belgien: Der erste Prototyp hat binnen Stunden so große Freude bereitet, dass daraus in nur rund einem Monat eine spannende und emotionsgeladene Spiele-App wurde, die durch die persönliche Interaktion der Spieler begeistert und das Smartphone hintanstellt.
+
+So funktioniert BiSi
+
+Eine Runde dauert oft nur wenige Sekunden und läuft in vier Schritten ab:
+1. Countdown: Ein synchroner Countdown startet auf allen Geräten. Wer zu früh tippt, verliert Power.
+2. Buzzern: Buchstabe und Thema erscheinen, etwa „Stadt mit M“. Der schnellste Finger gewinnt, die Erkennung arbeitet millisekundengenau.
+3. Laut antworten: Der Buzzer-Gewinner hat 4 Sekunden, um seine Antwort in die Runde zu rufen.
+4. Abstimmen: Die Mitspieler stimmen per Daumen hoch oder runter ab. Ab 50 Prozent Zustimmung steigt der Spieler ein Level auf.
+
+Das Smartphone ist dabei nur Buzzer und Schiedsrichter. Der eigentliche Spaß passiert am Tisch, zwischen echten Menschen, ohne Diskussionen beim Auswerten.
+
+Klau die Antwort, Level-System und echtes Fairplay
+
+Für zusätzliche Spannung sorgt der Modus „Klau die Antwort“. Ab 3 Spielern hat der Erst-Buzzer 6 Sekunden Zeit. In den letzten 3 Sekunden leuchtet bei allen Gegnern ein Steal-Button auf. Wer zuerst zuschlägt, darf selbst antworten, und bei einem Patt entscheidet eine neutrale Jury aus den übrigen Spielern.
+
+Mit jedem Level wird es hektischer: Das Zeitfenster zum Buzzern schrumpft von 20 Sekunden auf Level 1 bis auf 2 Sekunden auf Level 9. Wer als Erster Level 10 erreicht, gewinnt das Match.
+
+Getestet wurde von Anfang an unter echten Bedingungen: Als im Hotel-WLAN des Urlaubs plötzlich niemand mehr das erstellte Match sah, entstanden das lokale Matchmaking und eine robuste Netzwerkkomponente. Sie sorgen heute auch in abgeschotteten Netzen für faires, millisekundengenaues Buzzern.
+
+Weitere Merkmale im Überblick:
+- 12 Kategorien von Stadt über Tier und Film bis Markenname, kombiniert mit allen 26 Buchstaben
+- Spielbar auf Deutsch, Englisch, Französisch und Spanisch
+- Beitritt per 5-stelligem Raum-Code oder QR-Code
+- Offline über lokales Peer-to-Peer im WLAN oder Hotspot, alternativ online über die Cloud
+- Schutz vor Fehlstarts und Dauer-Tippen für faire Duelle
+- Kein Tracking, keine Werbung, kein Abo; Spielen als Gast ohne Account möglich
+
+Ein Spiel für den Tisch, nicht für den Bildschirm
+
+„Ich wollte das Gefühl einer Quizshow nach Hause holen, ohne dass alle nur auf ihr Handy starren“, sagt Entwickler Martin Bechtold. „Bei BiSi ist das Smartphone nur der Buzzer. Das Lachen, das Rufen und die gespielte Empörung, wenn einem jemand die Antwort klaut, passieren am Tisch.“
+
+Dass jemand, der beruflich mit Daten und KI arbeitet, bewusst auf jede Datensammlung verzichtet, ist Absicht: „Bei uns stimmen die Menschen in der Runde ab und nicht ein komplexes KI-Modell, das eine Sprachaufzeichnung auswertet und Wahrscheinlichkeiten berechnet“, so Bechtold. „Mensch und Spaß stehen im Vordergrund, ohne Sorge um Daten.“
+
+Verfügbarkeit
+
+BiSi erscheint demnächst im App Store für iPhone und iPad (ab iOS bzw. iPadOS 17). Die App wird als Einmalkauf angeboten, ohne Abo und ohne Werbung. Jeder Mitspieler benötigt ein eigenes Gerät mit der App. Die Altersfreigabe liegt bei 4+.
+
+Pressematerial und Testzugang
+
+Fact Sheet, Gründer-Geschichte, Screenshots in vier Sprachen, App-Icon und Logo stehen zum Download bereit. Ein Promo-Video folgt. Redaktionen erhalten auf Anfrage einen Testzugang; für einen aussagekräftigen Test empfehlen wir mindestens 3 Geräte.
+
+Pressekontakt: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
+
+Über BiSi
+
+BiSi: Buzz it, Say it ist ein Echtzeit-Reaktions-Quiz für iPhone und iPad, entwickelt von Martin Bechtold. Die App verbindet das Spielprinzip von Stadt-Land-Fluss mit dem Tempo einer TV-Gameshow und richtet sich an Freundesgruppen, Partygäste und Familien. BiSi ist auf Deutsch, Englisch, Französisch und Spanisch verfügbar und verzichtet vollständig auf Tracking und Werbung.
+
+– Ende der Pressemitteilung –

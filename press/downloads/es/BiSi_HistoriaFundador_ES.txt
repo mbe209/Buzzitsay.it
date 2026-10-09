@@ -1,0 +1,57 @@
+LA HISTORIA DEL FUNDADOR
+
+Perfil breve · aprox. 150 palabras
+Una manzana, un pulsador y una noche que no quería terminar
+
+Bélgica, finales de agosto de 2026. Una mesa, cuatro amigos, una noche de vacaciones… y ni un bolígrafo para jugar al «Stop». Así que Martin Bechtold, uno del grupo, construye un prototipo sobre la marcha. Unas horas después, todos pulsan, ríen, discuten y vuelven a reír. ¿El móvil? Ya solo hace de árbitro.
+
+Y entonces llega un momento así: alguien pulsa demasiado pronto y, de repente, no se le ocurre ni un solo alimento con A. Silencio. Otro jugador le roba la respuesta, mira la mesa y grita: «¡Manzana!». Toda la mesa estalla en carcajadas.
+
+En aproximadamente un mes, esas noches se convierten en BiSi: Buzz it, Say it, la primera app de Martin y un pequeño sueño hecho realidad. Una app que, a propósito, no recopila datos: «Aquí votan las personas de la mesa, no un modelo de IA. Lo primero son las personas y la diversión».
+
+—
+
+La historia completa · aprox. 600 palabras
+«¿Jugamos otra vez mañana?» Así nació BiSi
+
+«Alimento con A». Suena el pulsador. El dedo fue más rápido que la cabeza. Todas las miradas se clavan en él, los segundos corren. Nada. La mente en blanco. Entonces, desde el otro extremo de la mesa, un toque en «Roba la respuesta», una mirada rápida hacia abajo: «¡Manzana!». Estaba ahí todo el tiempo. La mesa estalla en carcajadas.
+
+Momentos así se viven en casi todas las partidas de BiSi. Son la razón por la que existe esta app.
+
+Una noche sin bolígrafos
+
+Finales de agosto de 2026, vacaciones en Bélgica con amigos y sus familias. Por la noche, todos se reúnen alrededor de la mesa para jugar al «Stop». Y enseguida empieza: ¿a qué jugamos?, ¿quién tiene bolígrafos?, ¿quién cuenta los puntos?
+
+Tener su propia app era desde hacía tiempo un pequeño sueño para Martin Bechtold. Gracias a la programación asistida por IA, de repente lo tiene al alcance de la mano durante esas vacaciones. Unas horas después, el primer prototipo ya está sobre la mesa.
+
+Pulsar, reír, discutir
+
+Y triunfa al instante. Los cuatro adultos no paran: conocimiento, velocidad, la carrera por el pulsador. Hay gritos de alegría, enfados y discusiones. El móvil solo se encarga de que todo sea justo, con la cuenta atrás, el tiempo de reacción y la votación. La alegría se queda donde debe estar: entre las personas. Hasta los niños se acercan a empujones para pulsar también.
+
+«El juego enganchó desde el primer momento. Es increíble lo rápido que surgieron las ganas: ¿jugamos otra vez mañana?», recuerda uno de los jugadores del grupo en Bélgica.
+
+La noche en que nada funcionaba
+
+La primera noche, en el Airbnb, todo va sobre ruedas. Al día siguiente, en el hotel, llega el susto: nadie ve la partida, no arranca ningún juego. Caras de desconcierto donde el día anterior había risas. Hasta que queda claro: el wifi del hotel aísla cada dispositivo.
+
+¿Rendirse? Ni hablar. «Tiene que funcionar», dice Martin. De este revés nacen el emparejamiento local y una tecnología de red robusta que garantiza pulsaciones justas y precisas al milisegundo, por muy rebelde que sea el wifi.
+
+Un mes lleno de noches de juego
+
+Del prototipo a la primera versión pasa aproximadamente un mes. Cada noche con amigos es a la vez prueba, laboratorio de ideas y fiesta. Hay frustración cuando algo falla, y todavía más alegría cuando vuelve a funcionar. Y al final, siempre la misma pregunta: «¿Jugamos otra vez mañana?».
+
+¿Por qué BiSi?
+
+Al principio, la app se llamaba «Quizzz». Pero tres Z suenan a ronquidos y a quedarse dormido, justo lo contrario de lo que pasa en la mesa. BiSi suena como el inglés «busy», porque quien juega se mantiene ocupado. Y resume de qué se trata: Buzz it, Say it.
+
+Personas en lugar de algoritmos
+
+Martin trabaja a diario con datos e IA. Y aun así, BiSi no recopila, a propósito, ningún dato de sus jugadores. Para él no es una contradicción, sino una decisión clara:
+
+«BiSi va de juego, diversión y emoción entre amigos. Para eso no hacen falta toneladas de datos que haya que analizar y procesar. Por eso, aquí votan las personas de la mesa y no un complejo modelo de IA que analiza una grabación de voz y calcula probabilidades. Lo primero son las personas y la diversión, sin preocuparse por los datos».
+
+Lo que viene
+
+En Bélgica, los niños demostraron cuánto disfrutan pulsando incluso los más pequeños. Por eso la siguiente idea ya está aquí: una versión con símbolos en lugar de letras, para todos los que aún no saben leer. Para que aún más personas se reúnan alrededor de una mesa y el móvil sea, simplemente, el pulsador.
+
+Contacto: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
