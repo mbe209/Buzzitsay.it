@@ -183,6 +183,11 @@
             .card { padding: 20px; }
             .shots { grid-template-columns: repeat(3, 1fr); }
         }
+        /* Promo video */
+        .video-wrap { margin-top: 18px; border-radius: 16px; overflow: hidden; border: 1px solid var(--bg-card-border); background: #0b0614; aspect-ratio: 16 / 9; }
+        .video-wrap video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0b0614; }
+        .video-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+        .video-meta { color: var(--text-muted); font-size: 0.85rem; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -253,6 +258,16 @@
     <section class="card">
         <h2><span data-i18n="videoHeading">Promo-Video</span><span class="dot">.</span></h2>
         <p class="lead" style="margin-bottom:0" data-i18n="videoLead"></p>
+        <div class="video-wrap">
+            <video id="promo-video" controls preload="none" playsinline poster="video/BiSi_Promo_DE_16x9_poster.png">
+                <source id="promo-src" src="video/BiSi_Promo_DE_16x9.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="video-actions">
+            <a class="btn btn-gold" id="vid-169" href="video/BiSi_Promo_DE_16x9.mp4" download><span data-i18n="vid169">16:9 herunterladen</span></a>
+            <a class="btn btn-ghost" id="vid-916" href="video/BiSi_Promo_DE_9x16.mp4" download><span data-i18n="vid916">9:16 herunterladen</span></a>
+        </div>
+        <p class="video-meta" data-i18n="videoMeta"></p>
     </section>
 
     <!-- Brand / CI -->
@@ -355,9 +370,9 @@
             boiler: "BiSi: Buzz it, Say it ist ein Echtzeit-Reaktions-Quiz für iPhone und iPad, entwickelt von Martin Bechtold. Die App verbindet das Spielprinzip von Stadt-Land-Fluss mit dem Tempo einer TV-Gameshow und richtet sich an Freundesgruppen, Partygäste und Familien. BiSi ist auf Deutsch, Englisch, Französisch und Spanisch verfügbar und verzichtet vollständig auf Tracking und Werbung.",
             copy: "Text kopieren", copied: "Kopiert!",
             dlHeading: "Downloads", dlLead: "Alle Dokumente je Sprache: als PDF zum Lesen, als Word (DOCX) und Text (TXT) zum direkten Übernehmen in eure Artikel. Das Media-Kit-ZIP enthält alles zusammen, dazu Screenshots in Originalauflösung für iPhone und iPad sowie Logos und Icons.",
-            dlDoc: "Dokument", dlZip: "Media Kit komplett", dlZipSub: "ZIP · ca. 20 MB · alle Dateien", dlFs: "Fact Sheet", dlFsSub: "PDF · 2 Seiten", dlPm: "Pressemitteilung", dlPmSub: "PDF · Word · Text", dlGs: "Gründer-Geschichte", dlGsSub: "Kurzporträt + Story · PDF · Word · Text",
+            dlDoc: "Dokument", dlZip: "Media Kit komplett", dlZipSub: "ZIP · ca. 58 MB · alle Dateien inkl. Video", dlFs: "Fact Sheet", dlFsSub: "PDF · 2 Seiten", dlPm: "Pressemitteilung", dlPmSub: "PDF · Word · Text", dlGs: "Gründer-Geschichte", dlGsSub: "Kurzporträt + Story · PDF · Word · Text",
             shotsHeading: "Screenshots", shotsLead: "Vorschau in der gewählten Sprache. Klick öffnet das Bild. Originalauflösung (iPhone 1290 × 2796, iPad 2048 × 2732) im Media-Kit-ZIP.",
-            videoHeading: "Promo-Video", videoLead: "Das Promo-Video in 16:9 und 9:16 folgt in Kürze und wird hier ergänzt.",
+            videoHeading: "Promo-Video", videoLead: "Eine echte BiSi-Runde in 28 Sekunden: Countdown, Buzzer-Duell, Abstimmung per Daumen, „Klau die Antwort“ und Match-Winner – auf dem Sofa und in der Bar.", vid169: "16:9 herunterladen", vid916: "9:16 herunterladen", videoMeta: "MP4 · 28 s · 1080p · ca. 20 MB je Format. Alle Sprachfassungen in der Download-Tabelle oben.", dlVid: "Promo-Video", dlVidSub: "MP4 · 28 s · 1080p · 16:9 und 9:16",
             ciHeading: "Marke & CI", ciLead: "Für Artikel, Banner und Werbung. Bitte haltet euch an diese Vorgaben, damit BiSi überall sofort wiedererkennbar ist.",
             logoHeading: "Logos & Icons", logo1: "Logo-Badge · PNG, transparent", logo2: "App-Icon abgerundet · 1024 px", logo3: "App-Icon eckig · 1024 px", logo4: "Header-Bild · 2760 × 1504", download: "Download",
             colorHeading: "Farben", colorLead: "Lila und Gelb stehen im Mittelpunkt. Gelb ist für Buzzer, Highlights und Gewinner-Momente reserviert. Klick auf eine Farbe kopiert den HEX-Code.",
@@ -386,9 +401,9 @@
             boiler: "BiSi: Buzz it, Say it is a real-time reaction quiz for iPhone and iPad, developed by Martin Bechtold. The app combines the classic categories word game with the pace of a TV game show and is made for groups of friends, party guests and families. BiSi is available in English, German, French and Spanish and uses no tracking and no advertising.",
             copy: "Copy text", copied: "Copied!",
             dlHeading: "Downloads", dlLead: "Every document per language: as PDF to read, and as Word (DOCX) and plain text (TXT) to drop straight into your article. The media kit ZIP bundles everything, plus full-resolution screenshots for iPhone and iPad, logos and icons.",
-            dlDoc: "Document", dlZip: "Complete media kit", dlZipSub: "ZIP · approx. 20 MB · all files", dlFs: "Fact sheet", dlFsSub: "PDF · 2 pages", dlPm: "Press release", dlPmSub: "PDF · Word · text", dlGs: "Founder story", dlGsSub: "Short profile + story · PDF · Word · text",
+            dlDoc: "Document", dlZip: "Complete media kit", dlZipSub: "ZIP · approx. 58 MB · all files incl. video", dlFs: "Fact sheet", dlFsSub: "PDF · 2 pages", dlPm: "Press release", dlPmSub: "PDF · Word · text", dlGs: "Founder story", dlGsSub: "Short profile + story · PDF · Word · text",
             shotsHeading: "Screenshots", shotsLead: "Preview in the selected language. Click to open. Full resolution (iPhone 1290 × 2796, iPad 2048 × 2732) in the media kit ZIP.",
-            videoHeading: "Promo video", videoLead: "The promo video in 16:9 and 9:16 is coming soon and will be added here.",
+            videoHeading: "Promo video", videoLead: "A real round of BiSi in 28 seconds: countdown, buzzer duel, thumbs-up voting, “Steal the answer” and match winner – on the couch and at the bar.", vid169: "Download 16:9", vid916: "Download 9:16", videoMeta: "MP4 · 28 s · 1080p · approx. 20 MB per format. All language versions are in the download table above.", dlVid: "Promo video", dlVidSub: "MP4 · 28 s · 1080p · 16:9 and 9:16",
             ciHeading: "Brand & CI", ciLead: "For articles, banners and ads. Please follow these guidelines so BiSi is instantly recognizable everywhere.",
             logoHeading: "Logos & icons", logo1: "Logo badge · PNG, transparent", logo2: "App icon, rounded · 1024 px", logo3: "App icon, square · 1024 px", logo4: "Header image · 2760 × 1504", download: "Download",
             colorHeading: "Colors", colorLead: "Purple and yellow are at the heart of the brand. Yellow is reserved for buzzers, highlights and winning moments. Click a color to copy its HEX code.",
@@ -417,9 +432,9 @@
             boiler: "BiSi: Buzz it, Say it est un quiz de réflexes en temps réel pour iPhone et iPad, développé par Martin Bechtold. L’app associe le principe du Petit Bac au rythme d’un jeu télévisé et s’adresse aux groupes d’amis, aux soirées et aux familles. BiSi est disponible en français, anglais, allemand et espagnol, sans aucun pistage ni publicité.",
             copy: "Copier le texte", copied: "Copié !",
             dlHeading: "Téléchargements", dlLead: "Chaque document par langue : en PDF pour la lecture, en Word (DOCX) et en texte brut (TXT) pour une reprise directe dans vos articles. Le ZIP du kit média regroupe tout, avec les captures d’écran en pleine résolution pour iPhone et iPad, les logos et les icônes.",
-            dlDoc: "Document", dlZip: "Kit média complet", dlZipSub: "ZIP · env. 20 Mo · tous les fichiers", dlFs: "Fiche produit", dlFsSub: "PDF · 2 pages", dlPm: "Communiqué de presse", dlPmSub: "PDF · Word · texte", dlGs: "Histoire du fondateur", dlGsSub: "Portrait + histoire · PDF · Word · texte",
+            dlDoc: "Document", dlZip: "Kit média complet", dlZipSub: "ZIP · env. 58 Mo · tous les fichiers, vidéo incluse", dlFs: "Fiche produit", dlFsSub: "PDF · 2 pages", dlPm: "Communiqué de presse", dlPmSub: "PDF · Word · texte", dlGs: "Histoire du fondateur", dlGsSub: "Portrait + histoire · PDF · Word · texte",
             shotsHeading: "Captures d’écran", shotsLead: "Aperçu dans la langue choisie. Cliquez pour ouvrir. Pleine résolution (iPhone 1290 × 2796, iPad 2048 × 2732) dans le ZIP du kit média.",
-            videoHeading: "Vidéo promo", videoLead: "La vidéo promo en 16:9 et 9:16 arrive bientôt et sera ajoutée ici.",
+            videoHeading: "Vidéo promo", videoLead: "Une vraie partie de BiSi en 28 secondes : compte à rebours, duel au buzzer, vote du pouce, « Vole la réponse » et vainqueur du match – sur le canapé et au bar.", vid169: "Télécharger en 16:9", vid916: "Télécharger en 9:16", videoMeta: "MP4 · 28 s · 1080p · env. 20 Mo par format. Toutes les versions linguistiques figurent dans le tableau de téléchargement ci-dessus.", dlVid: "Vidéo promo", dlVidSub: "MP4 · 28 s · 1080p · 16:9 et 9:16",
             ciHeading: "Marque & CI", ciLead: "Pour les articles, bannières et publicités. Merci de respecter ces règles pour que BiSi soit reconnaissable partout.",
             logoHeading: "Logos & icônes", logo1: "Badge logo · PNG, transparent", logo2: "Icône arrondie · 1024 px", logo3: "Icône carrée · 1024 px", logo4: "Image d’en-tête · 2760 × 1504", download: "Télécharger",
             colorHeading: "Couleurs", colorLead: "Le violet et le jaune sont au cœur de la marque. Le jaune est réservé aux buzzers, aux points forts et aux moments de victoire. Cliquez sur une couleur pour copier son code HEX.",
@@ -448,9 +463,9 @@
             boiler: "BiSi: Buzz it, Say it es un quiz de reflejos en tiempo real para iPhone y iPad, desarrollado por Martin Bechtold. La app combina la mecánica del clásico «Stop» con el ritmo de un concurso de televisión y está pensada para grupos de amigos, fiestas y familias. BiSi está disponible en español, inglés, alemán y francés y no utiliza rastreo ni publicidad.",
             copy: "Copiar texto", copied: "¡Copiado!",
             dlHeading: "Descargas", dlLead: "Cada documento por idioma: en PDF para leer y en Word (DOCX) y texto plano (TXT) para incorporarlo directamente a tus artículos. El ZIP del kit de medios lo reúne todo, con capturas a resolución completa para iPhone y iPad, logotipos e iconos.",
-            dlDoc: "Documento", dlZip: "Kit de medios completo", dlZipSub: "ZIP · aprox. 20 MB · todos los archivos", dlFs: "Ficha técnica", dlFsSub: "PDF · 2 páginas", dlPm: "Nota de prensa", dlPmSub: "PDF · Word · texto", dlGs: "Historia del fundador", dlGsSub: "Perfil breve + historia · PDF · Word · texto",
+            dlDoc: "Documento", dlZip: "Kit de medios completo", dlZipSub: "ZIP · aprox. 58 MB · todos los archivos, vídeo incluido", dlFs: "Ficha técnica", dlFsSub: "PDF · 2 páginas", dlPm: "Nota de prensa", dlPmSub: "PDF · Word · texto", dlGs: "Historia del fundador", dlGsSub: "Perfil breve + historia · PDF · Word · texto",
             shotsHeading: "Capturas", shotsLead: "Vista previa en el idioma seleccionado. Haz clic para abrir. Resolución completa (iPhone 1290 × 2796, iPad 2048 × 2732) en el ZIP del kit de medios.",
-            videoHeading: "Vídeo promocional", videoLead: "El vídeo promocional en 16:9 y 9:16 llegará pronto y se añadirá aquí.",
+            videoHeading: "Vídeo promocional", videoLead: "Una partida real de BiSi en 28 segundos: cuenta atrás, duelo de buzzer, votación con el pulgar, «Roba la respuesta» y ganador del match – en el sofá y en el bar.", vid169: "Descargar 16:9", vid916: "Descargar 9:16", videoMeta: "MP4 · 28 s · 1080p · aprox. 20 MB por formato. Todas las versiones de idioma están en la tabla de descargas de arriba.", dlVid: "Vídeo promocional", dlVidSub: "MP4 · 28 s · 1080p · 16:9 y 9:16",
             ciHeading: "Marca y CI", ciLead: "Para artículos, banners y publicidad. Respeta estas pautas para que BiSi sea reconocible en todas partes.",
             logoHeading: "Logotipos e iconos", logo1: "Insignia del logo · PNG, transparente", logo2: "Icono redondeado · 1024 px", logo3: "Icono cuadrado · 1024 px", logo4: "Imagen de cabecera · 2760 × 1504", download: "Descargar",
             colorHeading: "Colores", colorLead: "El morado y el amarillo son el corazón de la marca. El amarillo se reserva para pulsadores, destacados y momentos de victoria. Haz clic en un color para copiar su código HEX.",
@@ -487,10 +502,15 @@
     }
 
     function renderDownloads(t) {
-        const rows = [["dlZip", "dlZipSub", "zip"], ["dlFs", "dlFsSub", "fs"], ["dlPm", "dlPmSub", "pm"], ["dlGs", "dlGsSub", "gs"]];
+        const rows = [["dlZip", "dlZipSub", "zip"], ["dlFs", "dlFsSub", "fs"], ["dlPm", "dlPmSub", "pm"], ["dlGs", "dlGsSub", "gs"], ["dlVid", "dlVidSub", "vid"]];
         document.getElementById("dl-body").innerHTML = rows.map(([k, sub, key]) =>
             `<tr><td>${t[k]}<small>${t[sub]}</small></td>` +
             LANGS.map(l => {
+                if (key === "vid") {
+                    const L = l.toUpperCase();
+                    return `<td><div class="pills">` + [["16x9", "16:9"], ["9x16", "9:16"]].map(([f, lab]) =>
+                        `<a class="pill${l === current ? " cur" : ""}" href="video/BiSi_Promo_${L}_${f}.mp4" download>${lab}</a>`).join("") + `</div></td>`;
+                }
                 const base = DOCS[l][key];
                 const links = FORMATS[key].map(ext => {
                     const href = key === "zip" ? `downloads/${base}.zip` : `downloads/${l}/${base}.${ext}`;
@@ -499,6 +519,15 @@
                 }).join("");
                 return `<td><div class="pills">${links}</div></td>`;
             }).join("") + `</tr>`).join("");
+    }
+    function renderVideo() {
+        const L = current.toUpperCase(), v = document.getElementById("promo-video"), src = `video/BiSi_Promo_${L}_16x9.mp4`;
+        if (document.getElementById("promo-src").getAttribute("src") !== src) {
+            document.getElementById("promo-src").setAttribute("src", src);
+            v.setAttribute("poster", `video/BiSi_Promo_${L}_16x9_poster.png`); v.load();
+        }
+        document.getElementById("vid-169").href = src;
+        document.getElementById("vid-916").href = `video/BiSi_Promo_${L}_9x16.mp4`;
     }
     function renderShots() {
         document.getElementById("shots").innerHTML = SHOTS.map(s =>
@@ -525,7 +554,7 @@
         document.getElementById("footer-privacy").href = `https://www.buzzitsay.it/privacy/#${lang}`;
         document.getElementById("do-list").innerHTML = t.dos.map(x => `<li>${x}</li>`).join("");
         document.getElementById("dont-list").innerHTML = t.donts.map(x => `<li>${x}</li>`).join("");
-        renderDownloads(t); renderShots(); renderSwatches(t);
+        renderDownloads(t); renderShots(); renderSwatches(t); renderVideo();
         document.documentElement.lang = lang;
         if (window.location.hash.replace("#", "") !== lang && LANGS.includes(lang)) history.replaceState(null, "", "#" + lang);
     }

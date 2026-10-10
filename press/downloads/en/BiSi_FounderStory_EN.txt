@@ -7,7 +7,7 @@ Belgium, late August 2026. One table, four friends, a vacation evening – and n
 
 And then a moment like this: someone buzzes too early and suddenly can’t think of a single food starting with A. Silence. Another player steals the answer, glances at the table and shouts: “Apple!” The whole table bursts out laughing.
 
-In about a month, those evenings turn into BiSi: Buzz it, Say it, Martin’s first app and a small dream come true. An app that deliberately collects no data: “With us, the people at the table vote, not an AI model. People and fun come first.”
+In about a month, those evenings turn into BiSi: Buzz it, Say it, Martin's first app and a small dream come true. His second app follows: PantoMeGo, a charades app for families and children. Both stand for the same belief: the phone stays in the background – the fun belongs to the people at the table.
 
 —
 
@@ -52,6 +52,6 @@ Martin works with data and AI for a living. And yet BiSi deliberately collects n
 
 What’s next
 
-In Belgium, the kids showed how much even the youngest love to buzz. So the next idea is already here: a version with symbols instead of letters, for everyone who can’t read yet. So that even more people come together around one table, and the phone is simply the buzzer.
+In Belgium, the kids showed how much even the youngest love to buzz. That was the spark for Martin’s second app: PantoMeGo, a charades app for families and children on iPhone and iPad. Three difficulty levels from Bambini to Pros, five categories, four languages – and the same philosophy: the phone shows the word, the game is played with your body, your expressions and real togetherness. More at pantomego.app.
 
 Contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it

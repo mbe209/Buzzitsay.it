@@ -7,7 +7,7 @@ Belgique, fin août 2026. Une table, quatre amis, une soirée de vacances – et
 
 Et puis, un moment comme celui-ci : quelqu’un buzze trop tôt et ne trouve soudain plus un seul aliment en A. Silence. Un autre joueur lui vole la réponse, jette un œil sur la table et s’écrie : « Pomme ! » Toute la table éclate de rire.
 
-En un mois environ, ces soirées deviennent BiSi: Buzz it, Say it, la première app de Martin et un petit rêve devenu réalité. Une app qui ne collecte délibérément aucune donnée : « Chez nous, ce sont les joueurs qui votent, pas un modèle d’IA. L’humain et le plaisir passent avant tout. »
+En un mois environ, ces soirées deviennent BiSi: Buzz it, Say it, la première app de Martin et un petit rêve devenu réalité. Sa deuxième app suit : PantoMeGo, un jeu de mime pour familles et enfants. Les deux partagent la même conviction : le téléphone reste en retrait – le plaisir appartient aux gens autour de la table.
 
 —
 
@@ -52,6 +52,6 @@ Martin travaille au quotidien avec la data et l’IA. Et pourtant, BiSi ne colle
 
 Et ensuite ?
 
-En Belgique, les enfants ont montré à quel point même les plus petits adorent buzzer. La prochaine idée est donc déjà là : une version avec des symboles à la place des lettres, pour tous ceux qui ne savent pas encore lire. Pour que toujours plus de personnes se retrouvent autour d’une table, et que le téléphone ne soit qu’un buzzer.
+En Belgique, les enfants ont montré à quel point même les plus petits adorent buzzer. C’est ce qui a inspiré la deuxième app de Martin : PantoMeGo, une app de mime pour familles et enfants sur iPhone et iPad. Trois niveaux de difficulté de Bambini à Pros, cinq catégories, quatre langues – et la même philosophie : le téléphone affiche le mot, le jeu se joue avec le corps, les expressions et un vrai lien entre les gens. Plus d’infos sur pantomego.app.
 
 Contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
