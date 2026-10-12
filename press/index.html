@@ -163,6 +163,8 @@
         .contact { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
             background: linear-gradient(135deg, rgba(124,58,237,.45), rgba(36,17,61,.85)); border-color: rgba(167,139,250,.45); }
         .contact .mail { font-size: 1.3rem; font-weight: 800; color: var(--accent-gold); }
+        .tf-link { color: var(--accent-gold); font-weight: 700; text-decoration: none; }
+        .tf-link:hover { text-decoration: underline; }
         .note { color: var(--text-muted); font-size: 0.88rem; margin-top: 6px; max-width: 560px; }
 
         footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: 36px; }
@@ -214,7 +216,7 @@
         <div class="subtitle" data-i18n="subtitle"></div>
         <div class="cta-row">
             <a class="btn btn-gold" id="cta-kit" href="downloads/BiSi_MediaKit_DE.zip" download><span data-i18n="ctaKit">Media Kit herunterladen</span></a>
-            <a class="btn btn-ghost" id="cta-test" href="mailto:hello@buzzitsay.it"><span data-i18n="ctaTest">Testzugang anfragen</span></a>
+            <a class="btn btn-ghost" id="cta-test" href="https://testflight.apple.com/join/yANVqwV1" target="_blank" rel="noopener"><span data-i18n="ctaTest">Testzugang anfragen</span></a>
         </div>
     </header>
 
@@ -322,6 +324,7 @@
             <div class="mail">hello@buzzitsay.it</div>
             <p class="note"><b style="color:#fff">Martin Bechtold</b> · <span data-i18n="contactRole">Entwickler</span></p>
             <p class="note" data-i18n="contactTest"></p>
+            <p class="note"><a class="tf-link" id="tf-link" href="https://testflight.apple.com/join/yANVqwV1" target="_blank" rel="noopener">testflight.apple.com/join/yANVqwV1</a></p>
         </div>
         <a class="btn btn-gold" id="contact-btn" href="mailto:hello@buzzitsay.it"><span data-i18n="contactBtn">E-Mail schreiben</span></a>
     </section>
@@ -362,7 +365,7 @@
             navHome: "⚡ Startseite", navDownloads: "Downloads", navBrand: "Marke & CI", navContact: "Kontakt",
             badge: "⚡ Presse & Media Kit", title: "Alles für eure Berichterstattung über BiSi",
             subtitle: "Pressetexte, Screenshots, Logos und Markenrichtlinien in vier Sprachen. Frei verwendbar für die redaktionelle Berichterstattung.",
-            ctaKit: "Media Kit herunterladen (ZIP)", ctaTest: "Testzugang anfragen", testSubject: "Testzugang BiSi",
+            ctaKit: "Media Kit herunterladen (ZIP)", ctaTest: "Jetzt testen (TestFlight)", testSubject: "Testzugang BiSi",
             factsHeading: "Auf einen Blick",
             factsLead: "BiSi: Buzz it, Say it ist ein Echtzeit-Reaktions-Quiz für iPhone und iPad: Stadt-Land-Fluss als Gameshow. Buchstabe sehen, Thema checken, buzzern und die Antwort laut in die Runde rufen.",
             f1: "Spieler, jeder mit eigenem Gerät", f2: "Kategorien, von Stadt bis Markenname", f3: "Buchstaben für immer neue Runden", f4: "Sprachen: DE · EN · FR · ES",
@@ -385,7 +388,7 @@
             dos: ["Logo auf dunklem Lila oder ruhigem Hintergrund mit genug Freiraum", "Gelb sparsam als Akzent für Buzzer und Highlights", "Echte Screenshots aus dem Media Kit verwenden", "Name und Claim exakt wie angegeben schreiben"],
             donts: ["Logo verzerren, umfärben, drehen oder beschneiden", "Alte Namen wie „Quizzz“ oder ein „Q“-Logo verwenden", "App-Oberflächen nachbauen oder Funktionen erfinden", "Preise nennen, ohne den aktuellen App-Store-Stand zu prüfen"],
             contactHeading: "Pressekontakt", contactRole: "Entwickler",
-            contactTest: "Testzugang: BiSi macht ab 2 Spielern Spaß, der Modus „Klau die Antwort“ startet ab 3. Für einen aussagekräftigen Test stellen wir gern Zugänge für mehrere Geräte bereit.",
+            contactTest: "TestFlight-Zugang (Redaktionstest, Version 45): Der Link unten funktioniert auf iPhone und iPad, die Apple-App „TestFlight“ wird benötigt. BiSi macht ab 2 Spielern Spaß, der Modus „Klau die Antwort“ startet ab 3 – für einen aussagekräftigen Test empfehlen wir mindestens 3 Geräte.",
             contactBtn: "E-Mail schreiben", contactSubject: "Presseanfrage BiSi",
             footer: "© 2026 Martin Bechtold · Alle Materialien sind für die redaktionelle Berichterstattung frei verwendbar.", privacy: "Datenschutz"
         },
@@ -393,7 +396,7 @@
             navHome: "⚡ Home", navDownloads: "Downloads", navBrand: "Brand & CI", navContact: "Contact",
             badge: "⚡ Press & Media Kit", title: "Everything you need to cover BiSi",
             subtitle: "Press texts, screenshots, logos and brand guidelines in four languages. Free to use for editorial coverage.",
-            ctaKit: "Download media kit (ZIP)", ctaTest: "Request review access", testSubject: "BiSi review access",
+            ctaKit: "Download media kit (ZIP)", ctaTest: "Try it now (TestFlight)", testSubject: "BiSi review access",
             factsHeading: "At a glance",
             factsLead: "BiSi: Buzz it, Say it is a real-time reaction quiz for iPhone and iPad: the classic categories word game as a game show. See the letter, check the topic, buzz in and shout your answer out loud.",
             f1: "players, each on their own device", f2: "categories, from cities to brands", f3: "letters for endless new rounds", f4: "languages: EN · DE · FR · ES",
@@ -416,7 +419,7 @@
             dos: ["Place the logo on dark purple or a calm background with enough clear space", "Use yellow sparingly as an accent for buzzers and highlights", "Use real screenshots from the media kit", "Write the name and claim exactly as shown"],
             donts: ["Distort, recolor, rotate or crop the logo", "Use old names like “Quizzz” or a “Q” logo", "Recreate app screens or invent features", "Quote prices without checking the current App Store listing"],
             contactHeading: "Press contact", contactRole: "Developer",
-            contactTest: "Review access: BiSi is fun from 2 players, and “Steal the Answer” mode starts at 3. For a meaningful test we’re happy to provide access for several devices.",
+            contactTest: "TestFlight access (editorial test, version 45): the link below works on iPhone and iPad and requires Apple’s “TestFlight” app. BiSi is fun from 2 players, and “Steal the Answer” mode starts at 3 – for a meaningful test we recommend at least 3 devices.",
             contactBtn: "Send an email", contactSubject: "BiSi press inquiry",
             footer: "© 2026 Martin Bechtold · All materials may be used freely for editorial coverage.", privacy: "Privacy"
         },
@@ -424,7 +427,7 @@
             navHome: "⚡ Accueil", navDownloads: "Téléchargements", navBrand: "Marque & CI", navContact: "Contact",
             badge: "⚡ Presse & kit média", title: "Tout pour parler de BiSi",
             subtitle: "Textes presse, captures d’écran, logos et charte graphique en quatre langues. Libres d’utilisation pour un usage rédactionnel.",
-            ctaKit: "Télécharger le kit média (ZIP)", ctaTest: "Demander un accès test", testSubject: "Accès test BiSi",
+            ctaKit: "Télécharger le kit média (ZIP)", ctaTest: "Tester maintenant (TestFlight)", testSubject: "Accès test BiSi",
             factsHeading: "En bref",
             factsLead: "BiSi: Buzz it, Say it est un quiz de réflexes en temps réel pour iPhone et iPad : le Petit Bac version jeu télévisé. Vois la lettre, découvre le thème, buzze et crie ta réponse.",
             f1: "joueurs, chacun sur son appareil", f2: "catégories, des villes aux marques", f3: "lettres pour des parties toujours nouvelles", f4: "langues : FR · EN · DE · ES",
@@ -447,7 +450,7 @@
             dos: ["Placer le logo sur un fond violet foncé ou sobre, avec assez d’espace", "Utiliser le jaune avec parcimonie, comme accent", "Utiliser les vraies captures d’écran du kit média", "Écrire le nom et le slogan exactement comme indiqué"],
             donts: ["Déformer, recolorer, pivoter ou recadrer le logo", "Utiliser d’anciens noms comme « Quizzz » ou un logo « Q »", "Recréer des écrans de l’app ou inventer des fonctions", "Indiquer un prix sans vérifier la fiche App Store actuelle"],
             contactHeading: "Contact presse", contactRole: "développeur",
-            contactTest: "Accès test : BiSi se joue dès 2 joueurs, le mode « Vole la réponse » dès 3. Pour un test représentatif, nous fournissons volontiers des accès pour plusieurs appareils.",
+            contactTest: "Accès TestFlight (test rédactionnel, version 45) : le lien ci-dessous fonctionne sur iPhone et iPad et nécessite l’app Apple « TestFlight ». BiSi se joue dès 2 joueurs, le mode « Vole la réponse » dès 3 – pour un test représentatif, nous recommandons au moins 3 appareils.",
             contactBtn: "Écrire un e-mail", contactSubject: "Demande presse BiSi",
             footer: "© 2026 Martin Bechtold · Tous les éléments sont libres d’utilisation pour un usage rédactionnel.", privacy: "Confidentialité"
         },
@@ -455,7 +458,7 @@
             navHome: "⚡ Inicio", navDownloads: "Descargas", navBrand: "Marca y CI", navContact: "Contacto",
             badge: "⚡ Prensa y kit de medios", title: "Todo lo que necesitas para hablar de BiSi",
             subtitle: "Textos de prensa, capturas, logotipos y guía de marca en cuatro idiomas. De uso libre con fines editoriales.",
-            ctaKit: "Descargar kit de medios (ZIP)", ctaTest: "Solicitar acceso de prueba", testSubject: "Acceso de prueba BiSi",
+            ctaKit: "Descargar kit de medios (ZIP)", ctaTest: "Probar ahora (TestFlight)", testSubject: "Acceso de prueba BiSi",
             factsHeading: "De un vistazo",
             factsLead: "BiSi: Buzz it, Say it es un quiz de reflejos en tiempo real para iPhone y iPad: el clásico «Stop» convertido en concurso. Mira la letra, descubre el tema, pulsa y grita tu respuesta.",
             f1: "jugadores, cada uno con su dispositivo", f2: "categorías, de ciudades a marcas", f3: "letras para rondas siempre nuevas", f4: "idiomas: ES · EN · DE · FR",
@@ -478,7 +481,7 @@
             dos: ["Logo sobre morado oscuro o un fondo tranquilo, con espacio suficiente", "Amarillo con moderación, como acento", "Usar capturas reales del kit de medios", "Escribir el nombre y el eslogan exactamente como se indica"],
             donts: ["Deformar, recolorear, girar o recortar el logo", "Usar nombres antiguos como «Quizzz» o un logo con «Q»", "Recrear pantallas de la app o inventar funciones", "Indicar precios sin comprobar la ficha actual del App Store"],
             contactHeading: "Contacto de prensa", contactRole: "desarrollador",
-            contactTest: "Acceso de prueba: BiSi se disfruta desde 2 jugadores y el modo «Roba la respuesta» empieza con 3. Para una prueba representativa, con gusto facilitamos accesos para varios dispositivos.",
+            contactTest: "Acceso TestFlight (prueba para redacciones, versión 45): el enlace de abajo funciona en iPhone y iPad y requiere la app «TestFlight» de Apple. BiSi se disfruta desde 2 jugadores y el modo «Roba la respuesta» empieza con 3 – para una prueba representativa recomendamos al menos 3 dispositivos.",
             contactBtn: "Escribir un e-mail", contactSubject: "Consulta de prensa BiSi",
             footer: "© 2026 Martin Bechtold · Todos los materiales pueden usarse libremente con fines editoriales.", privacy: "Privacidad"
         }
@@ -548,7 +551,6 @@
         document.querySelectorAll(".lang-btn").forEach(b => b.classList.toggle("active", b.dataset.lang === lang));
         document.getElementById("boiler-text").textContent = t.boiler;
         document.getElementById("cta-kit").href = `downloads/${DOCS[lang].zip}.zip`;
-        document.getElementById("cta-test").href = `mailto:hello@buzzitsay.it?subject=${encodeURIComponent(t.testSubject)}`;
         document.getElementById("contact-btn").href = `mailto:hello@buzzitsay.it?subject=${encodeURIComponent(t.contactSubject)}`;
         document.getElementById("nav-home").href = `https://www.buzzitsay.it/#${lang}`;
         document.getElementById("footer-privacy").href = `https://www.buzzitsay.it/privacy/#${lang}`;

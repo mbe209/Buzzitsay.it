@@ -42,9 +42,9 @@ Disponibilité
 
 BiSi sera bientôt disponible sur l’App Store pour iPhone et iPad (iOS / iPadOS 17 ou ultérieur). L’app est proposée en achat unique, sans abonnement et sans publicité. Chaque joueur a besoin de son propre appareil avec l’app. Classification : 4+.
 
-Kit presse et accès test
+Kit presse et accès TestFlight
 
-Fiche produit, histoire du fondateur, captures d’écran et vidéo promotionnelle (16:9 et 9:16) en quatre langues, ainsi que l’icône et le logo, sont disponibles au téléchargement sur www.buzzitsay.it/press. Les rédactions peuvent obtenir un accès test sur demande ; pour un test représentatif, nous recommandons au moins 3 appareils.
+Fiche produit, histoire du fondateur, captures d’écran et vidéo promotionnelle (16:9 et 9:16) en quatre langues, ainsi que l’icône et le logo, sont disponibles au téléchargement sur www.buzzitsay.it/press. Les rédactions peuvent tester BiSi (version 45) directement via TestFlight : https://testflight.apple.com/join/yANVqwV1 – pour un test représentatif, nous recommandons au moins 3 appareils.
 
 Contact presse: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
 

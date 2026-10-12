@@ -42,9 +42,9 @@ Availability
 
 BiSi is coming soon to the App Store for iPhone and iPad (iOS / iPadOS 17 or later). The app is a one-time purchase, with no subscription and no ads. Each player needs their own device with the app. Age rating: 4+.
 
-Press assets and review access
+Press assets and TestFlight access
 
-Fact sheet, founder story, screenshots and the promo video (16:9 and 9:16) in four languages, plus app icon and logo, are available for download at www.buzzitsay.it/press. Editors can request review access; for a meaningful test we recommend at least 3 devices.
+Fact sheet, founder story, screenshots and the promo video (16:9 and 9:16) in four languages, plus app icon and logo, are available for download at www.buzzitsay.it/press. Editors can test BiSi (version 45) directly via TestFlight: https://testflight.apple.com/join/yANVqwV1 – for a meaningful test we recommend at least 3 devices.
 
 Press contact: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
 

@@ -42,9 +42,9 @@ Verfügbarkeit
 
 BiSi erscheint demnächst im App Store für iPhone und iPad (ab iOS bzw. iPadOS 17). Die App wird als Einmalkauf angeboten, ohne Abo und ohne Werbung. Jeder Mitspieler benötigt ein eigenes Gerät mit der App. Die Altersfreigabe liegt bei 4+.
 
-Pressematerial und Testzugang
+Pressematerial und TestFlight-Zugang
 
-Fact Sheet, Gründer-Geschichte, Screenshots und das Promo-Video (16:9 und 9:16) in vier Sprachen sowie App-Icon und Logo stehen unter www.buzzitsay.it/press zum Download bereit. Redaktionen erhalten auf Anfrage einen Testzugang; für einen aussagekräftigen Test empfehlen wir mindestens 3 Geräte.
+Fact Sheet, Gründer-Geschichte, Screenshots und das Promo-Video (16:9 und 9:16) in vier Sprachen sowie App-Icon und Logo stehen unter www.buzzitsay.it/press zum Download bereit. Redaktionen können BiSi (Version 45) direkt über TestFlight testen: https://testflight.apple.com/join/yANVqwV1 – für einen aussagekräftigen Test empfehlen wir mindestens 3 Geräte.
 
 Pressekontakt: Martin Bechtold · hello@buzzitsay.it · www.buzzitsay.it
 
