@@ -642,14 +642,24 @@
             document.getElementById('footer-privacy-link').href = `https://www.buzzitsay.it/privacy/#${lang}`;
 
             document.documentElement.lang = lang;
-            window.location.hash = lang;
+            if (window.location.hash.replace('#', '') !== lang) {
+                history.replaceState(null, '', '#' + lang);
+            }
+            try { localStorage.setItem('bisi_lang', lang); } catch (e) {}
         }
 
         function initHash() {
             const hash = window.location.hash.replace('#', '').toLowerCase();
             if (['de', 'en', 'fr', 'es'].includes(hash)) {
-                setLang(hash);
+                return setLang(hash);
             }
+            let stored = '';
+            try { stored = localStorage.getItem('bisi_lang'); } catch (e) {}
+            if (stored && ['de', 'en', 'fr', 'es'].includes(stored)) {
+                return setLang(stored);
+            }
+            const nav = ((navigator.languages && navigator.languages[0]) || navigator.language || 'de').slice(0, 2).toLowerCase();
+            setLang(['de', 'en', 'fr', 'es'].includes(nav) ? nav : 'en');
         }
 
         window.addEventListener('DOMContentLoaded', initHash);

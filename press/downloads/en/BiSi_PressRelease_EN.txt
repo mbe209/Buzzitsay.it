@@ -4,7 +4,7 @@ Buzzers, not pencils: BiSi turns the classic categories game into a real-time ga
 
 New iPhone and iPad app brings the game-show feeling to the table: see the letter, check the topic, buzz in and shout your answer out loud. For 2 to 10 friends, no extras needed, no ads, no subscription.
 
-[City], [Date] – “BiSi: Buzz it, Say it”, a new reaction quiz for iPhone and iPad, is coming soon and reinvents the classic categories word game. Instead of pen and paper, every player holds their smartphone as a buzzer. A letter and a topic appear on every device at the same moment. Whoever buzzes first gets the floor. Answers aren’t typed, they’re shouted out loud. BiSi was created by Martin Bechtold. The idea came about in late August 2026 on a vacation with friends in Belgium: within hours the first prototype was so much fun that, in just about a month, it grew into an exciting, emotion-packed game app that wins players over through personal interaction and puts the smartphone in the background.
+[City], [Date] – “BiSi: Buzz it, Say it”, a new reaction quiz for iPhone and iPad, is now available on the App Store and reinvents the classic categories word game. Instead of pen and paper, every player holds their smartphone as a buzzer. A letter and a topic appear on every device at the same moment. Whoever buzzes first gets the floor. Answers aren’t typed, they’re shouted out loud. BiSi was created by Martin Bechtold. The idea came about in late August 2026 on a vacation with friends in Belgium: within hours the first prototype was so much fun that, in just about a month, it grew into an exciting, emotion-packed game app that wins players over through personal interaction and puts the smartphone in the background.
 
 How BiSi works
 
@@ -40,7 +40,7 @@ That someone who works with data and AI for a living deliberately collects no da
 
 Availability
 
-BiSi is coming soon to the App Store for iPhone and iPad (iOS / iPadOS 17 or later). The app is a one-time purchase, with no subscription and no ads. Each player needs their own device with the app. Age rating: 4+.
+BiSi has been available on the App Store for iPhone and iPad in 175 countries since October 8, 2026 (iOS / iPadOS 17 or later): https://apps.apple.com/us/app/bisi-the-buzzer-quiz/id6812506398. It is a one-time purchase of $3.99 / £3.99 / €3.99 (prices may vary by country), with no subscription and no ads. Each player needs their own device with the app. Age rating: 4+.
 
 Press assets and TestFlight access
 

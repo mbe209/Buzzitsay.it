@@ -4,7 +4,7 @@ Buzzern statt Zettel: BiSi macht Stadt-Land-Fluss zur Echtzeit-Gameshow
 
 Neue iPhone- und iPad-App bringt das Gameshow-Gefühl an den Tisch: Buchstabe sehen, Thema checken, buzzern und die Antwort laut in die Runde rufen. Für 2 bis 10 Freunde, ohne Zubehör, ohne Werbung, ohne Abo.
 
-[Ort], [Datum] – Mit „BiSi: Buzz it, Say it“ erscheint demnächst ein Reaktions-Quiz für iPhone und iPad, das den Spieleklassiker Stadt-Land-Fluss neu erfindet. Statt Zettel und Stift hat jeder Spieler sein Smartphone als Buzzer in der Hand. Auf allen Geräten erscheinen gleichzeitig ein Buchstabe und ein Thema. Wer zuerst drückt, hat das Wort. Die Antwort wird nicht getippt, sondern laut gerufen. Entwickelt hat BiSi Martin Bechtold. Die Idee entstand Ende August 2026 während eines Urlaubs mit Freunden in Belgien: Der erste Prototyp hat binnen Stunden so große Freude bereitet, dass daraus in nur rund einem Monat eine spannende und emotionsgeladene Spiele-App wurde, die durch die persönliche Interaktion der Spieler begeistert und das Smartphone hintanstellt.
+[Ort], [Datum] – Mit „BiSi: Buzz it, Say it“ ist jetzt ein Reaktions-Quiz für iPhone und iPad im App Store erschienen, das den Spieleklassiker Stadt-Land-Fluss neu erfindet. Statt Zettel und Stift hat jeder Spieler sein Smartphone als Buzzer in der Hand. Auf allen Geräten erscheinen gleichzeitig ein Buchstabe und ein Thema. Wer zuerst drückt, hat das Wort. Die Antwort wird nicht getippt, sondern laut gerufen. Entwickelt hat BiSi Martin Bechtold. Die Idee entstand Ende August 2026 während eines Urlaubs mit Freunden in Belgien: Der erste Prototyp hat binnen Stunden so große Freude bereitet, dass daraus in nur rund einem Monat eine spannende und emotionsgeladene Spiele-App wurde, die durch die persönliche Interaktion der Spieler begeistert und das Smartphone hintanstellt.
 
 So funktioniert BiSi
 
@@ -40,7 +40,7 @@ Dass jemand, der beruflich mit Daten und KI arbeitet, bewusst auf jede Datensamm
 
 Verfügbarkeit
 
-BiSi erscheint demnächst im App Store für iPhone und iPad (ab iOS bzw. iPadOS 17). Die App wird als Einmalkauf angeboten, ohne Abo und ohne Werbung. Jeder Mitspieler benötigt ein eigenes Gerät mit der App. Die Altersfreigabe liegt bei 4+.
+BiSi ist seit dem 8. Oktober 2026 in 175 Ländern im App Store für iPhone und iPad erhältlich (ab iOS bzw. iPadOS 17): https://apps.apple.com/de/app/bisi-the-buzzer-quiz/id6812506398. Die App kostet einmalig 3,99 € (Schweiz: CHF 3.00, Preise können je Land abweichen), ohne Abo und ohne Werbung. Jeder Mitspieler benötigt ein eigenes Gerät mit der App. Die Altersfreigabe liegt bei 4+.
 
 Pressematerial und TestFlight-Zugang
 

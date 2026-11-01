@@ -4,7 +4,7 @@ Le buzzer remplace le papier : BiSi transforme le Petit Bac en jeu télévisé e
 
 Une nouvelle app pour iPhone et iPad apporte l’ambiance d’un jeu télévisé autour de la table : vois la lettre, découvre le thème, buzze et crie ta réponse. Pour 2 à 10 amis, sans accessoire, sans pub, sans abonnement.
 
-[Ville], le [date] – « BiSi: Buzz it, Say it », un quiz de réflexes pour iPhone et iPad, arrive bientôt et réinvente le Petit Bac. Fini le papier et le stylo : chaque joueur tient son smartphone comme un buzzer. Une lettre et un thème s’affichent au même instant sur tous les appareils. Le premier à buzzer prend la parole. La réponse ne se tape pas, elle se crie. BiSi a été créé par Martin Bechtold. L’idée est née fin août 2026, pendant des vacances entre amis en Belgique : en quelques heures, le premier prototype a suscité tant d’enthousiasme qu’il est devenu, en un mois environ, un jeu passionnant et riche en émotions, qui séduit par l’interaction entre les joueurs et relègue le smartphone au second plan.
+[Ville], le [date] – « BiSi: Buzz it, Say it », un quiz de réflexes pour iPhone et iPad, est désormais disponible sur l’App Store et réinvente le Petit Bac. Fini le papier et le stylo : chaque joueur tient son smartphone comme un buzzer. Une lettre et un thème s’affichent au même instant sur tous les appareils. Le premier à buzzer prend la parole. La réponse ne se tape pas, elle se crie. BiSi a été créé par Martin Bechtold. L’idée est née fin août 2026, pendant des vacances entre amis en Belgique : en quelques heures, le premier prototype a suscité tant d’enthousiasme qu’il est devenu, en un mois environ, un jeu passionnant et riche en émotions, qui séduit par l’interaction entre les joueurs et relègue le smartphone au second plan.
 
 Comment fonctionne BiSi
 
@@ -40,7 +40,7 @@ Que quelqu’un qui travaille au quotidien avec la data et l’IA renonce à tou
 
 Disponibilité
 
-BiSi sera bientôt disponible sur l’App Store pour iPhone et iPad (iOS / iPadOS 17 ou ultérieur). L’app est proposée en achat unique, sans abonnement et sans publicité. Chaque joueur a besoin de son propre appareil avec l’app. Classification : 4+.
+BiSi est disponible depuis le 8 octobre 2026 sur l’App Store pour iPhone et iPad dans 175 pays (iOS / iPadOS 17 ou ultérieur) : https://apps.apple.com/fr/app/bisi-the-buzzer-quiz/id6812506398. L’app est proposée en achat unique à 3,99 € (Suisse : CHF 3.00 ; les prix peuvent varier selon le pays), sans abonnement et sans publicité. Chaque joueur a besoin de son propre appareil avec l’app. Classification : 4+.
 
 Kit presse et accès TestFlight
 

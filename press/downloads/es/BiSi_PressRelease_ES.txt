@@ -4,7 +4,7 @@ Pulsadores en lugar de papel: BiSi convierte el clásico «Stop» en un concurso
 
 Una nueva app para iPhone y iPad lleva la emoción de un concurso de televisión a la mesa: mira la letra, descubre el tema, pulsa y grita tu respuesta. Para 2 a 10 amigos, sin accesorios, sin anuncios, sin suscripción.
 
-[Ciudad], [fecha] – «BiSi: Buzz it, Say it», un quiz de reflejos para iPhone y iPad, llega próximamente y reinventa el clásico juego «Stop». En lugar de papel y bolígrafo, cada jugador usa su móvil como pulsador. Una letra y un tema aparecen a la vez en todos los dispositivos. Quien pulsa primero tiene la palabra. La respuesta no se escribe: se grita en voz alta. BiSi es obra de Martin Bechtold. La idea surgió a finales de agosto de 2026, durante unas vacaciones con amigos en Bélgica: en pocas horas el primer prototipo resultó tan divertido que, en apenas un mes, acabó convirtiéndose en una app de juego apasionante y cargada de emociones, que entusiasma gracias a la interacción personal entre los jugadores y deja el móvil en segundo plano.
+[Ciudad], [fecha] – «BiSi: Buzz it, Say it», un quiz de reflejos para iPhone y iPad, ya está disponible en el App Store y reinventa el clásico juego «Stop». En lugar de papel y bolígrafo, cada jugador usa su móvil como pulsador. Una letra y un tema aparecen a la vez en todos los dispositivos. Quien pulsa primero tiene la palabra. La respuesta no se escribe: se grita en voz alta. BiSi es obra de Martin Bechtold. La idea surgió a finales de agosto de 2026, durante unas vacaciones con amigos en Bélgica: en pocas horas el primer prototipo resultó tan divertido que, en apenas un mes, acabó convirtiéndose en una app de juego apasionante y cargada de emociones, que entusiasma gracias a la interacción personal entre los jugadores y deja el móvil en segundo plano.
 
 Así funciona BiSi
 
@@ -40,7 +40,7 @@ Que alguien que trabaja a diario con datos e IA renuncie a recopilar datos es un
 
 Disponibilidad
 
-BiSi llegará próximamente al App Store para iPhone y iPad (iOS / iPadOS 17 o posterior). La app se ofrece como pago único, sin suscripción y sin anuncios. Cada jugador necesita su propio dispositivo con la app. Clasificación por edad: 4+.
+BiSi está disponible desde el 8 de octubre de 2026 en el App Store para iPhone y iPad en 175 países (iOS / iPadOS 17 o posterior): https://apps.apple.com/es/app/bisi-the-buzzer-quiz/id6812506398. La app se ofrece como pago único de 3,99 € (México: 89 MXN; los precios pueden variar según el país), sin suscripción y sin anuncios. Cada jugador necesita su propio dispositivo con la app. Clasificación por edad: 4+.
 
 Material de prensa y acceso TestFlight
 

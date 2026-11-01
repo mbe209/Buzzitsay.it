@@ -1,0 +1,43 @@
+{
+  "appId": "6812506398",
+  "appName": "bisi-the-buzzer-quiz",
+  "appStore": {
+    "universal": "https://apps.apple.com/app/bisi-the-buzzer-quiz/id6812506398",
+    "de": "https://apps.apple.com/de/app/bisi-the-buzzer-quiz/id6812506398",
+    "en": "https://apps.apple.com/us/app/bisi-the-buzzer-quiz/id6812506398",
+    "es": "https://apps.apple.com/es/app/bisi-the-buzzer-quiz/id6812506398",
+    "fr": "https://apps.apple.com/fr/app/bisi-the-buzzer-quiz/id6812506398"
+  },
+  "testFlight": {
+    "url": "https://testflight.apple.com/join/yANVqwV1",
+    "build": "45"
+  },
+  "website": {
+    "base": "https://www.buzzitsay.it",
+    "de": "https://www.buzzitsay.it/#de",
+    "en": "https://www.buzzitsay.it/#en",
+    "es": "https://www.buzzitsay.it/#es",
+    "fr": "https://www.buzzitsay.it/#fr"
+  },
+  "press": {
+    "page": "https://www.buzzitsay.it/press/",
+    "kits": {
+      "de": "https://www.buzzitsay.it/press/downloads/BiSi_MediaKit_DE.zip",
+      "en": "https://www.buzzitsay.it/press/downloads/BiSi_MediaKit_EN.zip",
+      "es": "https://www.buzzitsay.it/press/downloads/BiSi_MediaKit_ES.zip",
+      "fr": "https://www.buzzitsay.it/press/downloads/BiSi_MediaKit_FR.zip"
+    }
+  },
+  "support": {
+    "email": "hello@buzzitsay.it",
+    "page": "https://www.buzzitsay.it/support/"
+  },
+  "privacy": {
+    "page": "https://www.buzzitsay.it/privacy/"
+  },
+  "copyright": {
+    "holder": "Martin Bechtold",
+    "year": "2026",
+    "notice": "© 2026 Martin Bechtold. Alle Rechte vorbehalten."
+  }
+}
